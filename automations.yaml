@@ -1,0 +1,198 @@
+- id: '1736024836154'
+  alias: TV on, sofa on, set TV lights 100%
+  description: ''
+  triggers:
+  - trigger: state
+    entity_id:
+    - remote.50ex750_series
+    - media_player.50ex750_series
+    to: 'on'
+    for:
+      hours: 0
+      minutes: 0
+      seconds: 1
+    from: unavailable
+  conditions:
+  - condition: state
+    entity_id: light.sofa
+    state: 'on'
+    for:
+      hours: 0
+      minutes: 0
+      seconds: 1
+  actions:
+  - data:
+      entity_id: light.tv_lights
+      brightness: 255
+    action: light.turn_on
+  mode: single
+- id: '1736030062323'
+  alias: TV off
+  description: ''
+  triggers:
+  - trigger: state
+    entity_id:
+    - remote.50ex750_series
+    - media_player.50ex750_series
+    from: 'on'
+    to: unavailable
+    for:
+      hours: 0
+      minutes: 0
+      seconds: 1
+  conditions: []
+  actions:
+  - type: turn_off
+    device_id: 607799a2718af7810b1cbdc0e07df1a8
+    entity_id: afa7993cb05f83523a35fb8be8cb560b
+    domain: light
+  mode: single
+- id: '1736629800091'
+  alias: Sofa on, set tv light 100%
+  description: ''
+  triggers:
+  - type: turned_on
+    device_id: 797f9162b98e7cedea3641f24b81d9b3
+    entity_id: a8984406c5592223721c8ba5243f08ce
+    domain: light
+    trigger: device
+    for:
+      hours: 0
+      minutes: 0
+      seconds: 1
+  conditions:
+  - condition: state
+    entity_id: light.tv_lights
+    state: 'on'
+    for:
+      hours: 0
+      minutes: 0
+      seconds: 1
+  actions:
+  - data:
+      entity_id: light.tv_lights
+      brightness: 255
+    action: light.turn_on
+  mode: single
+- id: '1736630036315'
+  alias: Sofa off, TV on, nighttime, set tv lights 25%
+  description: ''
+  triggers:
+  - type: turned_off
+    device_id: 797f9162b98e7cedea3641f24b81d9b3
+    entity_id: a8984406c5592223721c8ba5243f08ce
+    domain: light
+    trigger: device
+    for:
+      hours: 0
+      minutes: 0
+      seconds: 1
+  conditions:
+  - condition: state
+    entity_id: light.tv_lights
+    state: 'on'
+    for:
+      hours: 0
+      minutes: 0
+      seconds: 1
+  - condition: sun
+    before: sunrise
+    after: sunset
+  actions:
+  - data:
+      entity_id: light.tv_lights
+      brightness: 63
+    action: light.turn_on
+  mode: single
+- id: '1736632151008'
+  alias: TV on, sofa off, nighttime, set TV lights 25%
+  description: ''
+  triggers:
+  - trigger: state
+    entity_id:
+    - remote.50ex750_series
+    - media_player.50ex750_series
+    to: 'on'
+    for:
+      hours: 0
+      minutes: 0
+      seconds: 1
+    from: unavailable
+  conditions:
+  - condition: state
+    entity_id: light.sofa
+    state: 'off'
+    for:
+      hours: 0
+      minutes: 0
+      seconds: 1
+  - condition: sun
+    after: sunset
+    before: sunrise
+  actions:
+  - data:
+      entity_id: light.tv_lights
+      brightness: 63
+    action: light.turn_on
+  mode: single
+- id: '1736685840415'
+  alias: TV on, sofa off, daytime, set TV lights 100%
+  description: ''
+  triggers:
+  - trigger: state
+    entity_id:
+    - remote.50ex750_series
+    - media_player.50ex750_series
+    to: 'on'
+    for:
+      hours: 0
+      minutes: 0
+      seconds: 1
+    from: unavailable
+  conditions:
+  - condition: state
+    entity_id: light.sofa
+    state: 'off'
+    for:
+      hours: 0
+      minutes: 0
+      seconds: 1
+  - condition: sun
+    after: sunrise
+    before: sunset
+  actions:
+  - data:
+      entity_id: light.tv_lights
+      brightness: 255
+    action: light.turn_on
+  mode: single
+- id: '1737632516779'
+  alias: Sofa off, TV on, daytime, set TV lights 100%
+  description: ''
+  triggers:
+  - type: turned_off
+    device_id: 797f9162b98e7cedea3641f24b81d9b3
+    entity_id: a8984406c5592223721c8ba5243f08ce
+    domain: light
+    trigger: device
+    for:
+      hours: 0
+      minutes: 0
+      seconds: 1
+  conditions:
+  - condition: state
+    entity_id: light.tv_lights
+    state: 'on'
+    for:
+      hours: 0
+      minutes: 0
+      seconds: 1
+  - condition: sun
+    before: sunset
+    after: sunrise
+  actions:
+  - data:
+      entity_id: light.tv_lights
+      brightness: 255
+    action: light.turn_on
+  mode: single

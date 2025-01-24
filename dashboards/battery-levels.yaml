@@ -1,0 +1,97 @@
+views:
+  - title: Home
+    sections:
+      - type: grid
+        cards:
+          - type: custom:battery-state-card
+            grid_options:
+              columns: full
+            title: Low Batteries
+            secondary_info: '{last_updated}'
+            sort: state
+            filter:
+              include:
+                - name: entity_id
+                  value: '*_battery_level'
+                - name: attributes.device_class
+                  value: battery
+              exclude:
+                - name: state
+                  value: 5
+                  operator: '>'
+          - type: custom:battery-state-card
+            title: Light Switches
+            secondary_info: '{last_updated}'
+            grid_options:
+              columns: full
+            sort: name
+            colors:
+              steps:
+                - value: 5
+                  color: var(--label-badge-red)
+                - value: 30
+                  color: var(--label-badge-yellow)
+                - value: 100
+                  color: var(--label-badge-green)
+            filter:
+              include:
+                - name: entity_id
+                  value: '*_switch_battery'
+              exclude:
+                - name: entity_id
+                  value: binary_sensor.*
+          - type: custom:battery-state-card
+            title: Thermometers
+            secondary_info: '{last_updated}'
+            grid_options:
+              columns: full
+            sort: name
+            colors:
+              steps:
+                - value: 5
+                  color: var(--label-badge-red)
+                - value: 30
+                  color: var(--label-badge-yellow)
+                - value: 100
+                  color: var(--label-badge-green)
+            filter:
+              include:
+                - name: attributes.friendly_name
+                  value: '*Thermometer Battery*'
+          - type: custom:battery-state-card
+            title: Radiators
+            secondary_info: '{last_updated}'
+            grid_options:
+              columns: full
+            sort: name
+            colors:
+              steps:
+                - value: 5
+                  color: var(--label-badge-red)
+                - value: 30
+                  color: var(--label-badge-yellow)
+                - value: 100
+                  color: var(--label-badge-green)
+            filter:
+              include:
+                - name: attributes.friendly_name
+                  value: '*Radiator Battery*'
+          - type: custom:battery-state-card
+            secondary_info: '{last_updated}'
+            title: Motion Sensors
+            grid_options:
+              columns: full
+            sort: name
+            colors:
+              steps:
+                - value: 5
+                  color: var(--label-badge-red)
+                - value: 30
+                  color: var(--label-badge-yellow)
+                - value: 100
+                  color: var(--label-badge-green)
+            filter:
+              include:
+                - name: attributes.friendly_name
+                  value: '*Sensor Battery*'
+        column_span: 4

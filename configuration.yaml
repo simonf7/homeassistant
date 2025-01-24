@@ -1,0 +1,35 @@
+# Loads default set of integrations. Do not remove.
+default_config:
+
+# Load frontend themes from the themes folder
+frontend:
+  themes: !include_dir_merge_named themes
+  extra_module_url:
+    - /hacsfiles/lovelace-card-mod/card-mod.js
+
+automation: !include automations.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml
+
+# Define extra yaml configured dashboards
+lovelace:
+  mode: storage
+  dashboards:
+    battery-levels:
+      mode: yaml
+      title: Battery Levels
+      icon: mdi:battery-50
+      show_in_sidebar: true
+      filename: dashboards/battery-levels.yaml
+    downstairs-lights:
+      mode: yaml
+      title: Downstairs Lights
+      icon: mdi:stairs-down
+      show_in_sidebar: true
+      filename: dashboards/downstairs-lights.yaml
+    upstairs-lights:
+      mode: yaml
+      title: Upstairs Lights
+      icon: mdi:stairs-up
+      show_in_sidebar: true
+      filename: dashboards/upstairs-lights.yaml
