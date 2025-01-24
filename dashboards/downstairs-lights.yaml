@@ -423,7 +423,7 @@ views:
                       opacity: {{ '1' if states(light) == 'on' else '0' }};
                       filter: hue-rotate({{ (color[0] + hue_adj)|round(2) }}deg) saturate({{ min(color[1]|round(2) * sat_mul, 100 ) }}%);
                     }
-              - type: custom:button-card
+              - type: custom:button-card # Living Room
                 entity: sensor.sonoff_a4800b698d_temperature
                 show_name: false
                 show_state: true
@@ -431,7 +431,7 @@ views:
                 style:
                   left: 80%
                   top: 92%
-              - type: custom:button-card
+              - type: custom:button-card # Hall
                 entity: sensor.sonoff_a4800c364c_temperature
                 show_name: false
                 show_state: true
@@ -439,7 +439,7 @@ views:
                 style:
                   left: 49.5%
                   top: 52%
-              - type: custom:button-card
+              - type: custom:button-card # Dining Room
                 entity: sensor.sonoff_a4800c35c2_temperature
                 show_name: false
                 show_state: true
@@ -447,7 +447,7 @@ views:
                 style:
                   left: 23%
                   top: 92%
-              - type: custom:button-card
+              - type: custom:button-card # Kitchen
                 entity: sensor.sonoff_a4800c23bc_temperature
                 show_name: false
                 show_state: true
@@ -455,7 +455,7 @@ views:
                 style:
                   left: 60%
                   top: 6%
-              - type: custom:button-card
+              - type: custom:button-card # Outside
                 entity: sensor.outside_sensor_temperature
                 show_name: false
                 show_state: true
