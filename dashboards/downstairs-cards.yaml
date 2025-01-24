@@ -1,0 +1,647 @@
+- type: picture-elements
+  image: /local/images/downstairs/base.png
+  grid_options:
+    columns: full
+  elements:
+    - type: image
+      image: /local/images/downstairs/uplighter-red.png
+      tap_action:
+        action: none
+      hold_action:
+        action: none
+      style:
+        transform: inherit
+        top: 0%
+        width: 100%
+        mix-blend-mode: lighten
+      card_mod:
+        style: >
+          {% set light = 'light.sofa' %}
+
+          {% set color = state_attr(light, 'hs_color') or [27.72,
+          55.11] %}
+
+          {% set hue_adj = 0 if state_attr(light, 'color_mode') ==
+          'xy' else 25  %}
+
+          {% set sat_mul = 1 if state_attr(light, 'color_mode') ==
+          'xy' else 0.5 %}
+
+          hui-image {
+            opacity: {{ state_attr(light, 'brightness') / 255 if states(light) == 'on' else '0' }};
+            filter: hue-rotate({{ (color[0] + hue_adj)|round(2) }}deg) saturate({{ min(color[1]|round(2) * sat_mul, 100 ) }}%);
+          }
+    - type: image
+      image: /local/images/downstairs/front-red.png
+      tap_action:
+        action: none
+      hold_action:
+        action: none
+      style:
+        transform: inherit
+        top: 0%
+        width: 100%
+        mix-blend-mode: lighten
+      card_mod:
+        style: >
+          {% set light = 'light.front' %}
+
+          {% set color = state_attr(light, 'hs_color') or [27.72,
+          55.11] %}
+
+          {% set hue_adj = 0 if state_attr(light, 'color_mode') ==
+          'xy' else 25  %}
+
+          {% set sat_mul = 1 if state_attr(light, 'color_mode') ==
+          'xy' else 0.5 %}
+
+          hui-image {
+            opacity: {{ state_attr(light, 'brightness') / 255 if states(light) == 'on' else '0' }};
+            filter: hue-rotate({{ (color[0] + hue_adj)|round(2) }}deg) saturate({{ min(color[1]|round(2) * sat_mul, 100 ) }}%);
+          }
+    - type: image
+      image: /local/images/downstairs/rear-red.png
+      tap_action:
+        action: none
+      hold_action:
+        action: none
+      style:
+        transform: inherit
+        top: 0%
+        width: 100%
+        mix-blend-mode: lighten
+      card_mod:
+        style: >
+          {% set light = 'light.rear' %}
+
+          {% set color = state_attr(light, 'hs_color') or [27.72,
+          55.11] %}
+
+          {% set hue_adj = 0 if state_attr(light, 'color_mode') ==
+          'xy' else 25  %}
+
+          {% set sat_mul = 1 if state_attr(light, 'color_mode') ==
+          'xy' else 0.5 %}
+
+          hui-image {
+            opacity: {{ state_attr(light, 'brightness') / 255 if states(light) == 'on' else '0' }};
+            filter: hue-rotate({{ (color[0] + hue_adj)|round(2) }}deg) saturate({{ min(color[1]|round(2) * sat_mul, 100 ) }}%);
+          }
+    - type: image
+      image: /local/images/downstairs/diningroom-red.png
+      tap_action:
+        action: none
+      hold_action:
+        action: none
+      style:
+        transform: inherit
+        top: 0%
+        width: 100%
+        mix-blend-mode: lighten
+      card_mod:
+        style: >
+          {% set light = 'light.dining_room' %}
+
+          {% set color = state_attr(light, 'hs_color') or [27.72,
+          55.11] %}
+
+          {% set hue_adj = 0 if state_attr(light, 'color_mode') ==
+          'xy' else 25  %}
+
+          {% set sat_mul = 1 if state_attr(light, 'color_mode') ==
+          'xy' else 0.5 %}
+
+          hui-image {
+            opacity: {{ state_attr(light, 'brightness') / 255 if states(light) == 'on' else '0' }};
+            filter: hue-rotate({{ (color[0] + hue_adj)|round(2) }}deg) saturate({{ min(color[1]|round(2) * sat_mul, 100 ) }}%);
+          }
+    - type: image
+      image: /local/images/downstairs/kitchen1-red.png
+      tap_action:
+        action: none
+      hold_action:
+        action: none
+      style:
+        transform: inherit
+        top: 0%
+        width: 100%
+        mix-blend-mode: lighten
+      card_mod:
+        style: >
+          {% set light = 'light.kitchen_1' %}
+
+          {% set color = state_attr(light, 'hs_color') or [27.72,
+          55.11] %}
+
+          {% set hue_adj = 0 if state_attr(light, 'color_mode') ==
+          'xy' else 25  %}
+
+          {% set sat_mul = 1 if state_attr(light, 'color_mode') ==
+          'xy' else 0.5 %}
+
+          hui-image {
+            opacity: {{ state_attr(light, 'brightness') / 255 if states(light) == 'on' else '0' }};
+            filter: hue-rotate({{ (color[0] + hue_adj)|round(2) }}deg) saturate({{ min(color[1]|round(2) * sat_mul, 100 ) }}%);
+          }
+    - type: image
+      image: /local/images/downstairs/kitchen2-red.png
+      tap_action:
+        action: none
+      hold_action:
+        action: none
+      style:
+        transform: inherit
+        top: 0%
+        width: 100%
+        mix-blend-mode: lighten
+      card_mod:
+        style: >
+          {% set light = 'light.kitchen_2' %}
+
+          {% set color = state_attr(light, 'hs_color') or [27.72,
+          55.11] %}
+
+          {% set hue_adj = 0 if state_attr(light, 'color_mode') ==
+          'xy' else 25  %}
+
+          {% set sat_mul = 1 if state_attr(light, 'color_mode') ==
+          'xy' else 0.5 %}
+
+          hui-image {
+            opacity: {{ state_attr(light, 'brightness') / 255 if states(light) == 'on' else '0' }};
+            filter: hue-rotate({{ (color[0] + hue_adj)|round(2) }}deg) saturate({{ min(color[1]|round(2) * sat_mul, 100 ) }}%);
+          }
+    - type: image
+      image: /local/images/downstairs/kitchen3-red.png
+      tap_action:
+        action: none
+      hold_action:
+        action: none
+      style:
+        transform: inherit
+        top: 0%
+        width: 100%
+        mix-blend-mode: lighten
+      card_mod:
+        style: >
+          {% set light = 'light.kitchen_3' %}
+
+          {% set color = state_attr(light, 'hs_color') or [27.72,
+          55.11] %}
+
+          {% set hue_adj = 0 if state_attr(light, 'color_mode') ==
+          'xy' else 25  %}
+
+          {% set sat_mul = 1 if state_attr(light, 'color_mode') ==
+          'xy' else 0.5 %}
+
+          hui-image {
+            opacity: {{ state_attr(light, 'brightness') / 255 if states(light) == 'on' else '0' }};
+            filter: hue-rotate({{ (color[0] + hue_adj)|round(2) }}deg) saturate({{ min(color[1]|round(2) * sat_mul, 100 ) }}%);
+          }
+    - type: image
+      image: /local/images/downstairs/kitchen4-red.png
+      tap_action:
+        action: none
+      hold_action:
+        action: none
+      style:
+        transform: inherit
+        top: 0%
+        width: 100%
+        mix-blend-mode: lighten
+      card_mod:
+        style: >
+          {% set light = 'light.kitchen_4' %}
+
+          {% set color = state_attr(light, 'hs_color') or [27.72,
+          55.11] %}
+
+          {% set hue_adj = 0 if state_attr(light, 'color_mode') ==
+          'xy' else 25  %}
+
+          {% set sat_mul = 1 if state_attr(light, 'color_mode') ==
+          'xy' else 0.5 %}
+
+          hui-image {
+            opacity: {{ state_attr(light, 'brightness') / 255 if states(light) == 'on' else '0' }};
+            filter: hue-rotate({{ (color[0] + hue_adj)|round(2) }}deg) saturate({{ min(color[1]|round(2) * sat_mul, 100 ) }}%);
+          }
+    - type: image
+      image: /local/images/downstairs/kitchen5-red.png
+      tap_action:
+        action: none
+      hold_action:
+        action: none
+      style:
+        transform: inherit
+        top: 0%
+        width: 100%
+        mix-blend-mode: lighten
+      card_mod:
+        style: >
+          {% set light = 'light.kitchen_5' %}
+
+          {% set color = state_attr(light, 'hs_color') or [27.72,
+          55.11] %}
+
+          {% set hue_adj = 0 if state_attr(light, 'color_mode') ==
+          'xy' else 25  %}
+
+          {% set sat_mul = 1 if state_attr(light, 'color_mode') ==
+          'xy' else 0.5 %}
+
+          hui-image {
+            opacity: {{ state_attr(light, 'brightness') / 255 if states(light) == 'on' else '0' }};
+            filter: hue-rotate({{ (color[0] + hue_adj)|round(2) }}deg) saturate({{ min(color[1]|round(2) * sat_mul, 100 ) }}%);
+          }
+    - type: image
+      image: /local/images/downstairs/kitchen6-red.png
+      tap_action:
+        action: none
+      hold_action:
+        action: none
+      style:
+        transform: inherit
+        top: 0%
+        width: 100%
+        mix-blend-mode: lighten
+      card_mod:
+        style: >
+          {% set light = 'light.kitchen_6' %}
+
+          {% set color = state_attr(light, 'hs_color') or [27.72,
+          55.11] %}
+
+          {% set hue_adj = 0 if state_attr(light, 'color_mode') ==
+          'xy' else 25  %}
+
+          {% set sat_mul = 1 if state_attr(light, 'color_mode') ==
+          'xy' else 0.5 %}
+
+          hui-image {
+            opacity: {{ state_attr(light, 'brightness') / 255 if states(light) == 'on' else '0' }};
+            filter: hue-rotate({{ (color[0] + hue_adj)|round(2) }}deg) saturate({{ min(color[1]|round(2) * sat_mul, 100 ) }}%);
+          }
+    - type: image
+      image: /local/images/downstairs/toilet-red.png
+      tap_action:
+        action: none
+      hold_action:
+        action: none
+      style:
+        transform: inherit
+        top: 0%
+        width: 100%
+        mix-blend-mode: lighten
+      card_mod:
+        style: |
+          {% set light = 'light.toilet' %}
+          {% set color = [27.72, 55.11] %}
+          {% set hue_adj = 25  %}
+          {% set sat_mul = 0.5 %}
+          hui-image {
+            opacity: {{ state_attr(light, 'brightness') / 255 if states(light) == 'on' else '0' }};
+            filter: hue-rotate({{ (color[0] + hue_adj)|round(2) }}deg) saturate({{ min(color[1]|round(2) * sat_mul, 100 ) }}%);
+          }
+    - type: image
+      image: /local/images/downstairs/office-red.png
+      tap_action:
+        action: none
+      hold_action:
+        action: none
+      style:
+        transform: inherit
+        top: 0%
+        width: 100%
+        mix-blend-mode: lighten
+      card_mod:
+        style: |
+          {% set light = 'light.office_2' %}
+          {% set color = [27.72, 55.11] %}
+          {% set hue_adj = 25  %}
+          {% set sat_mul = 0.5 %}
+          hui-image {
+            opacity: {{ state_attr(light, 'brightness') / 255 if states(light) == 'on' else '0' }};
+            filter: hue-rotate({{ (color[0] + hue_adj)|round(2) }}deg) saturate({{ min(color[1]|round(2) * sat_mul, 100 ) }}%);
+          }
+    - type: image
+      image: /local/images/downstairs/downstairs-red.png
+      tap_action:
+        action: none
+      hold_action:
+        action: none
+      style:
+        transform: inherit
+        top: 0%
+        width: 100%
+        mix-blend-mode: lighten
+      card_mod:
+        style: |
+          {% set light = 'light.downstairs' %}
+          {% set color = [27.72, 55.11] %}
+          {% set hue_adj = 25  %}
+          {% set sat_mul = 0.5 %}
+          hui-image {
+            opacity: {{ state_attr(light, 'brightness') / 255 if states(light) == 'on' else '0' }};
+            filter: hue-rotate({{ (color[0] + hue_adj)|round(2) }}deg) saturate({{ min(color[1]|round(2) * sat_mul, 100 ) }}%);
+          }
+    - type: image
+      image: /local/images/downstairs/outside-red.png
+      tap_action:
+        action: none
+      hold_action:
+        action: none
+      style:
+        transform: inherit
+        top: 0%
+        width: 100%
+        mix-blend-mode: lighten
+      card_mod:
+        style: |
+          {% set light = 'light.outside_light' %}
+          {% set color = [27.72, 55.11] %}
+          {% set hue_adj = 25  %}
+          {% set sat_mul = 0.5 %}
+          hui-image {
+            opacity: {{ state_attr(light, 'brightness') / 255 if states(light) == 'on' else '0' }};
+            filter: hue-rotate({{ (color[0] + hue_adj)|round(2) }}deg) saturate({{ min(color[1]|round(2) * sat_mul, 100 ) }}%);
+          }
+    - type: image
+      image: /local/images/downstairs/tv2.png
+      style:
+        transform: inherit
+        top: 0%
+        width: 100%
+        mix-blend-mode: lighten
+      card_mod:
+        style: |
+          {% set tv = 'media_player.50ex750_series' %}
+          hui-image {
+            opacity: {{ '1' if states(tv) == 'on' else '0' }};
+          }
+    - type: image
+      image: /local/images/downstairs/tv-lights-red.png
+      style:
+        transform: inherit
+        top: 0%
+        width: 100%
+        mix-blend-mode: lighten
+      card_mod:
+        style: |
+          {% set light = 'light.tv_lights' %}
+          {% set color = [240, 47] %}
+          {% set hue_adj = 0 %}
+          {% set sat_mul = 1 %}
+          hui-image {
+            opacity: {{ '1' if states(light) == 'on' else '0' }};
+            filter: hue-rotate({{ (color[0] + hue_adj)|round(2) }}deg) saturate({{ min(color[1]|round(2) * sat_mul, 100 ) }}%);
+          }
+    - type: image
+      image: /local/images/downstairs/stairs-red.png
+      tap_action:
+        action: none
+      hold_action:
+        action: none
+      style:
+        transform: inherit
+        top: 0%
+        width: 100%
+        mix-blend-mode: lighten
+      card_mod:
+        style: |
+          {% set light = 'switch.stair_lights' %}
+          {% set color = [120, 100] %}
+          {% set hue_adj = 0 %}
+          {% set sat_mul = 0.5 %}
+          hui-image {
+            opacity: {{ '1' if states(light) == 'on' else '0' }};
+            filter: hue-rotate({{ (color[0] + hue_adj)|round(2) }}deg) saturate({{ min(color[1]|round(2) * sat_mul, 100 ) }}%);
+          }
+    - type: custom:button-card # Living Room
+      entity: sensor.sonoff_a4800b698d_temperature
+      show_name: false
+      show_state: true
+      show_icon: false
+      style:
+        left: 80%
+        top: 92%
+    - type: custom:button-card # Hall
+      entity: sensor.sonoff_a4800c364c_temperature
+      show_name: false
+      show_state: true
+      show_icon: false
+      style:
+        left: 49.5%
+        top: 52%
+    - type: custom:button-card # Dining Room
+      entity: sensor.sonoff_a4800c35c2_temperature
+      show_name: false
+      show_state: true
+      show_icon: false
+      style:
+        left: 23%
+        top: 92%
+    - type: custom:button-card # Kitchen
+      entity: sensor.sonoff_a4800c23bc_temperature
+      show_name: false
+      show_state: true
+      show_icon: false
+      style:
+        left: 60%
+        top: 6%
+    - type: custom:button-card # Outside
+      entity: sensor.outside_sensor_temperature
+      show_name: false
+      show_state: true
+      show_icon: false
+      style:
+        left: 10%
+        top: 4%
+    - type: custom:button-card
+      entity: light.rear
+      show_name: false
+      color: auto
+      size: 2em
+      state:
+        - value: 'off'
+          icon: mdi:lightbulb-off
+          color: rgb(64,64,64)
+      style:
+        left: 72%
+        top: 36%
+      hold_action:
+        action: more-info
+    - type: custom:button-card
+      entity: light.hue_white_lamp_1
+      show_name: false
+      color: auto
+      size: 2em
+      state:
+        - value: 'off'
+          icon: mdi:lightbulb-off
+          color: rgb(64,64,64)
+      style:
+        left: 30%
+        top: 36%
+      tap_action:
+        action: more-info
+    - type: custom:button-card
+      entity: light.office
+      show_name: false
+      color: auto
+      size: 2em
+      state:
+        - value: 'off'
+          icon: mdi:lightbulb-off
+          color: rgb(64,64,64)
+      style:
+        left: 53%
+        top: 29%
+      tap_action:
+        action: more-info
+    - type: custom:button-card
+      entity: light.front
+      show_name: false
+      color: auto
+      size: 2em
+      state:
+        - value: 'off'
+          icon: mdi:lightbulb-off
+          color: rgb(64,64,64)
+      style:
+        left: 72%
+        top: 72%
+      tap_action:
+        action: more-info
+    - type: custom:button-card
+      entity: light.dining_room_light
+      show_name: false
+      color: auto
+      size: 2em
+      state:
+        - value: 'off'
+          icon: mdi:lightbulb-off
+          color: rgb(64,64,64)
+      style:
+        left: 25%
+        top: 72%
+      hold_action:
+        action: more-info
+    - type: custom:button-card
+      entity: light.sofa
+      show_name: false
+      color: auto
+      size: 2em
+      state:
+        - value: 'off'
+          icon: mdi:lightbulb-off
+          color: rgb(64,64,64)
+      style:
+        left: 58%
+        top: 50%
+      hold_action:
+        action: more-info
+    - type: custom:button-card
+      entity: light.downstairs
+      show_name: false
+      color: auto
+      size: 2em
+      state:
+        - value: 'off'
+          icon: mdi:lightbulb-off
+          color: rgb(64,64,64)
+      style:
+        left: 51.5%
+        top: 85%
+      hold_action:
+        action: more-info
+    - type: custom:button-card
+      entity: switch.stair_lights
+      show_name: false
+      color: auto
+      size: 2em
+      state:
+        - value: 'on'
+          icon: mdi:led-strip-variant
+          color: green
+        - value: 'off'
+          icon: mdi:led-strip-variant-off
+          color: rgb(64,64,64)
+      style:
+        left: 49.5%
+        top: 60%
+      hold_action:
+        action: more-info
+    - type: custom:button-card
+      entity: light.kitchen_1
+      show_name: false
+      color: auto
+      size: 1em
+      state:
+        - value: 'off'
+          icon: mdi:lightbulb-spot-off
+          color: rgb(64,64,64)
+      style:
+        left: 50%
+        top: 11%
+    - type: custom:button-card
+      entity: light.kitchen_2
+      show_name: false
+      color: auto
+      size: 1em
+      state:
+        - value: 'off'
+          icon: mdi:lightbulb-spot-off
+          color: rgb(64,64,64)
+      style:
+        left: 47%
+        top: 13%
+    - type: custom:button-card
+      entity: light.kitchen_3
+      show_name: false
+      color: auto
+      size: 1em
+      state:
+        - value: 'off'
+          icon: mdi:lightbulb-spot-off
+          color: rgb(64,64,64)
+      style:
+        left: 49.5%
+        top: 15%
+    - type: custom:button-card
+      entity: light.kitchen_6
+      show_name: false
+      color: auto
+      size: 1em
+      state:
+        - value: 'off'
+          icon: mdi:lightbulb-spot-off
+          color: rgb(64,64,64)
+      style:
+        left: 72%
+        top: 11%
+    - type: custom:button-card
+      entity: light.kitchen_4
+      show_name: false
+      color: auto
+      size: 1em
+      state:
+        - value: 'off'
+          icon: mdi:lightbulb-spot-off
+          color: rgb(64,64,64)
+      style:
+        left: 69%
+        top: 13%
+    - type: custom:button-card
+      entity: light.kitchen_5
+      show_name: false
+      color: auto
+      size: 1em
+      state:
+        - value: 'off'
+          icon: mdi:lightbulb-spot-off
+          color: rgb(64,64,64)
+      style:
+        left: 71.5%
+        top: 15%
