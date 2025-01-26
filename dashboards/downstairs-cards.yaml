@@ -59,34 +59,7 @@
             opacity: {{ state_attr(light, 'brightness') / 255 if states(light) == 'on' else '0' }};
             filter: hue-rotate({{ (color[0] + hue_adj)|round(2) }}deg) saturate({{ min(color[1]|round(2) * sat_mul, 100 ) }}%);
           }
-    - type: image
-      image: /local/images/downstairs/rear-red.png
-      tap_action:
-        action: none
-      hold_action:
-        action: none
-      style:
-        transform: inherit
-        top: 0%
-        width: 100%
-        mix-blend-mode: lighten
-      card_mod:
-        style: >
-          {% set light = 'light.rear' %}
-
-          {% set color = state_attr(light, 'hs_color') or [27.72,
-          55.11] %}
-
-          {% set hue_adj = 0 if state_attr(light, 'color_mode') ==
-          'xy' else 25  %}
-
-          {% set sat_mul = 1 if state_attr(light, 'color_mode') ==
-          'xy' else 0.5 %}
-
-          hui-image {
-            opacity: {{ state_attr(light, 'brightness') / 255 if states(light) == 'on' else '0' }};
-            filter: hue-rotate({{ (color[0] + hue_adj)|round(2) }}deg) saturate({{ min(color[1]|round(2) * sat_mul, 100 ) }}%);
-          }
+    - !include hue-color-bulb-card.yaml
     - type: image
       image: /local/images/downstairs/diningroom-red.png
       tap_action:
