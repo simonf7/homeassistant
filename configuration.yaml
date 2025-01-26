@@ -11,6 +11,8 @@ automation: !include automations.yaml
 script: !include scripts.yaml
 scene: !include scenes.yaml
 
+lovelace_gen:
+
 # Define extra yaml configured dashboards
 lovelace:
   mode: storage
