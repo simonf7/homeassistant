@@ -1,0 +1,24 @@
+# lovelace_gen
+type: custom:button-card
+entity: {{ entity }}
+show_name: false
+color: auto
+{% if size is defined %}
+size: {{ size }}
+{% else %}
+size: 2em
+{% endif %}
+state:
+  - value: 'on'
+    icon: mdi:{{ icon }}
+    {% if color is defined %}
+    color: {{ color }}
+    {% endif %}
+  - value: 'off'
+    icon: mdi:{{ icon }}-off
+    color: rgb(64,64,64)
+style:
+  left: {{ x }}
+  top: {{ y }}
+hold_action:
+  action: more-info
