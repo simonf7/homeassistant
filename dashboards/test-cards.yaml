@@ -1,78 +1,42 @@
 # lovelace_gen
+{% set color_bulbs = [ 
+  'light.sofa', 'light.rear', 'light.front', 'light.dining-room', 
+  'light.kitchen_1', 'light.kitchen_2', 'light.kitchen_3', 'light.kitchen_4', 'light.kitchen_5', 'light.kitchen_6' 
+] %}
+{% set white_bulbs = [
+  'light.toilet', 'light.office_2', 'light.downstairs', 'light.outside_light'
+] %}
+
 - type: picture-elements
   image: /local/images/downstairs/base.png
   grid_options:
     columns: full
   elements:
+  {% for bulb in color_bulbs %}
     - !include
       - hue-color-bulb-card.yaml
-      - image: /local/images/downstairs/uplighter-red.png
-        entity: light.sofa
-    - !include
-      - hue-color-bulb-card.yaml
-      - image: /local/images/downstairs/rear-red.png
-        entity: light.rear
-    - !include
-      - hue-color-bulb-card.yaml
-      - image: /local/images/downstairs/front-red.png
-        entity: light.front
-    - !include
-      - hue-color-bulb-card.yaml
-      - image: /local/images/downstairs/diningroom-red.png
-        entity: light.dining_room
-    - !include
-      - hue-color-bulb-card.yaml
-      - image: /local/images/downstairs/kitchen1-red.png
-        entity: light.kitchen_1
-    - !include
-      - hue-color-bulb-card.yaml
-      - image: /local/images/downstairs/kitchen2-red.png
-        entity: light.kitchen_2
-    - !include
-      - hue-color-bulb-card.yaml
-      - image: /local/images/downstairs/kitchen3-red.png
-        entity: light.kitchen_3
-    - !include
-      - hue-color-bulb-card.yaml
-      - image: /local/images/downstairs/kitchen4-red.png
-        entity: light.kitchen_4
-    - !include
-      - hue-color-bulb-card.yaml
-      - image: /local/images/downstairs/kitchen5-red.png
-        entity: light.kitchen_5
-    - !include
-      - hue-color-bulb-card.yaml
-      - image: /local/images/downstairs/kitchen6-red.png
-        entity: light.kitchen_6
+      - image: /local/images/downstairs/{{ bulb }}.png
+        entity: {{ bulb }}
+  {% endfor %} 
+  {% for bulb in white_bulbs %}
     - !include
       - hue-white-bulb-card.yaml
-      - image: /local/images/downstairs/toilet-red.png
-        entity: light.toilet
-    - !include
-      - hue-white-bulb-card.yaml
-      - image: /local/images/downstairs/office-red.png
-        entity: light.office_2
-    - !include
-      - hue-white-bulb-card.yaml
-      - image: /local/images/downstairs/downstairs-red.png
-        entity: light.downstairs
-    - !include
-      - hue-white-bulb-card.yaml
-      - image: /local/images/downstairs/outside-red.png
-        entity: light.outside_light
+      - image: /local/images/downstairs/{{ bulb }}.png
+        entity: {{ bulb }}
+  {% endfor %} 
     - !include
       - on-off-light-card.yaml
-      - image: /local/images/downstairs/tv-lights-red.png
+      - image: /local/images/downstairs/light.tv_lights.png
         entity: light.tv_lights
         color: [240, 47]
     - !include
       - on-off-light-card.yaml
-      - image: /local/images/downstairs/stairs-red.png
+      - image: /local/images/downstairs/switch.stair_lights.png
         entity: switch.stair_lights
         color: [120, 50]
 {% raw %}
     - type: image
-      image: /local/images/downstairs/tv2.png
+      image: /local/images/downstairs/media_player.50ex750_series.png
       style:
         transform: inherit
         top: 0%
