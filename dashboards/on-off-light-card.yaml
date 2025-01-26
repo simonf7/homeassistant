@@ -1,0 +1,22 @@
+# lovelace_gen
+type: image
+image: {{ image }}
+tap_action:
+  action: none
+hold_action:
+  action: none
+style:
+  transform: inherit
+  top: 0%
+  width: 100%
+  mix-blend-mode: lighten
+card_mod:
+  style: >
+    {% raw %}
+    {% set light = '{% endraw %}{{ entity }}{% raw %}' %}
+    {% set color = {% endraw %}{{ color }}{% raw %} %}
+    hui-image {
+      opacity: {{ '1' if states(light) == 'on' else '0' }};
+      filter: hue-rotate({{ color[0]|round(2) }}deg) saturate({{ min(color[1]|round(2), 100 ) }}%);
+    }
+    {% endraw %}

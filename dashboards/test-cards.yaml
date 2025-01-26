@@ -60,6 +60,16 @@
       - hue-white-bulb-card.yaml
       - image: /local/images/downstairs/outside-red.png
         entity: light.outside_light
+    - !include
+      - on-off-light-card.yaml
+      - image: /local/images/downstairs/tv-lights-red.png
+        entity: light.tv_lights
+        color: [240, 47]
+    - !include
+      - on-off-light-card.yaml
+      - image: /local/images/downstairs/stairs-red.png
+        entity: switch.stair_lights
+        color: [120, 50]
 {% raw %}
     - type: image
       image: /local/images/downstairs/tv2.png
@@ -73,43 +83,5 @@
           {% set tv = 'media_player.50ex750_series' %}
           hui-image {
             opacity: {{ '1' if states(tv) == 'on' else '0' }};
-          }
-    - type: image
-      image: /local/images/downstairs/tv-lights-red.png
-      style:
-        transform: inherit
-        top: 0%
-        width: 100%
-        mix-blend-mode: lighten
-      card_mod:
-        style: |
-          {% set light = 'light.tv_lights' %}
-          {% set color = [240, 47] %}
-          {% set hue_adj = 0 %}
-          {% set sat_mul = 1 %}
-          hui-image {
-            opacity: {{ '1' if states(light) == 'on' else '0' }};
-            filter: hue-rotate({{ (color[0] + hue_adj)|round(2) }}deg) saturate({{ min(color[1]|round(2) * sat_mul, 100 ) }}%);
-          }
-    - type: image
-      image: /local/images/downstairs/stairs-red.png
-      tap_action:
-        action: none
-      hold_action:
-        action: none
-      style:
-        transform: inherit
-        top: 0%
-        width: 100%
-        mix-blend-mode: lighten
-      card_mod:
-        style: |
-          {% set light = 'switch.stair_lights' %}
-          {% set color = [120, 100] %}
-          {% set hue_adj = 0 %}
-          {% set sat_mul = 0.5 %}
-          hui-image {
-            opacity: {{ '1' if states(light) == 'on' else '0' }};
-            filter: hue-rotate({{ (color[0] + hue_adj)|round(2) }}deg) saturate({{ min(color[1]|round(2) * sat_mul, 100 ) }}%);
           }
 {% endraw %}
