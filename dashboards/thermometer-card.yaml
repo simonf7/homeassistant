@@ -1,0 +1,9 @@
+# lovelace_gen
+type: custom:button-card
+entity: {{ entity }}
+show_name: false
+show_state: true
+show_icon: false
+style:
+  left: {{ x }}
+  top: {{ y }}

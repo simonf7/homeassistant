@@ -49,3 +49,28 @@
             opacity: {{ '1' if states(tv) == 'on' else '0' }};
           }
 {% endraw %}
+    - !include # Living Room
+      - thermometer-card.yaml
+      - entity: sensor.sonoff_a4800b698d_temperature
+        x: 80%
+        y: 92%
+    - !include # Hall
+      - thermometer-card.yaml
+      - entity: sensor.sonoff_a4800c364c_temperature
+        x: 49.5%
+        y: 52%
+    - !include # Dining Room
+      - thermometer-card.yaml
+      - entity: sensor.sonoff_a4800c35c2_temperature
+        x: 23%
+        y: 92%
+    - !include # Kitchen
+      - thermometer-card.yaml
+      - entity: sensor.sonoff_a4800c23bc_temperature
+        x: 60%
+        y: 6%
+    - !include # Outside
+      - thermometer-card.yaml
+      - entity: sensor.outside_sensor_temperature
+        x: 10%
+        y: 4%
