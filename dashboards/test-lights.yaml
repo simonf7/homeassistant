@@ -1,0 +1,7 @@
+# lovelace_gen
+views:
+  - title: Home
+    sections:
+      - type: grid
+        cards: !include test-cards.yaml
+        column_span: 4

@@ -14,13 +14,9 @@ card_mod:
   style: >
     {% raw %}
     {% set light = '{% endraw %}{{ entity }}{% raw %}' %}
-
-    {% set color = state_attr(light, 'hs_color') or [27.72, 55.11] %}
-
-    {% set hue_adj = 0 if state_attr(light, 'color_mode') == 'xy' else 25  %}
-
-    {% set sat_mul = 1 if state_attr(light, 'color_mode') == 'xy' else 0.5 %}
-
+    {% set color = [27.72, 55.11] %}
+    {% set hue_adj = 25  %}
+    {% set sat_mul = 0.5 %}
     hui-image {
       opacity: {{ state_attr(light, 'brightness') / 255 if states(light) == 'on' else '0' }};
       filter: hue-rotate({{ (color[0] + hue_adj)|round(2) }}deg) saturate({{ min(color[1]|round(2) * sat_mul, 100 ) }}%);
