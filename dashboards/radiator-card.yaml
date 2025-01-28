@@ -1,0 +1,16 @@
+# lovelace_gen
+type: custom:button-card
+entity: {{ entity }}_temperature
+show_name: false
+show_state: true
+show_icon: true
+size: 2em
+icon: >
+{% raw %}
+  [[[ if (states['{% endraw %}{{ entity }}{% raw %}_work_state'].state ==
+  '1') return "mdi:radiator";
+        else return "mdi:radiator-off"; ]]]
+{% endraw %}
+style:
+  left: {{ x }}
+  top: {{ y }}

@@ -1,159 +1,126 @@
 # lovelace_gen
 {% set color_bulbs = [ 
-  'light.sofa', 'light.rear', 'light.front', 'light.dining_room', 
-  'light.kitchen_1', 'light.kitchen_2', 'light.kitchen_3', 'light.kitchen_4', 'light.kitchen_5', 'light.kitchen_6' 
+  'light.bathroom', 'light.amy_s_light', 'light.bed_lights', 'light.wall', 'light.simon_s_light',
+  'light.wardrobe_light', 'light.harry_s_panel', 'light.harry_s_light', 'light.bedroom'
 ] %}
 {% set white_bulbs = [
-  'light.toilet', 'light.office_2', 'light.downstairs', 'light.outside_light'
+  'light.upstairs'
 ] %}
 
 - type: picture-elements
-  image: /local/images/downstairs/base.png
+  image: /local/images/upstairs/base.png
   grid_options:
     columns: full
   elements:
   {% for bulb in color_bulbs %}
     - !include
       - multi-color-bulb-card.yaml
-      - image: /local/images/downstairs/{{ bulb }}.png
+      - image: /local/images/upstairs/{{ bulb }}.png
         entity: {{ bulb }}
   {% endfor %} 
   {% for bulb in white_bulbs %}
     - !include
       - single-color-bulb-card.yaml
-      - image: /local/images/downstairs/{{ bulb }}.png
+      - image: /local/images/upstairs/{{ bulb }}.png
         entity: {{ bulb }}
   {% endfor %} 
     - !include
-      - single-color-bulb-card.yaml
-      - image: /local/images/downstairs/light.tv_lights.png
-        entity: light.tv_lights
-        color: [240, 47]
-    - !include
       - on-off-light-card.yaml
-      - image: /local/images/downstairs/switch.stair_lights.png
+      - image: /local/images/upstairs/switch.stair_lights.png
         entity: switch.stair_lights
         color: [120, 50]
-    - !include
-      - on-off-light-card.yaml
-      - image: /local/images/downstairs/media_player.50ex750_series.png
-        entity: media_player.50ex750_series
-        color: [0, 0]
 
-    - !include # living room
-      - thermometer-card.yaml
-      - entity: sensor.sonoff_a4800b698d_temperature
-        x: 80%
-        y: 96%
+    - !include # amy's radiator
+      - radiator-card.yaml
+      - entity: sensor.sonoff_a4800ba0b7
+        x: 30%
+        y: 7%
+    - !include # spareroom radiator
+      - radiator-card.yaml
+      - entity: sensor.sonoff_a4800badea
+        x: 74%
+        y: 7%
+    - !include # bedroom radiator
+      - radiator-card.yaml
+      - entity: sensor.sonoff_a4800b9e1a
+        x: 25%
+        y: 92%
+    - !include # harry's radiator
+      - radiator-card.yaml
+      - entity: sensor.sonoff_a4800b6840
+        x: 77%
+        y: 92%
+
     - !include # hall
       - thermometer-card.yaml
       - entity: sensor.sonoff_a4800c364c_temperature
         x: 49.5%
-        y: 60%
-    - !include # dining room
-      - thermometer-card.yaml
-      - entity: sensor.sonoff_a4800c35c2_temperature
-        x: 23%
-        y: 96%
-    - !include # kitchen
-      - thermometer-card.yaml
-      - entity: sensor.sonoff_a4800c23bc_temperature
-        x: 60%
-        y: 4%
-    - !include # outside
-      - thermometer-card.yaml
-      - entity: sensor.outside_sensor_temperature
-        x: 10%
-        y: 4%
+        y: 52%
 
-    - !include
-      - light-button-card.yaml
-      - entity: light.rear
-        icon: lightbulb
-        x: 73%
-        y: 40%      
-    - !include # office light
-      - light-button-card.yaml
-      - entity: light.hue_white_lamp_1
-        icon: lightbulb
-        x: 29%
-        y: 40%      
-    - !include # toilet light
-      - light-button-card.yaml
-      - entity: light.office
-        icon: lightbulb
-        x: 53%
-        y: 32%
-    - !include
-      - light-button-card.yaml
-      - entity: light.front
-        icon: lightbulb
-        x: 74%
-        y: 75%
-    - !include
-      - light-button-card.yaml
-      - entity: light.dining_room_light
-        icon: lightbulb
-        x: 25%
-        y: 75%
-    - !include # uplighter
-      - light-button-card.yaml
-      - entity: light.sofa
-        icon: lightbulb
-        x: 58%
-        y: 53%
-    - !include
-      - light-button-card.yaml
-      - entity: light.downstairs
-        icon: lightbulb
-        x: 51.5%
-        y: 87%
     - !include
       - light-button-card.yaml
       - entity: switch.stair_lights
         icon: led-strip-variant
         color: green
         x: 49.5%
-        y: 66%
+        y: 60%
     - !include
       - light-button-card.yaml
-      - entity: light.kitchen_1
-        icon: lightbulb-spot
-        size: 1em
-        x: 50%
-        y: 11.5%
-    - !include
-      - light-button-card.yaml
-      - entity: light.kitchen_2
-        icon: lightbulb-spot
-        size: 1em
-        x: 47%
-        y: 12.5%
-    - !include
-      - light-button-card.yaml
-      - entity: light.kitchen_3
-        icon: lightbulb-spot
-        size: 1em
+      - entity: light.wardrobe_light
+        icon: lightbulb
         x: 49.5%
-        y: 15%
+        y: 81%
     - !include
       - light-button-card.yaml
-      - entity: light.kitchen_4
-        icon: lightbulb-spot
-        size: 1em
-        x: 69%
-        y: 12.5%
+      - entity: light.harry_s_panel
+        icon: led-strip-variant
+        x: 57%
+        y: 81%
     - !include
       - light-button-card.yaml
-      - entity: light.kitchen_5
-        icon: lightbulb-spot
-        size: 1em
-        x: 71.5%
-        y: 15%
+      - entity: light.bathroom
+        icon: lightbulb
+        x: 53%
+        y: 17%
     - !include
       - light-button-card.yaml
-      - entity: light.kitchen_6
-        icon: lightbulb-spot
-        size: 1em
-        x: 72%
-        y: 11.5%
+      - entity: light.upstairs
+        icon: lightbulb
+        x: 52%
+        y: 35%
+    - !include
+      - light-button-card.yaml
+      - entity: light.amy_s_light
+        icon: lightbulb
+        x: 28%
+        y: 20%
+    - !include
+      - light-button-card.yaml
+      - entity: light.bed_lights
+        icon: led-strip-variant
+        x: 22%
+        y: 34%
+    - !include # spareroom
+      - light-button-card.yaml
+      - entity: light.simon_s_light
+        icon: lightbulb
+        x: 75%
+        y: 20%
+    - !include 
+      - light-button-card.yaml
+      - entity: light.wall
+        icon: led-strip-variant
+        x: 87%
+        y: 36%
+    - !include
+      - light-button-card.yaml
+      - entity: light.bedroom
+        icon: lightbulb
+        x: 25%
+        y: 70%
+    - !include
+      - light-button-card.yaml
+      - entity: light.harry_s_light
+        icon: lightbulb
+        x: 75%
+        y: 70%
