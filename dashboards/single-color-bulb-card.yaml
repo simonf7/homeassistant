@@ -14,11 +14,19 @@ card_mod:
   style: >
     {% raw %}
     {% set light = '{% endraw %}{{ entity }}{% raw %}' %}
-    {% set color = [27.72, 55.11] %}
-    {% set hue_adj = 25  %}
-    {% set sat_mul = 0.5 %}
+    {% endraw %}
+    {% if color is defined %}
+    {% raw %}
+    {% set color = {% endraw %}{{ color }}{% raw %} %}
+    {% endraw %}
+    {% else %}
+    {% raw %}
+    {% set color = [52.72, 27.5] %}
+    {% endraw %}
+    {% endif %}
+    {% raw %}
     hui-image {
       opacity: {{ state_attr(light, 'brightness') / 255 if states(light) == 'on' else '0' }};
-      filter: hue-rotate({{ (color[0] + hue_adj)|round(2) }}deg) saturate({{ min(color[1]|round(2) * sat_mul, 100 ) }}%);
+      filter: hue-rotate({{ (color[0])|round(2) }}deg) saturate({{ min(color[1]|round(2), 100 ) }}%);
     }
     {% endraw %}

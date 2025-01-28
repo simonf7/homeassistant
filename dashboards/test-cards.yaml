@@ -14,18 +14,18 @@
   elements:
   {% for bulb in color_bulbs %}
     - !include
-      - hue-color-bulb-card.yaml
+      - multi-color-bulb-card.yaml
       - image: /local/images/downstairs/{{ bulb }}.png
         entity: {{ bulb }}
   {% endfor %} 
   {% for bulb in white_bulbs %}
     - !include
-      - hue-white-bulb-card.yaml
+      - single-color-bulb-card.yaml
       - image: /local/images/downstairs/{{ bulb }}.png
         entity: {{ bulb }}
   {% endfor %} 
     - !include
-      - on-off-light-card.yaml
+      - single-color-bulb-card.yaml
       - image: /local/images/downstairs/light.tv_lights.png
         entity: light.tv_lights
         color: [240, 47]
@@ -34,47 +34,33 @@
       - image: /local/images/downstairs/switch.stair_lights.png
         entity: switch.stair_lights
         color: [120, 50]
-{% raw %}
-    - type: image
-      image: /local/images/downstairs/media_player.50ex750_series.png
-      tap_action:
-        action: none
-      hold_action:
-        action: none
-      style:
-        transform: inherit
-        top: 0%
-        width: 100%
-        mix-blend-mode: lighten
-      card_mod:
-        style: |
-          {% set tv = 'media_player.50ex750_series' %}
-          hui-image {
-            opacity: {{ '1' if states(tv) == 'on' else '0' }};
-          }
-{% endraw %}
+    - !include
+      - on-off-light-card.yaml
+      - image: /local/images/downstairs/media_player.50ex750_series.png
+        entity: media_player.50ex750_series
+        color: [0, 0]
 
-    - !include # Living Room
+    - !include # living room
       - thermometer-card.yaml
       - entity: sensor.sonoff_a4800b698d_temperature
         x: 80%
-        y: 92%
-    - !include # Hall
+        y: 96%
+    - !include # hall
       - thermometer-card.yaml
       - entity: sensor.sonoff_a4800c364c_temperature
         x: 49.5%
-        y: 52%
-    - !include # Dining Room
+        y: 60%
+    - !include # dining room
       - thermometer-card.yaml
       - entity: sensor.sonoff_a4800c35c2_temperature
         x: 23%
-        y: 92%
-    - !include # Kitchen
+        y: 96%
+    - !include # kitchen
       - thermometer-card.yaml
       - entity: sensor.sonoff_a4800c23bc_temperature
         x: 60%
-        y: 6%
-    - !include # Outside
+        y: 4%
+    - !include # outside
       - thermometer-card.yaml
       - entity: sensor.outside_sensor_temperature
         x: 10%
@@ -84,65 +70,65 @@
       - light-button-card.yaml
       - entity: light.rear
         icon: lightbulb
-        x: 72%
-        y: 36%      
-    - !include
+        x: 73%
+        y: 40%      
+    - !include # office light
       - light-button-card.yaml
       - entity: light.hue_white_lamp_1
         icon: lightbulb
-        x: 30%
-        y: 36%      
-    - !include
+        x: 29%
+        y: 40%      
+    - !include # toilet light
       - light-button-card.yaml
       - entity: light.office
         icon: lightbulb
         x: 53%
-        y: 29%
+        y: 32%
     - !include
       - light-button-card.yaml
       - entity: light.front
         icon: lightbulb
-        x: 72%
-        y: 72%
+        x: 74%
+        y: 75%
     - !include
       - light-button-card.yaml
       - entity: light.dining_room_light
         icon: lightbulb
         x: 25%
-        y: 72%
-    - !include
+        y: 75%
+    - !include # uplighter
       - light-button-card.yaml
       - entity: light.sofa
         icon: lightbulb
         x: 58%
-        y: 50%
+        y: 53%
     - !include
       - light-button-card.yaml
       - entity: light.downstairs
         icon: lightbulb
         x: 51.5%
-        y: 85%
+        y: 87%
     - !include
       - light-button-card.yaml
       - entity: switch.stair_lights
         icon: led-strip-variant
         color: green
         x: 49.5%
-        y: 60%
+        y: 66%
     - !include
       - light-button-card.yaml
       - entity: light.kitchen_1
         icon: lightbulb-spot
         size: 1em
         x: 50%
-        y: 11%
+        y: 11.5%
     - !include
       - light-button-card.yaml
       - entity: light.kitchen_2
         icon: lightbulb-spot
         size: 1em
         x: 47%
-        y: 13%
+        y: 12.5%
     - !include
       - light-button-card.yaml
       - entity: light.kitchen_3
@@ -156,7 +142,7 @@
         icon: lightbulb-spot
         size: 1em
         x: 69%
-        y: 13%
+        y: 12.5%
     - !include
       - light-button-card.yaml
       - entity: light.kitchen_5
@@ -170,4 +156,4 @@
         icon: lightbulb-spot
         size: 1em
         x: 72%
-        y: 11%
+        y: 11.5%
