@@ -1,5 +1,5 @@
 views:
-  - title: Home
+  - title: Downstairs
     sections:
       - type: grid
         cards: !include downstairs-cards.yaml

@@ -1,5 +1,5 @@
 views:
-  - title: Home
+  - title: Battery Levels
     sections:
       - type: grid
         cards:
