@@ -1,0 +1,58 @@
+type: vertical-stack
+cards:
+  - type: horizontal-stack
+    cards:
+      - type: custom:button-card
+        show_name: true
+        show_icon: false
+        tap_action:
+          action: toggle
+        entity: scene.kitchen_daylight
+        name: 'All Bulbs'
+      - type: custom:button-card
+        show_name: true
+        show_icon: false
+        tap_action:
+          action: toggle
+        entity: scene.kitchen_prep
+        name: 'Single Bulb'
+      - type: custom:button-card
+        show_name: true
+        show_icon: false
+        tap_action:
+          action: toggle
+        entity: scene.kitchen_bedtime
+        name: Night Light
+        show_state: false
+      - type: custom:button-card
+        show_name: true
+        show_icon: false
+        tap_action:
+          action: perform-action
+          perform_action: light.turn_off
+          target:
+            entity_id: light.kitchen
+        entity: light.kitchen
+        name: 'Off'
+  - type: horizontal-stack
+    cards:
+      - type: entities
+        entities:
+          - entity: light.kitchen_1
+          - entity: light.kitchen_2
+          - entity: light.kitchen_3
+      - type: entities
+        entities:
+          - entity: light.kitchen_4
+          - entity: light.kitchen_5
+          - entity: light.kitchen_6
+  - chart_type: bar
+    period: hour
+    type: statistics-graph
+    entities:
+      - sensor.sonoff_a4800c23bc_temperature
+    stat_types:
+      - mean
+    logarithmic_scale: false
+    days_to_show: 3
+    unit: °C

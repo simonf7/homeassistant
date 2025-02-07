@@ -20,5 +20,16 @@ state:
 style:
   left: {{ x }}
   top: {{ y }}
+tap_action:
+{% if popup is defined %}
+  action: fire-dom-event
+  browser_mod:
+    service: browser_mod.popup
+    data:
+      title: {{ title }}
+      content: !include {{ popup }}
+{% else %}
+  action: none
+{% endif %}
 hold_action:
-  action: more-info
+  action: none
