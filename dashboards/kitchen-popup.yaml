@@ -34,6 +34,9 @@ cards:
             entity_id: light.kitchen
         entity: light.kitchen
         name: 'Off'
+  - type: light
+    entity: light.kitchen
+    show_name: false
   - type: horizontal-stack
     cards:
       - type: entities
@@ -46,13 +49,15 @@ cards:
           - entity: light.kitchen_4
           - entity: light.kitchen_5
           - entity: light.kitchen_6
-  - chart_type: bar
-    period: hour
-    type: statistics-graph
-    entities:
-      - sensor.sonoff_a4800c23bc_temperature
-    stat_types:
-      - mean
-    logarithmic_scale: false
-    days_to_show: 3
-    unit: °C
+  - type: horizontal-stack
+    cards:
+      - graph: line
+        type: sensor
+        entity: sensor.sonoff_a4800c23bc_temperature
+        detail: 1
+        name: Temperature
+      - graph: line
+        type: sensor
+        entity: sensor.sonoff_a4800c23bc_humidity
+        detail: 1
+        name: Humidy
