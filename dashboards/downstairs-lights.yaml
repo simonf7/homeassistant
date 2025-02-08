@@ -1,6 +1,0 @@
-views:
-  - title: Downstairs
-    sections:
-      - type: grid
-        cards: !include downstairs-cards.yaml
-        column_span: 4

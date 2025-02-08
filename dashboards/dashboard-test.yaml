@@ -3,8 +3,8 @@ views:
   - title: Home
     sections:
       - type: grid
-        cards: !include upstairs-cards.yaml
+        cards: !include floorplan-upstairs.yaml
         column_span: 4
       - type: grid
-        cards: !include downstairs-cards.yaml
+        cards: !include floorplan-downstairs.yaml
         column_span: 4

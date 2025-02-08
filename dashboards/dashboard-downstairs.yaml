@@ -1,0 +1,6 @@
+views:
+  - title: Downstairs
+    sections:
+      - type: grid
+        cards: !include floorplan-downstairs.yaml
+        column_span: 4

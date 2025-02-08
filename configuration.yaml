@@ -22,22 +22,22 @@ lovelace:
       title: Battery Levels
       icon: mdi:battery-50
       show_in_sidebar: true
-      filename: dashboards/battery-levels.yaml
+      filename: dashboards/dashboard-battery-levels.yaml
     downstairs-lights:
       mode: yaml
       title: Downstairs Lights
       icon: mdi:stairs-down
       show_in_sidebar: true
-      filename: dashboards/downstairs-lights.yaml
+      filename: dashboards/dashboard-downstairs.yaml
     upstairs-lights:
       mode: yaml
       title: Upstairs Lights
       icon: mdi:stairs-up
       show_in_sidebar: true
-      filename: dashboards/upstairs-lights.yaml
+      filename: dashboards/dashboard-upstairs.yaml
     test-lights:
       mode: yaml
       title: Test Lights
       icon: mdi:stairs-up
       show_in_sidebar: true
-      filename: dashboards/test-lights.yaml
+      filename: dashboards/dashboard-test.yaml

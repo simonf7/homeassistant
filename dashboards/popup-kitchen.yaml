@@ -60,4 +60,4 @@ cards:
         type: sensor
         entity: sensor.sonoff_a4800c23bc_humidity
         detail: 1
-        name: Humidy
+        name: Humidity
