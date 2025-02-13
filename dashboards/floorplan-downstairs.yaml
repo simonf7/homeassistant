@@ -45,6 +45,8 @@
       - entity: sensor.sonoff_a4800b698d_temperature
         x: 80%
         y: 96%
+        popup: popup-living-room.yaml
+        title: Living Room
     - !include # hall
       - button-thermometer.yaml
       - entity: sensor.sonoff_a4800c364c_temperature
@@ -60,6 +62,8 @@
       - entity: sensor.sonoff_a4800c23bc_temperature
         x: 60%
         y: 4%
+        popup: popup-kitchen.yaml
+        title: Kitchen
     - !include # outside
       - button-thermometer.yaml
       - entity: sensor.outside_sensor_temperature
@@ -72,6 +76,8 @@
         icon: lightbulb
         x: 73%
         y: 40%      
+        popup: popup-living-room.yaml
+        title: Living Room
     - !include # office light
       - button-light.yaml
       - entity: light.hue_white_lamp_1
@@ -90,6 +96,8 @@
         icon: lightbulb
         x: 74%
         y: 75%
+        popup: popup-living-room.yaml
+        title: Living Room
     - !include
       - button-light.yaml
       - entity: light.dining_room_light
@@ -102,6 +110,8 @@
         icon: lightbulb
         x: 58%
         y: 53%
+        popup: popup-living-room.yaml
+        title: Living Room
     - !include
       - button-light.yaml
       - entity: light.downstairs

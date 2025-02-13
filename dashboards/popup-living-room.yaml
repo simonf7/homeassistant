@@ -8,23 +8,25 @@ cards:
         show_icon: false
         tap_action:
           action: toggle
-        entity: scene.kitchen_daylight
-        name: 'All Bulbs'
+        entity: scene.living_room_uplighter
+        name: Uplighter
+        show_state: false
       - type: custom:button-card
         show_name: true
         show_icon: false
         tap_action:
           action: toggle
-        entity: scene.kitchen_prep
-        name: 'Single Bulb'
-      - type: custom:button-card
-        show_name: true
-        show_icon: false
-        tap_action:
-          action: toggle
-        entity: scene.kitchen_bedtime
+        entity: scene.living_room_nightlight_2
         name: Night Light
         show_state: false
+      - type: custom:button-card
+        show_name: true
+        show_icon: false
+        tap_action:
+          action: toggle
+        entity: scene.living_room_uplighter
+        entity: scene.living_room_bright_3
+        name: Bright
       - type: custom:button-card
         show_name: true
         show_icon: false
@@ -32,24 +34,22 @@ cards:
           action: perform-action
           perform_action: light.turn_off
           target:
-            entity_id: light.kitchen
+            entity_id:
+              - light.sofa
+              - light.rear
+              - light.front
+          data: {}
         entity: light.kitchen
         name: 'Off'
-  - type: light
-    entity: light.kitchen
-    show_name: false
   - type: horizontal-stack
     cards:
       - type: entities
         entities:
-          - entity: light.kitchen_1
-          - entity: light.kitchen_2
-          - entity: light.kitchen_3
+          - entity: light.sofa
       - type: entities
         entities:
-          - entity: light.kitchen_4
-          - entity: light.kitchen_5
-          - entity: light.kitchen_6
+          - entity: light.front
+          - entity: light.rear
   - !include
     - snippet_thermometer.yaml
-    - entity: sensor.sonoff_a4800c23bc
+    - entity: sensor.sonoff_a4800b698d
