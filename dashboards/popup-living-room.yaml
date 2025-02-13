@@ -8,7 +8,7 @@ cards:
         show_icon: false
         tap_action:
           action: toggle
-        entity: scene.living_room_uplighter
+        entity: scene.custom_lounge_uplighter
         name: Uplighter
         show_state: false
       - type: custom:button-card
@@ -16,7 +16,7 @@ cards:
         show_icon: false
         tap_action:
           action: toggle
-        entity: scene.living_room_nightlight_2
+        entity: scene.custom_lounge_night
         name: Night Light
         show_state: false
       - type: custom:button-card
@@ -24,22 +24,14 @@ cards:
         show_icon: false
         tap_action:
           action: toggle
-        entity: scene.living_room_uplighter
-        entity: scene.living_room_bright_3
+        entity: scene.custom_lounge_daylight
         name: Bright
       - type: custom:button-card
         show_name: true
         show_icon: false
         tap_action:
-          action: perform-action
-          perform_action: light.turn_off
-          target:
-            entity_id:
-              - light.sofa
-              - light.rear
-              - light.front
-          data: {}
-        entity: light.kitchen
+          action: toggle
+        entity: scene.custom_lounge_off
         name: 'Off'
   - type: horizontal-stack
     cards:

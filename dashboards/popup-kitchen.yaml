@@ -8,33 +8,31 @@ cards:
         show_icon: false
         tap_action:
           action: toggle
-        entity: scene.kitchen_daylight
+        entity: scene.custom_kitchen_daylight
         name: 'All Bulbs'
       - type: custom:button-card
         show_name: true
         show_icon: false
         tap_action:
           action: toggle
-        entity: scene.kitchen_prep
+        entity: scene.custom_kitchen_single
         name: 'Single Bulb'
       - type: custom:button-card
         show_name: true
         show_icon: false
         tap_action:
           action: toggle
-        entity: scene.kitchen_bedtime
+        entity: scene.custom_kitchen_night
         name: Night Light
         show_state: false
       - type: custom:button-card
         show_name: true
         show_icon: false
         tap_action:
-          action: perform-action
-          perform_action: light.turn_off
-          target:
-            entity_id: light.kitchen
-        entity: light.kitchen
+          action: toggle
+        entity: scene.custom_kitchen_off
         name: 'Off'
+        show_state: false
   - type: light
     entity: light.kitchen
     show_name: false

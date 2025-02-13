@@ -1,7 +1,7 @@
-- id: '1737748739646'
-  name: Lounge Bright
+- id: '1739480601801'
+  name: Custom Kitchen Daylight
   entities:
-    light.front:
+    light.kitchen_1:
       min_color_temp_kelvin: 2000
       max_color_temp_kelvin: 6535
       min_mireds: 153
@@ -14,30 +14,37 @@
       - sparkle
       - opal
       - glisten
+      - unknown
+      - unknown
+      - unknown
+      - unknown
+      - sunrise
+      - sunset
       supported_color_modes:
       - color_temp
       - xy
       effect: None
       color_mode: color_temp
       brightness: 255
-      color_temp_kelvin: 6535
-      color_temp: 153
+      color_temp_kelvin: 5000
+      color_temp: 200
       hs_color:
-      - 54.768
-      - 1.6
+      - 27.001
+      - 19.243
       rgb_color:
       - 255
-      - 255
-      - 251
+      - 228
+      - 206
       xy_color:
-      - 0.325
-      - 0.333
+      - 0.371
+      - 0.349
       mode: normal
       dynamics: none
-      friendly_name: Front
+      icon: mdi:lightbulb-spot
+      friendly_name: Kitchen 1
       supported_features: 44
       state: 'on'
-    light.rear:
+    light.kitchen_2:
       min_color_temp_kelvin: 2000
       max_color_temp_kelvin: 6535
       min_mireds: 153
@@ -50,30 +57,37 @@
       - sparkle
       - opal
       - glisten
+      - unknown
+      - unknown
+      - unknown
+      - unknown
+      - sunrise
+      - sunset
       supported_color_modes:
       - color_temp
       - xy
       effect: None
       color_mode: color_temp
       brightness: 255
-      color_temp_kelvin: 6535
-      color_temp: 153
+      color_temp_kelvin: 5000
+      color_temp: 200
       hs_color:
-      - 54.768
-      - 1.6
+      - 27.001
+      - 19.243
       rgb_color:
       - 255
-      - 255
-      - 251
+      - 228
+      - 206
       xy_color:
-      - 0.325
-      - 0.333
+      - 0.371
+      - 0.349
       mode: normal
       dynamics: none
-      friendly_name: Rear
+      icon: mdi:lightbulb-spot
+      friendly_name: Kitchen 2
       supported_features: 44
       state: 'on'
-    light.sofa:
+    light.kitchen_3:
       min_color_temp_kelvin: 2000
       max_color_temp_kelvin: 6535
       min_mireds: 153
@@ -86,35 +100,37 @@
       - sparkle
       - opal
       - glisten
+      - unknown
+      - unknown
+      - unknown
+      - unknown
+      - sunrise
+      - sunset
       supported_color_modes:
       - color_temp
       - xy
       effect: None
       color_mode: color_temp
       brightness: 255
-      color_temp_kelvin: 6535
-      color_temp: 153
+      color_temp_kelvin: 5000
+      color_temp: 200
       hs_color:
-      - 54.768
-      - 1.6
+      - 27.001
+      - 19.243
       rgb_color:
       - 255
-      - 255
-      - 251
+      - 228
+      - 206
       xy_color:
-      - 0.325
-      - 0.333
+      - 0.371
+      - 0.349
       mode: normal
       dynamics: none
-      friendly_name: Sofa
+      icon: mdi:lightbulb-spot
+      friendly_name: Kitchen 3
       supported_features: 44
       state: 'on'
-  icon: mdi:lightbulb-on
-  metadata: {}
-- id: '1738964613705'
-  name: Living Room Bright
-  entities:
-    light.front:
+    light.kitchen_4:
       min_color_temp_kelvin: 2000
       max_color_temp_kelvin: 6535
       min_mireds: 153
@@ -127,30 +143,37 @@
       - sparkle
       - opal
       - glisten
+      - unknown
+      - unknown
+      - unknown
+      - unknown
+      - sunrise
+      - sunset
       supported_color_modes:
       - color_temp
       - xy
       effect: None
       color_mode: color_temp
       brightness: 255
-      color_temp_kelvin: 6535
-      color_temp: 153
+      color_temp_kelvin: 5000
+      color_temp: 200
       hs_color:
-      - 54.768
-      - 1.6
+      - 27.001
+      - 19.243
       rgb_color:
       - 255
-      - 255
-      - 251
+      - 228
+      - 206
       xy_color:
-      - 0.325
-      - 0.333
+      - 0.371
+      - 0.349
       mode: normal
       dynamics: none
-      friendly_name: Front
+      icon: mdi:lightbulb-spot
+      friendly_name: Kitchen 4
       supported_features: 44
       state: 'on'
-    light.rear:
+    light.kitchen_5:
       min_color_temp_kelvin: 2000
       max_color_temp_kelvin: 6535
       min_mireds: 153
@@ -163,30 +186,37 @@
       - sparkle
       - opal
       - glisten
+      - unknown
+      - unknown
+      - unknown
+      - unknown
+      - sunrise
+      - sunset
       supported_color_modes:
       - color_temp
       - xy
       effect: None
       color_mode: color_temp
       brightness: 255
-      color_temp_kelvin: 6535
-      color_temp: 153
+      color_temp_kelvin: 5000
+      color_temp: 200
       hs_color:
-      - 54.768
-      - 1.6
+      - 27.001
+      - 19.243
       rgb_color:
       - 255
-      - 255
-      - 251
+      - 228
+      - 206
       xy_color:
-      - 0.325
-      - 0.333
+      - 0.371
+      - 0.349
       mode: normal
       dynamics: none
-      friendly_name: Rear
+      icon: mdi:lightbulb-spot
+      friendly_name: Kitchen 5
       supported_features: 44
       state: 'on'
-    light.sofa:
+    light.kitchen_6:
       min_color_temp_kelvin: 2000
       max_color_temp_kelvin: 6535
       min_mireds: 153
@@ -199,39 +229,765 @@
       - sparkle
       - opal
       - glisten
+      - unknown
+      - unknown
+      - unknown
+      - unknown
+      - sunrise
+      - sunset
       supported_color_modes:
       - color_temp
       - xy
       effect: None
       color_mode: color_temp
       brightness: 255
-      color_temp_kelvin: 6535
-      color_temp: 153
+      color_temp_kelvin: 5000
+      color_temp: 200
       hs_color:
-      - 54.768
-      - 1.6
+      - 27.001
+      - 19.243
       rgb_color:
       - 255
-      - 255
-      - 251
+      - 228
+      - 206
       xy_color:
-      - 0.325
-      - 0.333
+      - 0.371
+      - 0.349
       mode: normal
       dynamics: none
-      friendly_name: Sofa
+      icon: mdi:lightbulb-spot
+      friendly_name: Kitchen 6
       supported_features: 44
       state: 'on'
-  icon: mdi:lightbulb-group
+  icon: mdi:lightbulb
   metadata:
-    light.front:
+    light.kitchen_1:
       entity_only: true
-    light.rear:
+    light.kitchen_2:
       entity_only: true
-    light.sofa:
+    light.kitchen_3:
       entity_only: true
-- id: '1738964828134'
-  name: Living Room Uplighter
+    light.kitchen_4:
+      entity_only: true
+    light.kitchen_5:
+      entity_only: true
+    light.kitchen_6:
+      entity_only: true
+- id: '1739480929744'
+  name: Custom Kitchen Single
+  entities:
+    light.kitchen_1:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      - sparkle
+      - opal
+      - glisten
+      - unknown
+      - unknown
+      - unknown
+      - unknown
+      - sunrise
+      - sunset
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect: None
+      color_mode: color_temp
+      brightness: 255
+      color_temp_kelvin: 5050
+      color_temp: 198
+      hs_color:
+      - 27.056
+      - 18.568
+      rgb_color:
+      - 255
+      - 229
+      - 208
+      xy_color:
+      - 0.369
+      - 0.348
+      mode: normal
+      dynamics: none
+      icon: mdi:lightbulb-spot
+      friendly_name: Kitchen 1
+      supported_features: 44
+      state: 'on'
+    light.kitchen_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      - sparkle
+      - opal
+      - glisten
+      - unknown
+      - unknown
+      - unknown
+      - unknown
+      - sunrise
+      - sunset
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      mode: normal
+      dynamics: none
+      icon: mdi:lightbulb-spot
+      friendly_name: Kitchen 2
+      supported_features: 44
+      state: 'off'
+    light.kitchen_3:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      - sparkle
+      - opal
+      - glisten
+      - unknown
+      - unknown
+      - unknown
+      - unknown
+      - sunrise
+      - sunset
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      mode: normal
+      dynamics: none
+      icon: mdi:lightbulb-spot
+      friendly_name: Kitchen 3
+      supported_features: 44
+      state: 'off'
+    light.kitchen_4:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      - sparkle
+      - opal
+      - glisten
+      - unknown
+      - unknown
+      - unknown
+      - unknown
+      - sunrise
+      - sunset
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      mode: normal
+      dynamics: none
+      icon: mdi:lightbulb-spot
+      friendly_name: Kitchen 4
+      supported_features: 44
+      state: 'off'
+    light.kitchen_5:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      - sparkle
+      - opal
+      - glisten
+      - unknown
+      - unknown
+      - unknown
+      - unknown
+      - sunrise
+      - sunset
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      mode: normal
+      dynamics: none
+      icon: mdi:lightbulb-spot
+      friendly_name: Kitchen 5
+      supported_features: 44
+      state: 'off'
+    light.kitchen_6:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      - sparkle
+      - opal
+      - glisten
+      - unknown
+      - unknown
+      - unknown
+      - unknown
+      - sunrise
+      - sunset
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      mode: normal
+      dynamics: none
+      icon: mdi:lightbulb-spot
+      friendly_name: Kitchen 6
+      supported_features: 44
+      state: 'off'
+  icon: mdi:lightbulb
+  metadata:
+    light.kitchen_1:
+      entity_only: true
+    light.kitchen_2:
+      entity_only: true
+    light.kitchen_3:
+      entity_only: true
+    light.kitchen_4:
+      entity_only: true
+    light.kitchen_5:
+      entity_only: true
+    light.kitchen_6:
+      entity_only: true
+- id: '1739480964670'
+  name: Custom Kitchen Night
+  entities:
+    light.kitchen_1:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      - sparkle
+      - opal
+      - glisten
+      - unknown
+      - unknown
+      - unknown
+      - unknown
+      - sunrise
+      - sunset
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect: None
+      color_mode: xy
+      brightness: 3
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 219.048
+      - 49.412
+      rgb_color:
+      - 129
+      - 173
+      - 255
+      xy_color:
+      - 0.208
+      - 0.217
+      mode: normal
+      dynamics: none
+      icon: mdi:lightbulb-spot
+      friendly_name: Kitchen 1
+      supported_features: 44
+      state: 'on'
+    light.kitchen_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      - sparkle
+      - opal
+      - glisten
+      - unknown
+      - unknown
+      - unknown
+      - unknown
+      - sunrise
+      - sunset
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      mode: normal
+      dynamics: none
+      icon: mdi:lightbulb-spot
+      friendly_name: Kitchen 2
+      supported_features: 44
+      state: 'off'
+    light.kitchen_3:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      - sparkle
+      - opal
+      - glisten
+      - unknown
+      - unknown
+      - unknown
+      - unknown
+      - sunrise
+      - sunset
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      mode: normal
+      dynamics: none
+      icon: mdi:lightbulb-spot
+      friendly_name: Kitchen 3
+      supported_features: 44
+      state: 'off'
+    light.kitchen_4:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      - sparkle
+      - opal
+      - glisten
+      - unknown
+      - unknown
+      - unknown
+      - unknown
+      - sunrise
+      - sunset
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      mode: normal
+      dynamics: none
+      icon: mdi:lightbulb-spot
+      friendly_name: Kitchen 4
+      supported_features: 44
+      state: 'off'
+    light.kitchen_5:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      - sparkle
+      - opal
+      - glisten
+      - unknown
+      - unknown
+      - unknown
+      - unknown
+      - sunrise
+      - sunset
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      mode: normal
+      dynamics: none
+      icon: mdi:lightbulb-spot
+      friendly_name: Kitchen 5
+      supported_features: 44
+      state: 'off'
+    light.kitchen_6:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      - sparkle
+      - opal
+      - glisten
+      - unknown
+      - unknown
+      - unknown
+      - unknown
+      - sunrise
+      - sunset
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      mode: normal
+      dynamics: none
+      icon: mdi:lightbulb-spot
+      friendly_name: Kitchen 6
+      supported_features: 44
+      state: 'off'
+  icon: mdi:lightbulb
+  metadata:
+    light.kitchen_1:
+      entity_only: true
+    light.kitchen_2:
+      entity_only: true
+    light.kitchen_3:
+      entity_only: true
+    light.kitchen_4:
+      entity_only: true
+    light.kitchen_5:
+      entity_only: true
+    light.kitchen_6:
+      entity_only: true
+- id: '1739481002685'
+  name: Custom Kitchen Off
+  entities:
+    light.kitchen_1:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      - sparkle
+      - opal
+      - glisten
+      - unknown
+      - unknown
+      - unknown
+      - unknown
+      - sunrise
+      - sunset
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      mode: normal
+      dynamics: none
+      icon: mdi:lightbulb-spot
+      friendly_name: Kitchen 1
+      supported_features: 44
+      state: 'off'
+    light.kitchen_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      - sparkle
+      - opal
+      - glisten
+      - unknown
+      - unknown
+      - unknown
+      - unknown
+      - sunrise
+      - sunset
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      mode: normal
+      dynamics: none
+      icon: mdi:lightbulb-spot
+      friendly_name: Kitchen 2
+      supported_features: 44
+      state: 'off'
+    light.kitchen_3:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      - sparkle
+      - opal
+      - glisten
+      - unknown
+      - unknown
+      - unknown
+      - unknown
+      - sunrise
+      - sunset
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      mode: normal
+      dynamics: none
+      icon: mdi:lightbulb-spot
+      friendly_name: Kitchen 3
+      supported_features: 44
+      state: 'off'
+    light.kitchen_4:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      - sparkle
+      - opal
+      - glisten
+      - unknown
+      - unknown
+      - unknown
+      - unknown
+      - sunrise
+      - sunset
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      mode: normal
+      dynamics: none
+      icon: mdi:lightbulb-spot
+      friendly_name: Kitchen 4
+      supported_features: 44
+      state: 'off'
+    light.kitchen_5:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      - sparkle
+      - opal
+      - glisten
+      - unknown
+      - unknown
+      - unknown
+      - unknown
+      - sunrise
+      - sunset
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      mode: normal
+      dynamics: none
+      icon: mdi:lightbulb-spot
+      friendly_name: Kitchen 5
+      supported_features: 44
+      state: 'off'
+    light.kitchen_6:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      - sparkle
+      - opal
+      - glisten
+      - unknown
+      - unknown
+      - unknown
+      - unknown
+      - sunrise
+      - sunset
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      mode: normal
+      dynamics: none
+      icon: mdi:lightbulb-spot
+      friendly_name: Kitchen 6
+      supported_features: 44
+      state: 'off'
+  icon: mdi:lightbulb-off
+  metadata:
+    light.kitchen_1:
+      entity_only: true
+    light.kitchen_2:
+      entity_only: true
+    light.kitchen_3:
+      entity_only: true
+    light.kitchen_4:
+      entity_only: true
+    light.kitchen_5:
+      entity_only: true
+    light.kitchen_6:
+      entity_only: true
+- id: '1739482366497'
+  name: Custom Lounge Uplighter
   entities:
     light.rear:
       min_color_temp_kelvin: 2000
@@ -309,19 +1065,19 @@
       - xy
       effect: None
       color_mode: color_temp
-      brightness: 144
-      color_temp_kelvin: 2257
-      color_temp: 443
+      brightness: 77
+      color_temp_kelvin: 2732
+      color_temp: 366
       hs_color:
-      - 29.599
-      - 82.123
+      - 28.327
+      - 64.71
       rgb_color:
       - 255
-      - 149
-      - 46
+      - 168
+      - 90
       xy_color:
-      - 0.572
-      - 0.389
+      - 0.522
+      - 0.387
       mode: normal
       dynamics: none
       friendly_name: Sofa
@@ -335,8 +1091,127 @@
       entity_only: true
     light.sofa:
       entity_only: true
-- id: '1738965029972'
-  name: Living Room Nightlight
+- id: '1739482496092'
+  name: Custom Lounge Daylight
+  entities:
+    light.rear:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      - sparkle
+      - opal
+      - glisten
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect: None
+      color_mode: color_temp
+      brightness: 255
+      color_temp_kelvin: 5000
+      color_temp: 200
+      hs_color:
+      - 27.001
+      - 19.243
+      rgb_color:
+      - 255
+      - 228
+      - 206
+      xy_color:
+      - 0.371
+      - 0.349
+      mode: normal
+      dynamics: none
+      friendly_name: Rear
+      supported_features: 44
+      state: 'on'
+    light.front:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      - sparkle
+      - opal
+      - glisten
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect: None
+      color_mode: color_temp
+      brightness: 255
+      color_temp_kelvin: 5000
+      color_temp: 200
+      hs_color:
+      - 27.001
+      - 19.243
+      rgb_color:
+      - 255
+      - 228
+      - 206
+      xy_color:
+      - 0.371
+      - 0.349
+      mode: normal
+      dynamics: none
+      friendly_name: Front
+      supported_features: 44
+      state: 'on'
+    light.sofa:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      - sparkle
+      - opal
+      - glisten
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect: None
+      color_mode: color_temp
+      brightness: 255
+      color_temp_kelvin: 5000
+      color_temp: 200
+      hs_color:
+      - 27.001
+      - 19.243
+      rgb_color:
+      - 255
+      - 228
+      - 206
+      xy_color:
+      - 0.371
+      - 0.349
+      mode: normal
+      dynamics: none
+      friendly_name: Sofa
+      supported_features: 44
+      state: 'on'
+  icon: mdi:lightbulb
+  metadata:
+    light.rear:
+      entity_only: true
+    light.front:
+      entity_only: true
+    light.sofa:
+      entity_only: true
+- id: '1739482545237'
+  name: Custom Lounge Night
   entities:
     light.rear:
       min_color_temp_kelvin: 2000
@@ -414,24 +1289,122 @@
       - xy
       effect: None
       color_mode: xy
-      brightness: 13
+      brightness: 3
       color_temp_kelvin:
       color_temp:
       hs_color:
-      - 135.529
-      - 100
+      - 219.048
+      - 49.412
       rgb_color:
-      - 0
+      - 129
+      - 173
       - 255
-      - 66
       xy_color:
-      - 0.17
-      - 0.7
+      - 0.208
+      - 0.217
       mode: normal
       dynamics: none
       friendly_name: Sofa
       supported_features: 44
       state: 'on'
+  icon: mdi:lightbulb
+  metadata:
+    light.rear:
+      entity_only: true
+    light.front:
+      entity_only: true
+    light.sofa:
+      entity_only: true
+- id: '1739482564504'
+  name: Custom Lounge Off
+  entities:
+    light.rear:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      - sparkle
+      - opal
+      - glisten
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      mode: normal
+      dynamics: none
+      friendly_name: Rear
+      supported_features: 44
+      state: 'off'
+    light.front:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      - sparkle
+      - opal
+      - glisten
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      mode: normal
+      dynamics: none
+      friendly_name: Front
+      supported_features: 44
+      state: 'off'
+    light.sofa:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      - sparkle
+      - opal
+      - glisten
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      mode: normal
+      dynamics: none
+      friendly_name: Sofa
+      supported_features: 44
+      state: 'off'
   icon: mdi:lightbulb
   metadata:
     light.rear:
