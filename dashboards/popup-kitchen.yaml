@@ -3,36 +3,22 @@ type: vertical-stack
 cards:
   - type: horizontal-stack
     cards:
-      - type: custom:button-card
-        show_name: true
-        show_icon: false
-        tap_action:
-          action: toggle
-        entity: scene.custom_kitchen_daylight
-        name: 'All Bulbs'
-      - type: custom:button-card
-        show_name: true
-        show_icon: false
-        tap_action:
-          action: toggle
-        entity: scene.custom_kitchen_single
-        name: 'Single Bulb'
-      - type: custom:button-card
-        show_name: true
-        show_icon: false
-        tap_action:
-          action: toggle
-        entity: scene.custom_kitchen_night
-        name: Night Light
-        show_state: false
-      - type: custom:button-card
-        show_name: true
-        show_icon: false
-        tap_action:
-          action: toggle
-        entity: scene.custom_kitchen_off
-        name: 'Off'
-        show_state: false
+      - !include
+        - button_scene_toggle.yaml
+        - entity: scene.custom_kitchen_daylight
+          name: 'Bright'
+      - !include
+        - button_scene_toggle.yaml
+        - entity: scene.custom_kitchen_single
+          name: 'Single'
+      - !include
+        - button_scene_toggle.yaml
+        - entity: scene.custom_kitchen_night
+          name: 'Night'
+      - !include
+        - button_scene_toggle.yaml
+        - entity: scene.custom_kitchen_off
+          name: 'Off'
   - type: light
     entity: light.kitchen
     show_name: false
@@ -41,13 +27,19 @@ cards:
       - type: entities
         entities:
           - entity: light.kitchen_1
+            secondary_info: brightness
           - entity: light.kitchen_2
+            secondary_info: brightness
           - entity: light.kitchen_3
+            secondary_info: brightness
       - type: entities
         entities:
           - entity: light.kitchen_4
+            secondary_info: brightness
           - entity: light.kitchen_5
+            secondary_info: brightness
           - entity: light.kitchen_6
+            secondary_info: brightness
   - !include
     - snippet_thermometer.yaml
     - entity: sensor.sonoff_a4800c23bc

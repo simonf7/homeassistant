@@ -3,45 +3,34 @@ type: vertical-stack
 cards:
   - type: horizontal-stack
     cards:
-      - type: custom:button-card
-        show_name: true
-        show_icon: false
-        tap_action:
-          action: toggle
-        entity: scene.custom_lounge_uplighter
-        name: Uplighter
-        show_state: false
-      - type: custom:button-card
-        show_name: true
-        show_icon: false
-        tap_action:
-          action: toggle
-        entity: scene.custom_lounge_night
-        name: Night Light
-        show_state: false
-      - type: custom:button-card
-        show_name: true
-        show_icon: false
-        tap_action:
-          action: toggle
-        entity: scene.custom_lounge_daylight
-        name: Bright
-      - type: custom:button-card
-        show_name: true
-        show_icon: false
-        tap_action:
-          action: toggle
-        entity: scene.custom_lounge_off
-        name: 'Off'
+      - !include
+        - button_scene_toggle.yaml
+        - entity: scene.custom_lounge_daylight
+          name: 'Bright'
+      - !include
+        - button_scene_toggle.yaml
+        - entity: scene.custom_lounge_uplighter
+          name: 'Uplighter'
+      - !include
+        - button_scene_toggle.yaml
+        - entity: scene.custom_lounge_night
+          name: 'Night'
+      - !include
+        - button_scene_toggle.yaml
+        - entity: scene.custom_lounge_off
+          name: 'Off'
   - type: horizontal-stack
     cards:
       - type: entities
         entities:
           - entity: light.sofa
+            secondary_info: brightness
       - type: entities
         entities:
           - entity: light.front
+            secondary_info: brightness
           - entity: light.rear
+            secondary_info: brightness
   - !include
     - snippet_thermometer.yaml
     - entity: sensor.sonoff_a4800b698d

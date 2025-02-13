@@ -1,0 +1,9 @@
+# lovelace_gen
+type: custom:button-card
+show_name: true
+show_icon: false
+tap_action:
+  action: toggle
+entity: {{ entity }}
+name: '{{ name }}'
+show_state: false
