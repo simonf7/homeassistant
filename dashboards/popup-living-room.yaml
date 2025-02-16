@@ -34,3 +34,5 @@ cards:
   - !include
     - snippet_thermometer.yaml
     - entity: sensor.sonoff_a4800b698d
+  - type: media-control
+    entity: media_player.living_room_display

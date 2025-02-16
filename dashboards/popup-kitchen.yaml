@@ -19,9 +19,9 @@ cards:
         - button_scene_toggle.yaml
         - entity: scene.custom_kitchen_off
           name: 'Off'
-  - type: light
-    entity: light.kitchen
-    show_name: false
+  - type: entities
+    entities:
+      - entity: light.kitchen
   - type: horizontal-stack
     cards:
       - type: entities
@@ -43,3 +43,5 @@ cards:
   - !include
     - snippet_thermometer.yaml
     - entity: sensor.sonoff_a4800c23bc
+  - type: media-control
+    entity: media_player.kitchen_display

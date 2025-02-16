@@ -57,6 +57,8 @@
       - entity: sensor.sonoff_a4800c35c2_temperature
         x: 23%
         y: 96%
+        popup: popup-dining-room.yaml
+        title: Dining Room
     - !include # kitchen
       - button-thermometer.yaml
       - entity: sensor.sonoff_a4800c23bc_temperature
@@ -66,7 +68,7 @@
         title: Kitchen
     - !include # outside
       - button-thermometer.yaml
-      - entity: sensor.outside_sensor_temperature
+      - entity: sensor.downstairs_temperature
         x: 10%
         y: 4%
 
@@ -104,6 +106,8 @@
         icon: lightbulb
         x: 25%
         y: 75%
+        popup: popup-dining-room.yaml
+        title: Dining Room
     - !include # uplighter
       - button-light.yaml
       - entity: light.sofa
