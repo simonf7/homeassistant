@@ -4,19 +4,19 @@ cards:
   - type: horizontal-stack
     cards:
       - !include
-        - button_scene_toggle.yaml
+        - button-scene-toggle.yaml
         - entity: scene.custom_kitchen_daylight
           name: 'Bright'
       - !include
-        - button_scene_toggle.yaml
+        - button-scene-toggle.yaml
         - entity: scene.custom_kitchen_single
           name: 'Single'
       - !include
-        - button_scene_toggle.yaml
+        - button-scene-toggle.yaml
         - entity: scene.custom_kitchen_night
           name: 'Night'
       - !include
-        - button_scene_toggle.yaml
+        - button-scene-toggle.yaml
         - entity: scene.custom_kitchen_off
           name: 'Off'
   - type: entities
@@ -41,7 +41,7 @@ cards:
           - entity: light.kitchen_6
             secondary_info: brightness
   - !include
-    - snippet_thermometer.yaml
+    - snippet-thermometer.yaml
     - entity: sensor.sonoff_a4800c23bc
   - type: media-control
     entity: media_player.kitchen_display

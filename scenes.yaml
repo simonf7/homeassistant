@@ -259,7 +259,7 @@
       friendly_name: Kitchen 6
       supported_features: 44
       state: 'on'
-  icon: mdi:lightbulb
+  icon: mdi:lightbulb-on
   metadata:
     light.kitchen_1:
       entity_only: true
@@ -739,7 +739,7 @@
       friendly_name: Kitchen 6
       supported_features: 44
       state: 'off'
-  icon: mdi:lightbulb
+  icon: mdi:lightbulb-night
   metadata:
     light.kitchen_1:
       entity_only: true
@@ -1202,7 +1202,7 @@
       friendly_name: Sofa
       supported_features: 44
       state: 'on'
-  icon: mdi:lightbulb
+  icon: mdi:lightbulb-on
   metadata:
     light.rear:
       entity_only: true
@@ -1307,7 +1307,7 @@
       friendly_name: Sofa
       supported_features: 44
       state: 'on'
-  icon: mdi:lightbulb
+  icon: mdi:lightbulb-night
   metadata:
     light.rear:
       entity_only: true
@@ -1405,7 +1405,7 @@
       friendly_name: Sofa
       supported_features: 44
       state: 'off'
-  icon: mdi:lightbulb
+  icon: mdi:lightbulb-off
   metadata:
     light.rear:
       entity_only: true
@@ -1452,7 +1452,7 @@
       friendly_name: Dining Room
       supported_features: 44
       state: 'on'
-  icon: mdi:lightbulb
+  icon: mdi:lightbulb-night
   metadata:
     light.dining_room_light:
       entity_only: true
@@ -1495,7 +1495,7 @@
       friendly_name: Dining Room
       supported_features: 44
       state: 'on'
-  icon: mdi:lightbulb
+  icon: mdi:lightbulb-on
   metadata:
     light.dining_room_light:
       entity_only: true
@@ -1531,7 +1531,7 @@
       friendly_name: Dining Room
       supported_features: 44
       state: 'off'
-  icon: mdi:lightbulb
+  icon: mdi:lightbulb-off
   metadata:
     light.dining_room_light:
       entity_only: true
@@ -1656,7 +1656,7 @@
       icon: mdi:led-strip
       friendly_name: Stair lights
       state: 'on'
-  icon: mdi:lightbulb
+  icon: mdi:lightbulb-night
   metadata:
     light.upstairs:
       entity_only: true
@@ -1699,7 +1699,7 @@
       icon: mdi:led-strip
       friendly_name: Stair lights
       state: 'off'
-  icon: mdi:lightbulb
+  icon: mdi:lightbulb-off
   metadata:
     light.upstairs:
       entity_only: true
@@ -1742,11 +1742,53 @@
       icon: mdi:led-strip
       friendly_name: Stair lights
       state: 'off'
-  icon: mdi:lightbulb
+  icon: mdi:lightbulb-on
   metadata:
     light.upstairs:
       entity_only: true
     light.downstairs:
       entity_only: true
     switch.stair_lights:
+      entity_only: true
+- id: '1739781209280'
+  name: Custom Outside Bright
+  entities:
+    light.outside_light:
+      effect_list:
+      - None
+      - candle
+      supported_color_modes:
+      - brightness
+      effect: None
+      color_mode: brightness
+      brightness: 255
+      mode: normal
+      dynamics: none
+      friendly_name: Outside
+      supported_features: 44
+      state: 'on'
+  icon: mdi:lightbulb-on
+  metadata:
+    light.outside_light:
+      entity_only: true
+- id: '1739781225832'
+  name: Custom Outside Off
+  entities:
+    light.outside_light:
+      effect_list:
+      - None
+      - candle
+      supported_color_modes:
+      - brightness
+      effect:
+      color_mode:
+      brightness:
+      mode: normal
+      dynamics: none
+      friendly_name: Outside
+      supported_features: 44
+      state: 'off'
+  icon: mdi:lightbulb-off
+  metadata:
+    light.outside_light:
       entity_only: true

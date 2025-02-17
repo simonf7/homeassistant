@@ -73,6 +73,8 @@
       - entity: sensor.downstairs_temperature
         x: 10%
         y: 4%
+        popup: popup-outside.yaml
+        title: Outside
 
     - !include
       - button-light.yaml

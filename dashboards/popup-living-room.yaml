@@ -4,19 +4,19 @@ cards:
   - type: horizontal-stack
     cards:
       - !include
-        - button_scene_toggle.yaml
+        - button-scene-toggle.yaml
         - entity: scene.custom_lounge_daylight
           name: 'Bright'
       - !include
-        - button_scene_toggle.yaml
+        - button-scene-toggle.yaml
         - entity: scene.custom_lounge_uplighter
           name: 'Soft'
       - !include
-        - button_scene_toggle.yaml
+        - button-scene-toggle.yaml
         - entity: scene.custom_lounge_night
           name: 'Night'
       - !include
-        - button_scene_toggle.yaml
+        - button-scene-toggle.yaml
         - entity: scene.custom_lounge_off
           name: 'Off'
   - type: horizontal-stack
@@ -33,7 +33,7 @@ cards:
           - entity: light.rear
             secondary_info: brightness
   - !include
-    - snippet_thermometer.yaml
+    - snippet-thermometer.yaml
     - entity: sensor.sonoff_a4800b698d
   - type: media-control
     entity: media_player.living_room_display
