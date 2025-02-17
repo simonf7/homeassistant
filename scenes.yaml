@@ -1578,3 +1578,175 @@
   metadata:
     light.dining_room_light:
       entity_only: true
+- id: '1739738918775'
+  name: Custom Hall Soft
+  entities:
+    light.upstairs:
+      effect_list:
+      - None
+      - candle
+      supported_color_modes:
+      - brightness
+      effect: None
+      color_mode: brightness
+      brightness: 77
+      mode: normal
+      dynamics: none
+      friendly_name: Upstairs
+      supported_features: 44
+      state: 'on'
+    light.downstairs:
+      effect_list:
+      - None
+      - candle
+      supported_color_modes:
+      - brightness
+      effect: None
+      color_mode: brightness
+      brightness: 77
+      mode: normal
+      dynamics: none
+      friendly_name: Downstairs
+      supported_features: 44
+      state: 'on'
+    switch.stair_lights:
+      icon: mdi:led-strip
+      friendly_name: Stair lights
+      state: 'on'
+  icon: mdi:lightbulb
+  metadata:
+    light.upstairs:
+      entity_only: true
+    light.downstairs:
+      entity_only: true
+    switch.stair_lights:
+      entity_only: true
+- id: '1739739029575'
+  name: Custom Hall Night
+  entities:
+    light.upstairs:
+      effect_list:
+      - None
+      - candle
+      supported_color_modes:
+      - brightness
+      effect:
+      color_mode:
+      brightness:
+      mode: normal
+      dynamics: none
+      friendly_name: Upstairs
+      supported_features: 44
+      state: 'off'
+    light.downstairs:
+      effect_list:
+      - None
+      - candle
+      supported_color_modes:
+      - brightness
+      effect:
+      color_mode:
+      brightness:
+      mode: normal
+      dynamics: none
+      friendly_name: Downstairs
+      supported_features: 44
+      state: 'off'
+    switch.stair_lights:
+      icon: mdi:led-strip
+      friendly_name: Stair lights
+      state: 'on'
+  icon: mdi:lightbulb
+  metadata:
+    light.upstairs:
+      entity_only: true
+    light.downstairs:
+      entity_only: true
+    switch.stair_lights:
+      entity_only: true
+- id: '1739739044873'
+  name: Custom Hall Off
+  entities:
+    light.upstairs:
+      effect_list:
+      - None
+      - candle
+      supported_color_modes:
+      - brightness
+      effect:
+      color_mode:
+      brightness:
+      mode: normal
+      dynamics: none
+      friendly_name: Upstairs
+      supported_features: 44
+      state: 'off'
+    light.downstairs:
+      effect_list:
+      - None
+      - candle
+      supported_color_modes:
+      - brightness
+      effect:
+      color_mode:
+      brightness:
+      mode: normal
+      dynamics: none
+      friendly_name: Downstairs
+      supported_features: 44
+      state: 'off'
+    switch.stair_lights:
+      icon: mdi:led-strip
+      friendly_name: Stair lights
+      state: 'off'
+  icon: mdi:lightbulb
+  metadata:
+    light.upstairs:
+      entity_only: true
+    light.downstairs:
+      entity_only: true
+    switch.stair_lights:
+      entity_only: true
+- id: '1739739081133'
+  name: Custom Hall Bright
+  entities:
+    light.upstairs:
+      effect_list:
+      - None
+      - candle
+      supported_color_modes:
+      - brightness
+      effect: None
+      color_mode: brightness
+      brightness: 255
+      mode: normal
+      dynamics: none
+      friendly_name: Upstairs
+      supported_features: 44
+      state: 'on'
+    light.downstairs:
+      effect_list:
+      - None
+      - candle
+      supported_color_modes:
+      - brightness
+      effect: None
+      color_mode: brightness
+      brightness: 255
+      mode: normal
+      dynamics: none
+      friendly_name: Downstairs
+      supported_features: 44
+      state: 'on'
+    switch.stair_lights:
+      icon: mdi:led-strip
+      friendly_name: Stair lights
+      state: 'off'
+  icon: mdi:lightbulb
+  metadata:
+    light.upstairs:
+      entity_only: true
+    light.downstairs:
+      entity_only: true
+    switch.stair_lights:
+      entity_only: true

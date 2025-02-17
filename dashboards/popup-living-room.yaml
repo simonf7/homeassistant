@@ -10,7 +10,7 @@ cards:
       - !include
         - button_scene_toggle.yaml
         - entity: scene.custom_lounge_uplighter
-          name: 'Uplighter'
+          name: 'Soft'
       - !include
         - button_scene_toggle.yaml
         - entity: scene.custom_lounge_night
@@ -25,6 +25,7 @@ cards:
         entities:
           - entity: light.sofa
             secondary_info: brightness
+          - entity: light.tv_lights
       - type: entities
         entities:
           - entity: light.front

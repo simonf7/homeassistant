@@ -56,6 +56,8 @@
       - entity: sensor.sonoff_a4800c364c_temperature
         x: 49.5%
         y: 52%
+        popup: popup-hall.yaml
+        title: Hall
 
     - !include
       - button-light.yaml
@@ -64,6 +66,8 @@
         color: green
         x: 49.5%
         y: 60%
+        popup: popup-hall.yaml
+        title: Hall
     - !include
       - button-light.yaml
       - entity: light.wardrobe_light
@@ -88,6 +92,8 @@
         icon: lightbulb
         x: 52%
         y: 35%
+        popup: popup-hall.yaml
+        title: Hall
     - !include
       - button-light.yaml
       - entity: light.amy_s_light
