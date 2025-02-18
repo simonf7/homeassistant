@@ -16,3 +16,5 @@ cards:
     - entity: sensor.downstairs
   - type: sensor
     entity: sensor.outside_sensor_illuminance
+    graph: line
+    detail: 1

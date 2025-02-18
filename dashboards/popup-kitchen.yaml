@@ -5,19 +5,19 @@ cards:
     cards:
       - !include
         - button-scene-toggle.yaml
-        - entity: scene.custom_kitchen_daylight
+        - entity: switch.custom_kitchen_daylight_stateful_scene
           name: 'Bright'
       - !include
         - button-scene-toggle.yaml
-        - entity: scene.custom_kitchen_single
+        - entity: switch.custom_kitchen_single_stateful_scene
           name: 'Single'
       - !include
         - button-scene-toggle.yaml
-        - entity: scene.custom_kitchen_night
+        - entity: switch.custom_kitchen_night_stateful_scene
           name: 'Night'
       - !include
         - button-scene-toggle.yaml
-        - entity: scene.custom_kitchen_off
+        - entity: switch.custom_kitchen_off_stateful_scene
           name: 'Off'
   - type: entities
     entities:
