@@ -20,6 +20,10 @@ state:
 style:
   left: {{ x }}
   top: {{ y }}
+styles:
+  card:
+    - border-color: transparent
+    - background-color: transparent
 tap_action:
 {% if popup is defined %}
   action: fire-dom-event
@@ -33,3 +37,4 @@ tap_action:
 {% endif %}
 hold_action:
   action: none
+

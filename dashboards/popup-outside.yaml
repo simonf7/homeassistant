@@ -5,11 +5,11 @@ cards:
     cards:
       - !include
         - button-scene-toggle.yaml
-        - entity: scene.custom_outside_bright
+        - entity: switch.custom_outside_bright_stateful_scene
           name: 'Bright'
       - !include
         - button-scene-toggle.yaml
-        - entity: scene.custom_outside_off
+        - entity: switch.custom_outside_off_stateful_scene
           name: 'Off'
   - !include
     - snippet-thermometer.yaml
@@ -18,3 +18,7 @@ cards:
     entity: sensor.outside_sensor_illuminance
     graph: line
     detail: 1
+  - type: logbook
+    target:
+      entity_id:
+        - binary_sensor.outside_sensor_motion

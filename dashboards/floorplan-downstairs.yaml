@@ -90,6 +90,8 @@
         icon: lightbulb
         x: 29%
         y: 40%      
+        popup: popup-office.yaml
+        title: Office
     - !include # toilet light
       - button-light.yaml
       - entity: light.office

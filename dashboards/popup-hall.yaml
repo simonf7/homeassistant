@@ -5,19 +5,19 @@ cards:
     cards:
       - !include
         - button-scene-toggle.yaml
-        - entity: scene.custom_hall_bright
+        - entity: switch.custom_hall_bright_stateful_scene
           name: 'Bright'
       - !include
         - button-scene-toggle.yaml
-        - entity: scene.custom_hall_soft
+        - entity: switch.custom_hall_soft_stateful_scene
           name: 'Soft'
       - !include
         - button-scene-toggle.yaml
-        - entity: scene.custom_hall_night
+        - entity: switch.custom_hall_night_stateful_scene
           name: 'Night'
       - !include
         - button-scene-toggle.yaml
-        - entity: scene.custom_hall_off
+        - entity: switch.custom_hall_off_stateful_scene
           name: 'Off'
   - type: horizontal-stack
     cards:

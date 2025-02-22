@@ -1792,3 +1792,66 @@
   metadata:
     light.outside_light:
       entity_only: true
+- id: '1740236771181'
+  name: Custom Office Soft
+  entities:
+    light.hue_white_lamp_1:
+      effect_list:
+      - None
+      - candle
+      supported_color_modes:
+      - brightness
+      effect: None
+      color_mode: brightness
+      brightness: 153
+      mode: normal
+      dynamics: none
+      friendly_name: Office
+      supported_features: 44
+      state: 'on'
+  icon: mdi:lightbulb
+  metadata:
+    light.hue_white_lamp_1:
+      entity_only: true
+- id: '1740236796118'
+  name: Custom Office Off
+  entities:
+    light.hue_white_lamp_1:
+      effect_list:
+      - None
+      - candle
+      supported_color_modes:
+      - brightness
+      effect:
+      color_mode:
+      brightness:
+      mode: normal
+      dynamics: none
+      friendly_name: Office
+      supported_features: 44
+      state: 'off'
+  icon: mdi:lightbulb-off
+  metadata:
+    light.hue_white_lamp_1:
+      entity_only: true
+- id: '1740236879536'
+  name: Custom Office Bright
+  entities:
+    light.hue_white_lamp_1:
+      effect_list:
+      - None
+      - candle
+      supported_color_modes:
+      - brightness
+      effect: None
+      color_mode: brightness
+      brightness: 255
+      mode: normal
+      dynamics: none
+      friendly_name: Office
+      supported_features: 44
+      state: 'on'
+  icon: mdi:lightbulb-on
+  metadata:
+    light.hue_white_lamp_1:
+      entity_only: true

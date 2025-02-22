@@ -5,19 +5,19 @@ cards:
     cards:
       - !include
         - button-scene-toggle.yaml
-        - entity: scene.custom_dining_room_daylight
+        - entity: switch.custom_dining_room_daylight_stateful_scene
           name: 'Bright'
       - !include
         - button-scene-toggle.yaml
-        - entity: scene.custom_dining_room_soft
+        - entity: switch.custom_dining_room_soft_stateful_scene
           name: 'Soft'
       - !include
         - button-scene-toggle.yaml
-        - entity: scene.custom_dining_room_night
+        - entity: switch.custom_dining_room_night_stateful_scene
           name: 'Night'
       - !include
         - button-scene-toggle.yaml
-        - entity: scene.custom_dining_room_off
+        - entity: switch.custom_dining_room_off_stateful_scene
           name: 'Off'
   - type: entities
     entities:
