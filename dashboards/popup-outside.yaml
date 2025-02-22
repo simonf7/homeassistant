@@ -18,7 +18,13 @@ cards:
     entity: sensor.outside_sensor_illuminance
     graph: line
     detail: 1
-  - type: logbook
-    target:
-      entity_id:
-        - binary_sensor.outside_sensor_motion
+  - type: custom:logbook-card
+    title: Outside Motion
+    entity: binary_sensor.outside_sensor_motion
+    hidden_state:
+      - 'off'
+    max_items: 5
+    show:
+      duration: false
+      end_date: false
+      state: false
