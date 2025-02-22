@@ -9,6 +9,12 @@ views:
             title: Low Batteries
             secondary_info: '{last_updated}'
             sort: state
+            colors:
+              steps:
+                - '#ff0000' # red
+                - '#ffff00' # yellow
+                - '#004400' # green
+              gradient: true
             filter:
               include:
                 - name: entity_id
@@ -27,12 +33,10 @@ views:
             sort: name
             colors:
               steps:
-                - value: 5
-                  color: var(--label-badge-red)
-                - value: 30
-                  color: var(--label-badge-yellow)
-                - value: 100
-                  color: var(--label-badge-green)
+                - '#ff0000' # red
+                - '#ffff00' # yellow
+                - '#004400' # green
+              gradient: true
             filter:
               include:
                 - name: entity_id
@@ -48,12 +52,10 @@ views:
             sort: name
             colors:
               steps:
-                - value: 5
-                  color: var(--label-badge-red)
-                - value: 30
-                  color: var(--label-badge-yellow)
-                - value: 100
-                  color: var(--label-badge-green)
+                - '#ff0000' # red
+                - '#ffff00' # yellow
+                - '#004400' # green
+              gradient: true
             filter:
               include:
                 - name: attributes.friendly_name
@@ -66,12 +68,10 @@ views:
             sort: name
             colors:
               steps:
-                - value: 5
-                  color: var(--label-badge-red)
-                - value: 30
-                  color: var(--label-badge-yellow)
-                - value: 100
-                  color: var(--label-badge-green)
+                - '#ff0000' # red
+                - '#ffff00' # yellow
+                - '#004400' # green
+              gradient: true
             filter:
               include:
                 - name: attributes.friendly_name
@@ -84,12 +84,10 @@ views:
             sort: name
             colors:
               steps:
-                - value: 5
-                  color: var(--label-badge-red)
-                - value: 30
-                  color: var(--label-badge-yellow)
-                - value: 100
-                  color: var(--label-badge-green)
+                - '#ff0000' # red
+                - '#ffff00' # yellow
+                - '#004400' # green
+              gradient: true
             filter:
               include:
                 - name: attributes.friendly_name
