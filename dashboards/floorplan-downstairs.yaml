@@ -70,11 +70,16 @@
         title: Kitchen
     - !include # outside
       - button-thermometer.yaml
-      - entity: sensor.downstairs_temperature
+      - entity: sensor.outside_thermometer_temperature
         x: 10%
         y: 4%
         popup: popup-outside.yaml
         title: Outside
+    - !include # porch
+      - button-thermometer.yaml
+      - entity: sensor.porch_thermometer_temperature
+        x: 51.5%
+        y: 98%
 
     - !include
       - button-light.yaml
@@ -86,7 +91,7 @@
         title: Living Room
     - !include # office light
       - button-light.yaml
-      - entity: light.hue_white_lamp_1
+      - entity: light.office
         icon: lightbulb
         x: 29%
         y: 40%      
@@ -94,7 +99,7 @@
         title: Office
     - !include # toilet light
       - button-light.yaml
-      - entity: light.office
+      - entity: light.toilet
         icon: lightbulb
         x: 53%
         y: 32%
@@ -108,7 +113,7 @@
         title: Living Room
     - !include
       - button-light.yaml
-      - entity: light.dining_room_light
+      - entity: light.dining_room
         icon: lightbulb
         x: 25%
         y: 75%

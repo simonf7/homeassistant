@@ -13,7 +13,21 @@ cards:
           name: 'Off'
   - !include
     - snippet-thermometer.yaml
-    - entity: sensor.downstairs
+    - entity: sensor.outside_thermometer
+  - type: horizontal-stack
+    cards:
+      - show_state: true
+        show_name: true
+        camera_view: auto
+        type: picture-entity
+        entity: camera.garden_camera
+        image: https://demo.home-assistant.io/stub_config/bedroom.png
+      - show_state: true
+        show_name: true
+        camera_view: auto
+        type: picture-entity
+        entity: camera.side_camera
+        image: https://demo.home-assistant.io/stub_config/bedroom.png
   - type: sensor
     entity: sensor.outside_sensor_illuminance
     graph: line

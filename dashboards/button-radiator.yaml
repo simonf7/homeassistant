@@ -14,3 +14,20 @@ icon: >
 style:
   left: {{ x }}
   top: {{ y }}
+styles:
+  card:
+    - border-color: transparent
+    - background-color: transparent
+tap_action:
+{% if popup is defined %}
+  action: fire-dom-event
+  browser_mod:
+    service: browser_mod.popup
+    data:
+      title: {{ title }}
+      content: !include {{ popup }}
+{% else %}
+  action: none
+{% endif %}
+hold_action:
+  action: none

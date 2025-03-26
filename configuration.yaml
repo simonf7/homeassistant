@@ -35,9 +35,9 @@ lovelace:
       icon: mdi:stairs-up
       show_in_sidebar: true
       filename: dashboards/dashboard-upstairs.yaml
-    test-lights:
+    house-lights:
       mode: yaml
-      title: Test Lights
+      title: House Lights
       icon: mdi:stairs-up
       show_in_sidebar: true
-      filename: dashboards/dashboard-test.yaml
+      filename: dashboards/dashboard-house.yaml

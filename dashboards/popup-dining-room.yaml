@@ -21,7 +21,7 @@ cards:
           name: 'Off'
   - type: entities
     entities:
-      - entity: light.dining_room_light
+      - entity: light.dining_room
         secondary_info: brightness
   - !include
     - snippet-thermometer.yaml

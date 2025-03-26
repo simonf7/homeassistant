@@ -15,5 +15,9 @@ cards:
         - button-scene-toggle.yaml
         - entity: switch.custom_office_off_stateful_scene
           name: 'Off'
+  - type: entities
+    entities:
+      - entity: light.office
+        secondary_info: brightness
   - type: media-control
     entity: media_player.office_speaker

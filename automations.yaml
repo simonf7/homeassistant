@@ -44,7 +44,7 @@
   actions:
   - type: turn_off
     device_id: 607799a2718af7810b1cbdc0e07df1a8
-    entity_id: afa7993cb05f83523a35fb8be8cb560b
+    entity_id: 4ede4d29c3dd7f3bc2b299ddee27bbf0
     domain: light
   mode: single
 - id: '1736629800091'
@@ -53,13 +53,9 @@
   triggers:
   - type: turned_on
     device_id: 797f9162b98e7cedea3641f24b81d9b3
-    entity_id: a8984406c5592223721c8ba5243f08ce
+    entity_id: b14b15424b605748c0f1f8208e980d51
     domain: light
     trigger: device
-    for:
-      hours: 0
-      minutes: 0
-      seconds: 1
   conditions:
   - condition: state
     entity_id: light.tv_lights
@@ -80,13 +76,9 @@
   triggers:
   - type: turned_off
     device_id: 797f9162b98e7cedea3641f24b81d9b3
-    entity_id: a8984406c5592223721c8ba5243f08ce
+    entity_id: b14b15424b605748c0f1f8208e980d51
     domain: light
     trigger: device
-    for:
-      hours: 0
-      minutes: 0
-      seconds: 1
   conditions:
   - condition: state
     entity_id: light.tv_lights
@@ -172,13 +164,9 @@
   triggers:
   - type: turned_off
     device_id: 797f9162b98e7cedea3641f24b81d9b3
-    entity_id: a8984406c5592223721c8ba5243f08ce
+    entity_id: b14b15424b605748c0f1f8208e980d51
     domain: light
     trigger: device
-    for:
-      hours: 0
-      minutes: 0
-      seconds: 1
   conditions:
   - condition: state
     entity_id: light.tv_lights

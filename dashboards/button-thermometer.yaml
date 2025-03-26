@@ -7,6 +7,10 @@ show_icon: false
 style:
   left: {{ x }}
   top: {{ y }}
+styles:
+  card:
+    - border-color: transparent
+    - background-color: transparent
 tap_action:
 {% if popup is defined %}
   action: fire-dom-event
