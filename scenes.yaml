@@ -1753,7 +1753,7 @@
 - id: '1739781209280'
   name: Custom Outside Bright
   entities:
-    light.outside_light:
+    light.outside:
       effect_list:
       - None
       - candle
@@ -1769,12 +1769,12 @@
       state: 'on'
   icon: mdi:lightbulb-on
   metadata:
-    light.outside_light:
+    light.outside:
       entity_only: true
 - id: '1739781225832'
   name: Custom Outside Off
   entities:
-    light.outside_light:
+    light.outside:
       effect_list:
       - None
       - candle
@@ -1790,7 +1790,7 @@
       state: 'off'
   icon: mdi:lightbulb-off
   metadata:
-    light.outside_light:
+    light.outside:
       entity_only: true
 - id: '1740236771181'
   name: Custom Office Soft

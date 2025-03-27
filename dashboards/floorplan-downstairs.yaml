@@ -4,7 +4,7 @@
   'light.kitchen_1', 'light.kitchen_2', 'light.kitchen_3', 'light.kitchen_4', 'light.kitchen_5', 'light.kitchen_6' 
 ] %}
 {% set white_bulbs = [
-  'light.toilet', 'light.office_2', 'light.downstairs', 'light.outside_light'
+  'light.toilet', 'light.office', 'light.downstairs', 'light.outside'
 ] %}
 
 - type: picture-elements
