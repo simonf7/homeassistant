@@ -38,6 +38,6 @@ lovelace:
     house-lights:
       mode: yaml
       title: House Lights
-      icon: mdi:stairs-up
+      icon: mdi:home
       show_in_sidebar: true
       filename: dashboards/dashboard-house.yaml

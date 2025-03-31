@@ -34,28 +34,28 @@
       - button-radiator.yaml
       - entity: sensor.sonoff_a4800ba0b7
         x: 30%
-        y: 7%
+        y: 8%
     - !include # spareroom radiator
       - button-radiator.yaml
       - entity: sensor.sonoff_a4800badea
         x: 74%
-        y: 7%
+        y: 8%
     - !include # bedroom radiator
       - button-radiator.yaml
       - entity: sensor.sonoff_a4800b9e1a
         x: 25%
-        y: 92%
+        y: 91%
     - !include # harry's radiator
       - button-radiator.yaml
       - entity: sensor.sonoff_a4800b6840
         x: 77%
-        y: 92%
+        y: 91%
 
     - !include # bathroom thermometer
       - button-thermometer.yaml
       - entity: sensor.bathroom_thermometer_temperature
         x: 53%
-        y: 5%
+        y: 6%
 
     - !include # hall
       - button-thermometer.yaml
@@ -136,3 +136,16 @@
         icon: lightbulb
         x: 75%
         y: 70%
+  card_mod:
+    style: |
+      ha-card {
+        background: none;
+        box-shadow: none;
+        border: none;
+      }
+      h1.card-header {
+        padding: 0px;
+      }
+      div#states.card-content {
+        padding: 0px;
+      }

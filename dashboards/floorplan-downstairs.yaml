@@ -198,3 +198,16 @@
         y: 11.5%
         popup: popup-kitchen.yaml
         title: Kitchen
+  card_mod:
+    style: |
+      ha-card {
+        background: none;
+        box-shadow: none;
+        border: none;
+      }
+      h1.card-header {
+        padding: 0px;
+      }
+      div#states.card-content {
+        padding: 0px;
+      }
