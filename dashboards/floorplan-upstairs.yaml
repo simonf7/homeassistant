@@ -30,41 +30,6 @@
         entity: switch.stair_lights
         color: [120, 50]
 
-    - !include # amy's radiator
-      - button-radiator.yaml
-      - entity: sensor.sonoff_a4800ba0b7
-        x: 30%
-        y: 8%
-    - !include # spareroom radiator
-      - button-radiator.yaml
-      - entity: sensor.sonoff_a4800badea
-        x: 74%
-        y: 8%
-    - !include # bedroom radiator
-      - button-radiator.yaml
-      - entity: sensor.sonoff_a4800b9e1a
-        x: 25%
-        y: 91%
-    - !include # harry's radiator
-      - button-radiator.yaml
-      - entity: sensor.sonoff_a4800b6840
-        x: 77%
-        y: 91%
-
-    - !include # bathroom thermometer
-      - button-thermometer.yaml
-      - entity: sensor.bathroom_thermometer_temperature
-        x: 53%
-        y: 6%
-
-    - !include # hall
-      - button-thermometer.yaml
-      - entity: sensor.sonoff_a4800c364c_temperature
-        x: 49.5%
-        y: 52%
-        popup: popup-hall.yaml
-        title: Hall
-
     - !include
       - button-light.yaml
       - entity: switch.stair_lights
@@ -136,6 +101,41 @@
         icon: lightbulb
         x: 75%
         y: 70%
+
+    - !include # amy's radiator
+      - button-radiator.yaml
+      - entity: sensor.sonoff_a4800ba0b7
+        x: 30%
+        y: 8%
+    - !include # spareroom radiator
+      - button-radiator.yaml
+      - entity: sensor.sonoff_a4800badea
+        x: 74%
+        y: 8%
+    - !include # bedroom radiator
+      - button-radiator.yaml
+      - entity: sensor.sonoff_a4800b9e1a
+        x: 25%
+        y: 91%
+    - !include # harry's radiator
+      - button-radiator.yaml
+      - entity: sensor.sonoff_a4800b6840
+        x: 77%
+        y: 91%
+
+    - !include # bathroom thermometer
+      - button-thermometer.yaml
+      - entity: sensor.bathroom_thermometer_temperature
+        x: 53%
+        y: 6%
+
+    - !include # hall
+      - button-thermometer.yaml
+      - entity: sensor.sonoff_a4800c364c_temperature
+        x: 49.5%
+        y: 52%
+        popup: popup-hall.yaml
+        title: Hall
   card_mod:
     style: |
       ha-card {

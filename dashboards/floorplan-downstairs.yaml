@@ -40,47 +40,6 @@
         entity: media_player.50ex750_series
         color: [0, 0]
 
-    - !include # living room
-      - button-thermometer.yaml
-      - entity: sensor.sonoff_a4800b698d_temperature
-        x: 80%
-        y: 96%
-        popup: popup-living-room.yaml
-        title: Living Room
-    - !include # hall
-      - button-thermometer.yaml
-      - entity: sensor.sonoff_a4800c364c_temperature
-        x: 49.5%
-        y: 60%
-        popup: popup-hall.yaml
-        title: Hall
-    - !include # dining room
-      - button-thermometer.yaml
-      - entity: sensor.sonoff_a4800c35c2_temperature
-        x: 23%
-        y: 96%
-        popup: popup-dining-room.yaml
-        title: Dining Room
-    - !include # kitchen
-      - button-thermometer.yaml
-      - entity: sensor.sonoff_a4800c23bc_temperature
-        x: 60%
-        y: 4%
-        popup: popup-kitchen.yaml
-        title: Kitchen
-    - !include # outside
-      - button-thermometer.yaml
-      - entity: sensor.outside_thermometer_temperature
-        x: 10%
-        y: 4%
-        popup: popup-outside.yaml
-        title: Outside
-    - !include # porch
-      - button-thermometer.yaml
-      - entity: sensor.porch_thermometer_temperature
-        x: 51.5%
-        y: 98%
-
     - !include
       - button-light.yaml
       - entity: light.rear
@@ -198,6 +157,47 @@
         y: 11.5%
         popup: popup-kitchen.yaml
         title: Kitchen
+
+    - !include # living room
+      - button-thermometer.yaml
+      - entity: sensor.sonoff_a4800b698d_temperature
+        x: 80%
+        y: 96%
+        popup: popup-living-room.yaml
+        title: Living Room
+    - !include # hall
+      - button-thermometer.yaml
+      - entity: sensor.sonoff_a4800c364c_temperature
+        x: 49.5%
+        y: 60%
+        popup: popup-hall.yaml
+        title: Hall
+    - !include # dining room
+      - button-thermometer.yaml
+      - entity: sensor.sonoff_a4800c35c2_temperature
+        x: 23%
+        y: 96%
+        popup: popup-dining-room.yaml
+        title: Dining Room
+    - !include # kitchen
+      - button-thermometer.yaml
+      - entity: sensor.sonoff_a4800c23bc_temperature
+        x: 60%
+        y: 4%
+        popup: popup-kitchen.yaml
+        title: Kitchen
+    - !include # outside
+      - button-thermometer.yaml
+      - entity: sensor.outside_thermometer_temperature
+        x: 10%
+        y: 4%
+        popup: popup-outside.yaml
+        title: Outside
+    - !include # porch
+      - button-thermometer.yaml
+      - entity: sensor.porch_thermometer_temperature
+        x: 51.5%
+        y: 98%
   card_mod:
     style: |
       ha-card {

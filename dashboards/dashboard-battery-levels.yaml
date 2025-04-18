@@ -23,7 +23,7 @@ views:
                   value: battery
               exclude:
                 - name: state
-                  value: 5
+                  value: 10
                   operator: '>'
           - type: custom:battery-state-card
             title: Light Switches

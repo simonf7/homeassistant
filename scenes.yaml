@@ -1797,13 +1797,13 @@
   entities:
     light.office:
       effect_list:
-      - None
+      - 'off'
       - candle
       supported_color_modes:
       - brightness
-      effect: None
+      effect: 'off'
       color_mode: brightness
-      brightness: 153
+      brightness: 112
       mode: normal
       dynamics: none
       friendly_name: Office
@@ -1818,7 +1818,7 @@
   entities:
     light.office:
       effect_list:
-      - None
+      - 'off'
       - candle
       supported_color_modes:
       - brightness

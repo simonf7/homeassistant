@@ -184,3 +184,32 @@
       brightness: 255
     action: light.turn_on
   mode: single
+- id: '1744151227137'
+  alias: Monitor Drive Camera
+  description: ''
+  triggers:
+  - trigger: state
+    entity_id:
+    - device_tracker.drive_camera
+    from: home
+    to: not_home
+    for:
+      hours: 0
+      minutes: 0
+      seconds: 5
+  conditions: []
+  actions:
+  - type: turn_off
+    device_id: 76cc523bc96313e37dcbcc0404612208
+    entity_id: 5e59fc094f37a472da7364ebebc67826
+    domain: switch
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 30
+      milliseconds: 0
+  - type: turn_on
+    device_id: 76cc523bc96313e37dcbcc0404612208
+    entity_id: 5e59fc094f37a472da7364ebebc67826
+    domain: switch
+  mode: single
