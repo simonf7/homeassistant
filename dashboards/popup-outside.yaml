@@ -7,6 +7,10 @@ cards:
         - button-scene-toggle.yaml
         - entity: switch.custom_outside_bright_stateful_scene
           name: 'Bright'
+      - type: markdown
+        content: ' '
+      - type: markdown
+        content: ' '
       - !include
         - button-scene-toggle.yaml
         - entity: switch.custom_outside_off_stateful_scene
