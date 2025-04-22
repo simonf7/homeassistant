@@ -11,6 +11,8 @@ cards:
         - button-scene-toggle.yaml
         - entity: switch.custom_office_soft_stateful_scene
           name: 'Soft'
+      - type: markdown
+        content: ' '
       - !include
         - button-scene-toggle.yaml
         - entity: switch.custom_office_off_stateful_scene

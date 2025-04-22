@@ -19,6 +19,8 @@ styles:
     - border-color: transparent
     - background-color: transparent
     - text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+    - stroke: black;
+    - stroke-width: 0.5px;
 tap_action:
 {% if popup is defined %}
   action: fire-dom-event

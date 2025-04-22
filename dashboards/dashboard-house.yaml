@@ -3,8 +3,23 @@ views:
   - title: Home
     sections:
       - type: grid
-        cards: !include floorplan-upstairs.yaml
+        cards: !include floorplan-downstairs.yaml
         column_span: 4
       - type: grid
-        cards: !include floorplan-downstairs.yaml
+        cards:
+          - type: entity
+            entity: device_tracker.simon_s_s23_ultra
+            state_color: true
+          - type: entity
+            entity: device_tracker.galaxy_s20_fe
+            state_color: true
+          - type: entity
+            entity: device_tracker.harrison_s_s24_ultra
+            state_color: true
+          - type: entity
+            entity: device_tracker.iphone
+            state_color: true
+        column_span: 4
+      - type: grid
+        cards: !include floorplan-upstairs.yaml
         column_span: 4

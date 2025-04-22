@@ -12,6 +12,9 @@
   grid_options:
     columns: full
   elements:
+    - !include
+      - image-daylight.yaml
+      - image: /local/images/downstairs/daylight.png
   {% for bulb in color_bulbs %}
     - !include
       - light-color.yaml
@@ -135,7 +138,7 @@
       - entity: light.kitchen_4
         icon: lightbulb-spot
         size: 1em
-        x: 69%
+        x: 73%
         y: 15%
         popup: popup-kitchen.yaml
         title: Kitchen
@@ -144,7 +147,7 @@
       - entity: light.kitchen_5
         icon: lightbulb-spot
         size: 1em
-        x: 71.5%
+        x: 75.5%
         y: 17.5%
         popup: popup-kitchen.yaml
         title: Kitchen
@@ -153,7 +156,7 @@
       - entity: light.kitchen_6
         icon: lightbulb-spot
         size: 1em
-        x: 72%
+        x: 76%
         y: 14%
         popup: popup-kitchen.yaml
         title: Kitchen

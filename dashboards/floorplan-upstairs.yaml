@@ -12,6 +12,9 @@
   grid_options:
     columns: full
   elements:
+    - !include
+      - image-daylight.yaml
+      - image: /local/images/upstairs/daylight.png
   {% for bulb in color_bulbs %}
     - !include
       - light-color.yaml

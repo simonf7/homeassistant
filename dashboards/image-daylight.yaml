@@ -1,0 +1,30 @@
+# lovelace_gen
+type: image
+image: {{ image }}
+tap_action:
+  action: none
+hold_action:
+  action: none
+style:
+  transform: inherit
+  top: 0%
+  width: 100%
+  mix-blend-mode: lighten
+card_mod:
+  style: >
+    {% if color is defined %}
+    {% raw %}
+    {% set color = {% endraw %}{{ color }}{% raw %} %}
+    {% endraw %}
+    {% else %}
+    {% raw %}
+    {% set color = [52.72, 27.5] %}
+    {% endraw %}
+    {% endif %}
+    {% raw %}
+    {% set elevation = state_attr('sun.sun','elevation') | float %}
+    hui-image {
+      opacity: {{ (max(0, elevation)/90)|round(2) }};
+      filter: hue-rotate({{ (color[0])|round(2) }}deg) saturate({{ min(color[1]|round(2), 100 ) }}%);
+    }
+    {% endraw %}

@@ -213,3 +213,20 @@
     entity_id: 5e59fc094f37a472da7364ebebc67826
     domain: switch
   mode: single
+- id: '1745008819282'
+  alias: Turn off waterfall at 11pm
+  description: ''
+  triggers:
+  - trigger: time
+    at: '23:00:00'
+  conditions:
+  - condition: numeric_state
+    entity_id: sensor.outside_thermometer_temperature
+    above: 1
+    below: 100
+  actions:
+  - type: turn_off
+    device_id: b987625314537073b010e9f9af5291ba
+    entity_id: f30e259040ee5ae041a2b92495ab5653
+    domain: switch
+  mode: single
