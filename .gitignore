@@ -10,6 +10,7 @@ tts/
 home-assistant.log*
 home-assistant_v2.db*
 onlineBackupsData/
+.git-maintenance.lock/
 
 # Local secrets and machine-specific configuration
 secrets.yaml

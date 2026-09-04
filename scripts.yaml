@@ -20,3 +20,9 @@ power_off_television:
         command: PowerOff
   alias: Power Off Television
   description: ''
+
+git_maintenance:
+  sequence:
+    - action: shell_command.git_maintenance
+  alias: Maintain Git repository
+  description: Compact local Git objects without removing commit history.

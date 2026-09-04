@@ -12,6 +12,9 @@ automation: !include automations.yaml
 script: !include scripts.yaml
 scene: !include scenes.yaml
 
+shell_command:
+  git_maintenance: bash /config/scripts/git-maintenance.sh
+
 lovelace_gen:
 
 # Define extra yaml configured dashboards
