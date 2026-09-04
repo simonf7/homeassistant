@@ -1,0 +1,25 @@
+# lovelace_gen
+type: vertical-stack
+cards:
+  - type: horizontal-stack
+    cards:
+      - !include
+        - button-scene-toggle.yaml
+        - entity: switch.custom_office_bright_stateful_scene
+          name: 'Bright'
+      - !include
+        - button-scene-toggle.yaml
+        - entity: switch.custom_office_soft_stateful_scene
+          name: 'Soft'
+      - type: markdown
+        content: ' '
+      - !include
+        - button-scene-toggle.yaml
+        - entity: switch.custom_office_off_stateful_scene
+          name: 'Off'
+  - type: entities
+    entities:
+      - entity: light.office
+        secondary_info: brightness
+  - type: media-control
+    entity: media_player.office_speaker

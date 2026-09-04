@@ -1,0 +1,39 @@
+# lovelace_gen
+type: vertical-stack
+cards:
+  - type: horizontal-stack
+    cards:
+      - !include
+        - button-scene-toggle.yaml
+        - entity: switch.custom_lounge_daylight_stateful_scene
+          name: 'Bright'
+      - !include
+        - button-scene-toggle.yaml
+        - entity: switch.custom_lounge_uplighter_stateful_scene
+          name: 'Soft'
+      - !include
+        - button-scene-toggle.yaml
+        - entity: switch.custom_lounge_night_stateful_scene
+          name: 'Night'
+      - !include
+        - button-scene-toggle.yaml
+        - entity: switch.custom_lounge_off_stateful_scene
+          name: 'Off'
+  - type: horizontal-stack
+    cards:
+      - type: entities
+        entities:
+          - entity: light.sofa
+            secondary_info: brightness
+          - entity: light.tv_lights
+      - type: entities
+        entities:
+          - entity: light.front
+            secondary_info: brightness
+          - entity: light.rear
+            secondary_info: brightness
+  - !include
+    - snippet-thermometer.yaml
+    - entity: sensor.sonoff_a4800b698d
+  - type: media-control
+    entity: media_player.living_room_display

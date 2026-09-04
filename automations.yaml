@@ -1,0 +1,305 @@
+- id: '1736024836154'
+  alias: TV on, sofa on, set TV lights 100%
+  description: ''
+  triggers:
+  - trigger: state
+    entity_id:
+    - remote.50ex750_series
+    - media_player.50ex750_series
+    to: 'on'
+    for:
+      hours: 0
+      minutes: 0
+      seconds: 1
+    from: unavailable
+  conditions:
+  - condition: state
+    entity_id: light.sofa
+    state: 'on'
+    for:
+      hours: 0
+      minutes: 0
+      seconds: 1
+  actions:
+  - data:
+      entity_id: light.tv_lights
+      brightness: 255
+    action: light.turn_on
+  mode: single
+- id: '1736030062323'
+  alias: TV off
+  description: ''
+  triggers:
+  - trigger: state
+    entity_id:
+    - remote.50ex750_series
+    - media_player.50ex750_series
+    from: 'on'
+    to: unavailable
+    for:
+      hours: 0
+      minutes: 0
+      seconds: 1
+  conditions: []
+  actions:
+  - type: turn_off
+    device_id: 607799a2718af7810b1cbdc0e07df1a8
+    entity_id: 4ede4d29c3dd7f3bc2b299ddee27bbf0
+    domain: light
+  mode: single
+- id: '1736629800091'
+  alias: Sofa on, set tv light 100%
+  description: ''
+  triggers:
+  - type: turned_on
+    device_id: 797f9162b98e7cedea3641f24b81d9b3
+    entity_id: b14b15424b605748c0f1f8208e980d51
+    domain: light
+    trigger: device
+  conditions:
+  - condition: state
+    entity_id: light.tv_lights
+    state: 'on'
+    for:
+      hours: 0
+      minutes: 0
+      seconds: 1
+  actions:
+  - data:
+      entity_id: light.tv_lights
+      brightness: 255
+    action: light.turn_on
+  mode: single
+- id: '1736630036315'
+  alias: Sofa off, TV on, nighttime, set tv lights 25%
+  description: ''
+  triggers:
+  - type: turned_off
+    device_id: 797f9162b98e7cedea3641f24b81d9b3
+    entity_id: b14b15424b605748c0f1f8208e980d51
+    domain: light
+    trigger: device
+  conditions:
+  - condition: state
+    entity_id: light.tv_lights
+    state: 'on'
+    for:
+      hours: 0
+      minutes: 0
+      seconds: 1
+  - condition: sun
+    before: sunrise
+    after: sunset
+  actions:
+  - data:
+      entity_id: light.tv_lights
+      brightness: 63
+    action: light.turn_on
+  mode: single
+- id: '1736632151008'
+  alias: TV on, sofa off, nighttime, set TV lights 25%
+  description: ''
+  triggers:
+  - trigger: state
+    entity_id:
+    - remote.50ex750_series
+    - media_player.50ex750_series
+    to: 'on'
+    for:
+      hours: 0
+      minutes: 0
+      seconds: 1
+    from: unavailable
+  conditions:
+  - condition: state
+    entity_id: light.sofa
+    state: 'off'
+    for:
+      hours: 0
+      minutes: 0
+      seconds: 1
+  - condition: sun
+    after: sunset
+    before: sunrise
+  actions:
+  - data:
+      entity_id: light.tv_lights
+      brightness: 63
+    action: light.turn_on
+  mode: single
+- id: '1736685840415'
+  alias: TV on, sofa off, daytime, set TV lights 100%
+  description: ''
+  triggers:
+  - trigger: state
+    entity_id:
+    - remote.50ex750_series
+    - media_player.50ex750_series
+    to: 'on'
+    for:
+      hours: 0
+      minutes: 0
+      seconds: 1
+    from: unavailable
+  conditions:
+  - condition: state
+    entity_id: light.sofa
+    state: 'off'
+    for:
+      hours: 0
+      minutes: 0
+      seconds: 1
+  - condition: sun
+    after: sunrise
+    before: sunset
+  actions:
+  - data:
+      entity_id: light.tv_lights
+      brightness: 255
+    action: light.turn_on
+  mode: single
+- id: '1737632516779'
+  alias: Sofa off, TV on, daytime, set TV lights 100%
+  description: ''
+  triggers:
+  - type: turned_off
+    device_id: 797f9162b98e7cedea3641f24b81d9b3
+    entity_id: b14b15424b605748c0f1f8208e980d51
+    domain: light
+    trigger: device
+  conditions:
+  - condition: state
+    entity_id: light.tv_lights
+    state: 'on'
+    for:
+      hours: 0
+      minutes: 0
+      seconds: 1
+  - condition: sun
+    before: sunset
+    after: sunrise
+  actions:
+  - data:
+      entity_id: light.tv_lights
+      brightness: 255
+    action: light.turn_on
+  mode: single
+- id: '1744151227137'
+  alias: Monitor Drive Camera
+  description: ''
+  triggers:
+  - trigger: state
+    entity_id:
+    - device_tracker.drive_camera
+    from:
+    - home
+    to:
+    - not_home
+    for:
+      hours: 0
+      minutes: 0
+      seconds: 30
+  conditions: []
+  actions:
+  - type: turn_off
+    device_id: 76cc523bc96313e37dcbcc0404612208
+    entity_id: 5e59fc094f37a472da7364ebebc67826
+    domain: switch
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 30
+      milliseconds: 0
+  - type: turn_on
+    device_id: 76cc523bc96313e37dcbcc0404612208
+    entity_id: 5e59fc094f37a472da7364ebebc67826
+    domain: switch
+  mode: single
+- id: '1745008819282'
+  alias: Turn off waterfall at 11pm
+  description: ''
+  triggers:
+  - trigger: time
+    at: '23:00:00'
+  conditions:
+  - condition: numeric_state
+    entity_id: sensor.outside_thermometer_temperature
+    above: 3
+    below: 100
+  actions:
+  - type: turn_off
+    device_id: b987625314537073b010e9f9af5291ba
+    entity_id: f30e259040ee5ae041a2b92495ab5653
+    domain: switch
+  mode: single
+- id: '1752015009053'
+  alias: Morning off if after sunrise
+  description: ''
+  triggers:
+  - trigger: time
+    at: 06:05:00
+  conditions:
+  - condition: sun
+    after: sunrise
+  actions:
+  - action: light.turn_off
+    metadata: {}
+    data: {}
+    target:
+      area_id:
+      - kitchen
+      - office
+      - hall
+      - bathroom
+  mode: single
+- id: '1763144442384'
+  alias: Pond frost protection under 3C
+  description: ''
+  triggers:
+  - type: temperature
+    device_id: 838036362034bcdf11b0a595cd9cff49
+    entity_id: e5a6bd3bea547dc5b6f3fed897075f55
+    domain: sensor
+    trigger: device
+    below: 3
+  conditions:
+  - condition: state
+    entity_id: switch.waterfall_socket_1
+    state:
+    - 'off'
+  actions:
+  - type: turn_on
+    device_id: b987625314537073b010e9f9af5291ba
+    entity_id: f30e259040ee5ae041a2b92495ab5653
+    domain: switch
+  mode: single
+- id: '1765472737188'
+  alias: Turn on outside light if dark
+  description: ''
+  triggers:
+  - trigger: sun
+    event: sunset
+    offset: -00:15:00
+  conditions:
+  - condition: time
+    before: '17:30:00'
+  actions:
+  - action: light.turn_on
+    metadata: {}
+    target:
+      entity_id: light.outside
+    data: {}
+  mode: single
+- id: '1787942744330'
+  alias: Sonoff Integration Auto-Reset
+  description: ''
+  triggers:
+  - trigger: time_pattern
+    minutes: /15
+  conditions: []
+  actions:
+  - action: homeassistant.reload_config_entry
+    metadata: {}
+    data:
+      entry_id: 01JE9Y68FY5JTKHFMKN6MJZQP0
+  mode: single

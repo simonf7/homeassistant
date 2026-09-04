@@ -1,0 +1,11 @@
+# lovelace_gen
+type: custom:button-card
+entity: {{ entity }}
+name: {{ name }}
+icon: mdi:account-off-outline
+show_name: true
+show_state: false
+show_icon: true
+state:
+  - value: home
+    icon: mdi:account-check

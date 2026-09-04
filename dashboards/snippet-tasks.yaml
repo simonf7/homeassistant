@@ -1,0 +1,6 @@
+display_order: duedate_asc
+type: todo-list
+entity: todo.simonf21_s_list
+hide_completed: true
+hide_section_headers: true
+hide_create: true

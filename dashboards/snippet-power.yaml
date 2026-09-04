@@ -1,0 +1,26 @@
+type: custom:power-flow-card-plus
+entities:
+  battery:
+    entity: ""
+    state_of_charge: sensor.sm_s918b_battery_level
+  grid:
+    entity: sensor.octopus_energy_electricity_21l4171264_1012675233301_current_demand
+  individual:
+    - entity: sensor.entertainment_monitor_sonoff_a480141b02_power
+      name: Entertainment
+  fossil_fuel_percentage: {}
+clickable_entities: true
+display_zero_lines: true
+use_new_flow_rate_model: true
+base_decimals: 0
+kilo_decimals: 1
+min_flow_rate: 0.75
+max_flow_rate: 6
+max_expected_power: 2000
+min_expected_power: 0.01
+kilo_threshold: 1000
+mega_threshold: 1000000
+transparency_zero_lines: 0
+sort_individual_devices: false
+grid_options:
+  columns: full

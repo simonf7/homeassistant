@@ -1,0 +1,13 @@
+# lovelace_gen
+type: horizontal-stack
+cards:
+  - graph: line
+    type: sensor
+    entity: {{ entity }}_temperature
+    detail: 1
+    name: Temperature
+  - graph: line
+    type: sensor
+    entity: {{ entity }}_humidity
+    detail: 1
+    name: Humidity

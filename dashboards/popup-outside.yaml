@@ -1,0 +1,34 @@
+# lovelace_gen
+type: vertical-stack
+cards:
+  - type: horizontal-stack
+    cards:
+      - !include
+        - button-scene-toggle.yaml
+        - entity: switch.custom_outside_bright_stateful_scene
+          name: 'Bright'
+      - type: markdown
+        content: ' '
+      - type: markdown
+        content: ' '
+      - !include
+        - button-scene-toggle.yaml
+        - entity: switch.custom_outside_off_stateful_scene
+          name: 'Off'
+  - !include
+    - snippet-thermometer.yaml
+    - entity: sensor.outside_thermometer
+  - type: sensor
+    entity: sensor.outside_sensor_illuminance
+    graph: line
+    detail: 1
+  - type: custom:logbook-card
+    title: Outside Motion
+    entity: binary_sensor.outside_sensor_motion
+    hidden_state:
+      - 'off'
+    max_items: 5
+    show:
+      duration: false
+      end_date: false
+      state: false

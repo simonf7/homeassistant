@@ -1,0 +1,22 @@
+power_on_tv:
+  sequence:
+  - action: remote.send_command
+    metadata: {}
+    target:
+      entity_id: remote.harmony
+    data:
+      device: '54522812'
+      command: PowerOn
+  alias: Power On TV
+  description: ''
+power_on_tv_duplicate:
+  sequence:
+  - action: remote.send_command
+    metadata: {}
+    target:
+      entity_id: remote.harmony
+    data:
+      device: '54522812'
+      command: PowerOff
+  alias: Power On TV (Duplicate)
+  description: ''

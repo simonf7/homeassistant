@@ -1,0 +1,26 @@
+type: custom:battery-state-card
+grid_options:
+  columns: full
+secondary_info: null
+sort: state
+colors:
+  steps:
+    - '#ff0000' # red
+    - '#ffff00' # yellow
+    - '#004400' # green
+  gradient: true
+filter:
+  include:
+    - or:
+        - name: entity_id
+          value: '*_battery_level'
+        - name: attributes.device_class
+          value: battery
+  exclude:
+    - name: state
+      value: unavailable
+    - name: state
+      value: unknown
+    - name: state
+      value: 10
+      operator: '>'

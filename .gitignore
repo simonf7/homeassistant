@@ -1,0 +1,19 @@
+# Home Assistant runtime and generated files
+.HA_VERSION
+.ha_run.lock
+.cache/
+.cloud/
+.storage/
+.tmp/
+deps/
+tts/
+home-assistant.log*
+home-assistant_v2.db*
+onlineBackupsData/
+
+# Local secrets and machine-specific configuration
+secrets.yaml
+*.secret.yaml
+
+# Keep custom integrations out of this dashboard-focused repository
+custom_components/

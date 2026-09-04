@@ -1,0 +1,34 @@
+entities:
+  - entity: calendar.simonf21_gmail_com
+    label: '📅 Simon:'
+  - entity: calendar.family
+    label: '👪'
+  - entity: calendar.family_birthdays
+    label: '🎂'
+  - entity: calendar.myschedule_rota
+    color: ''
+    label: '🍽️ Amy'
+    accent_color: '#ffaaaa'
+  - entity: >-
+      calendar.webcal_teamer_net_teams_121353_norwich_ice_events_subscription_ics_e8bc56
+    label: '⚽'
+    accent_color: '#ffffff'
+days_to_show: 14
+compact_days_to_show: 0
+weather:
+  position: date
+  date:
+    show_conditions: true
+    show_high_temp: true
+    show_low_temp: false
+    icon_size: 14px
+    font_size: 12px
+    color: var(--primary-text-color)
+  event:
+    show_conditions: true
+    show_temp: true
+    icon_size: 14px
+    font_size: 12px
+    color: var(--primary-text-color)
+  entity: weather.forecast_home
+type: custom:calendar-card-pro

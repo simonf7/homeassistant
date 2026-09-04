@@ -1,0 +1,43 @@
+# lovelace_gen
+type: custom:button-card
+entity: {{ entity }}
+show_name: false
+color: auto
+{% if size is defined %}
+size: {{ size }}
+{% else %}
+size: 2em
+{% endif %}
+state:
+  - value: 'on'
+    icon: mdi:{{ icon }}
+    {% if color is defined %}
+    color: {{ color }}
+    {% endif %}
+  - value: 'off'
+    icon: mdi:{{ icon }}-off
+    color: rgb(255,255,255)
+style:
+  left: {{ x }}
+  top: {{ y }}
+styles:
+  card:
+    - border-color: transparent
+    - background-color: transparent
+    - text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+    - stroke: black;
+    - stroke-width: 0.5px;
+tap_action:
+{% if popup is defined %}
+  action: fire-dom-event
+  browser_mod:
+    service: browser_mod.popup
+    data:
+      title: {{ title }}
+      content: !include {{ popup }}
+{% else %}
+  action: none
+{% endif %}
+hold_action:
+  action: none
+

@@ -1,0 +1,7 @@
+streams:
+  garden: kasa://simonf7%40hotmail.com:Y1ozSUhnN2RJUzBYMnE1eXpNT08=@192.168.0.231:19443/https/stream/mixed?video=h264&audio=g711&resolution=hd
+  shed: kasa://simonf7%40hotmail.com:Y1ozSUhnN2RJUzBYMnE1eXpNT08=@192.168.0.232:19443/https/stream/mixed?video=h264&audio=g711&resolution=hd
+  drive: kasa://simonf7%40hotmail.com:Y1ozSUhnN2RJUzBYMnE1eXpNT08=@192.168.0.233:19443/https/stream/mixed
+  side: kasa://simonf7%40hotmail.com:Y1ozSUhnN2RJUzBYMnE1eXpNT08=@192.168.0.234:19443/https/stream/mixed?video=h264&audio=g711&resolution=hd
+  garage: kasa://simonf7%40hotmail.com:Y1ozSUhnN2RJUzBYMnE1eXpNT08=@192.168.0.235:19443/https/stream/mixed?video=h264&audio=g711&resolution=hd
+  pond: kasa://simonf7%40hotmail.com:Y1ozSUhnN2RJUzBYMnE1eXpNT08=@192.168.0.236:19443/https/stream/mixed?video=h264&audio=g711&resolution=hd

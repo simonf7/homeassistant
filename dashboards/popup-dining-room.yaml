@@ -1,0 +1,28 @@
+# lovelace_gen
+type: vertical-stack
+cards:
+  - type: horizontal-stack
+    cards:
+      - !include
+        - button-scene-toggle.yaml
+        - entity: switch.custom_dining_room_daylight_stateful_scene
+          name: 'Bright'
+      - !include
+        - button-scene-toggle.yaml
+        - entity: switch.custom_dining_room_soft_stateful_scene
+          name: 'Soft'
+      - !include
+        - button-scene-toggle.yaml
+        - entity: switch.custom_dining_room_night_stateful_scene
+          name: 'Night'
+      - !include
+        - button-scene-toggle.yaml
+        - entity: switch.custom_dining_room_off_stateful_scene
+          name: 'Off'
+  - type: entities
+    entities:
+      - entity: light.dining_room
+        secondary_info: brightness
+  - !include
+    - snippet-thermometer.yaml
+    - entity: sensor.sonoff_a4800c35c2
