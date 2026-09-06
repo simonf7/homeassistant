@@ -8,6 +8,9 @@ style:
   left: {{ x }}
   top: {{ y }}
 styles:
+  state:
+    - font-size: >-
+        [[[ return window.matchMedia('(max-width: 600px)').matches ? '0.65em' : '1em'; ]]]
   card:
     - border-color: transparent
     - background-color: transparent
