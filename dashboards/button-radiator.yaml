@@ -4,7 +4,7 @@ entity: {{ entity }}_temperature
 show_name: false
 show_state: true
 show_icon: true
-size: 2em
+size: clamp(1.5em, 2.5vw, 2em)
 icon: >
 {% raw %}
   [[[ if (states['{% endraw %}{{ entity }}{% raw %}_work_state'].state ==
