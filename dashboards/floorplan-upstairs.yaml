@@ -1,7 +1,8 @@
 # lovelace_gen
 {% set color_bulbs = [ 
   'light.bathroom', 'light.amy_s', 'light.bed_lights', 'light.tube', 'light.spare_room',
-  'light.wardrobe', 'light.panel', 'light.harry_s_light', 'light.bedroom'
+  'light.wardrobe', 'light.panel', 'light.harry_s_light', 'light.bedroom',
+  'light.h619a_6e5e', 'light.harry_s_room_wall'
 ] %}
 {% set white_bulbs = [
   'light.upstairs'
@@ -73,7 +74,7 @@
       - entity: light.bedroom
         icon: lightbulb
         x: 28%
-        y: 21%
+        y: 22%
     - !include
       - button-light.yaml
       - entity: light.bed_lights
@@ -91,12 +92,24 @@
       - entity: light.tube
         icon: led-strip-variant
         x: 86%
-        y: 39%
+        y: 55%
+    - !include 
+      - button-light.yaml
+      - entity: light.harry_s_room_wall
+        icon: led-strip-variant
+        x: 86%
+        y: 87%
     - !include
       - button-light.yaml
       - entity: light.amy_s
         icon: lightbulb
         x: 28%
+        y: 70%
+    - !include 
+      - button-light.yaml
+      - entity: light.h619a_6e5e
+        icon: led-strip-variant
+        x: 18%
         y: 70%
     - !include
       - button-light.yaml
