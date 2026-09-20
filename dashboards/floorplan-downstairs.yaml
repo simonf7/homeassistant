@@ -182,6 +182,13 @@
         y: 86%
         popup: popup-dining-room.yaml
         title: Dining Room
+    - !include # office
+      - button-thermometer.yaml
+      - entity: sensor.office_thermometer_sonoff_a48014d8e7_temperature
+        x: 29%
+        y: 30%
+        popup: popup-office.yaml
+        title: Office
     - !include # kitchen
       - button-thermometer.yaml
       - entity: sensor.sonoff_a4800c23bc_temperature

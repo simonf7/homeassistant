@@ -22,7 +22,7 @@ card_mod:
     {% set sat_mul = 1 if state_attr(light, 'color_mode') == 'xy' else 0.5 %}
 
     hui-image {
-      opacity: {{ state_attr(light, 'brightness') / 255 if states(light) == 'on' else '0' }};
+      opacity: {{ max(state_attr(light, 'brightness') / 255, 0.1) if states(light) == 'on' else '0' }};
       filter: hue-rotate({{ (color[0] + hue_adj)|round(2) }}deg) saturate({{ min(color[1]|round(2) * sat_mul, 100 ) }}%);
     }
     {% endraw %}

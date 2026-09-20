@@ -141,7 +141,7 @@
 
     - !include # bathroom thermometer
       - button-thermometer.yaml
-      - entity: sensor.bathroom_thermometer_temperature
+      - entity: sensor.bathroom_thermometer_sonoff_a48014d8eb_temperature
         x: 53%
         y: 6%
 

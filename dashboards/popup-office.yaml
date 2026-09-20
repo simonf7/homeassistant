@@ -21,5 +21,8 @@ cards:
     entities:
       - entity: light.office
         secondary_info: brightness
+  - !include
+    - snippet-thermometer.yaml
+    - entity: sensor.office_thermometer_sonoff_a48014d8e7_temperature
   - type: media-control
     entity: media_player.office_speaker

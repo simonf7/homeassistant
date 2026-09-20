@@ -26,7 +26,7 @@ card_mod:
     {% endif %}
     {% raw %}
     hui-image {
-      opacity: {{ state_attr(light, 'brightness') / 255 if states(light) == 'on' else '0' }};
+      opacity: {{ max(state_attr(light, 'brightness') / 255, 0.1) if states(light) == 'on' else '0' }};
       filter: hue-rotate({{ (color[0])|round(2) }}deg) saturate({{ min(color[1]|round(2), 100 ) }}%);
     }
     {% endraw %}
