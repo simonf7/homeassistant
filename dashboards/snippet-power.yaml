@@ -1,13 +1,19 @@
 type: custom:power-flow-card-plus
 entities:
   battery:
-    entity: ""
+    entity: ''
     state_of_charge: sensor.sm_s918b_battery_level
   grid:
     entity: sensor.octopus_energy_electricity_21l4171264_1012675233301_current_demand
   individual:
     - entity: sensor.entertainment_monitor_sonoff_a480141b02_power
       name: Entertainment
+      icon: mdi:television
+      display_zero: true # <--- This keeps the entity visible at
+    - entity: sensor.kitchen_washing_machine_power
+      name: Washing Machine
+      icon: mdi:washing-machine
+      display_zero: true # <--- This keeps the entity visible at
   fossil_fuel_percentage: {}
 clickable_entities: true
 display_zero_lines: true
