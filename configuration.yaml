@@ -27,6 +27,12 @@ lovelace:
       icon: mdi:battery-50
       show_in_sidebar: true
       filename: dashboards/dashboard-battery-levels.yaml
+    link-quality:
+      mode: yaml
+      title: Link Quality
+      icon: mdi:signal
+      show_in_sidebar: true
+      filename: dashboards/dashboard-link-quality.yaml
     downstairs-lights:
       mode: yaml
       title: Downstairs Lights
