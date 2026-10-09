@@ -1,22 +1,42 @@
 type: custom:power-flow-card-plus
 entities:
   battery:
-    entity: ''
-    state_of_charge: sensor.sm_s918b_battery_level
+    state_of_charge: sensor.battery_soc
+    entity:
+      consumption: sensor.battery_discharge
+      production: sensor.battery_charge
   grid:
-    entity: sensor.octopus_energy_electricity_21l4171264_1012675233301_current_demand
+    entity:
+      consumption: >-
+        sensor.octopus_energy_electricity_21l4171264_1012675233301_current_demand
+      production: sensor.feed_in
+    use_metadata: false
+    secondary_info:
+      color_value: false
+      entity: sensor.current_electricity_rate_in_pence
+      decimals: 2
+      unit_white_space: false
+      unit_of_measurement: p
   individual:
     - entity: sensor.entertainment_monitor_ac_current_power_value
-      name: Entertainment
+      name: TV/Xbox
       icon: mdi:television
-      display_zero: true # <--- This keeps the entity visible at
     - entity: sensor.kitchen_washing_machine_power
       name: Washing Machine
-      icon: mdi:washing-machine
-      display_zero: true # <--- This keeps the entity visible at
+    - entity: sensor.zappi_27008591_myenergi_zappi_27008591_power_ct_grid
+      name: Zappi
+      icon: mdi:ev-station
   fossil_fuel_percentage: {}
+  solar:
+    entity: sensor.pv1_power
 clickable_entities: true
-display_zero_lines: true
+display_zero_lines:
+  mode: grey_out
+  transparency: 50
+  grey_color:
+    - 189
+    - 189
+    - 189
 use_new_flow_rate_model: true
 base_decimals: 0
 kilo_decimals: 1
