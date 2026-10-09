@@ -17,6 +17,8 @@ filter:
         - name: attributes.device_class
           value: battery
   exclude:
+    - name: entity_id
+      value: '*min_soc*'
     - name: state
       value: unavailable
     - name: state

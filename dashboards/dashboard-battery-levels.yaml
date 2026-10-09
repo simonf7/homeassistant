@@ -22,6 +22,10 @@ views:
                 - name: attributes.device_class
                   value: battery
               exclude:
+                - name: entity_id
+                  value: '*min_soc*'
+                - name: entity_id
+                  value: '*state_of_charge'
                 - name: state
                   value: 10
                   operator: '>'
