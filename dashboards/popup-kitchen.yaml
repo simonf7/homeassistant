@@ -42,6 +42,6 @@ cards:
             secondary_info: brightness
   - !include
     - snippet-thermometer.yaml
-    - entity: sensor.sonoff_a4800c23bc
+    - entity: sensor.kitchen_thermometer
   - type: media-control
     entity: media_player.kitchen_display

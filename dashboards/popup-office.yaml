@@ -23,6 +23,6 @@ cards:
         secondary_info: brightness
   - !include
     - snippet-thermometer.yaml
-    - entity: sensor.office_thermometer_sonoff_a48014d8e7
+    - entity: sensor.office_thermometer
   - type: media-control
     entity: media_player.office_speaker

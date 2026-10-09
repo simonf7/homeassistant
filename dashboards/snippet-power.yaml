@@ -6,7 +6,7 @@ entities:
   grid:
     entity: sensor.octopus_energy_electricity_21l4171264_1012675233301_current_demand
   individual:
-    - entity: sensor.entertainment_monitor_sonoff_a480141b02_power
+    - entity: sensor.entertainment_monitor_ac_current_power_value
       name: Entertainment
       icon: mdi:television
       display_zero: true # <--- This keeps the entity visible at

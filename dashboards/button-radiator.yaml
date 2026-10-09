@@ -1,15 +1,17 @@
 # lovelace_gen
 type: custom:button-card
-entity: {{ entity }}_temperature
+entity: sensor.{{ entity }}_local_temperature
 show_name: false
 show_state: true
 show_icon: true
 size: clamp(1.5em, 2.5vw, 2em)
 icon: >
 {% raw %}
-  [[[ if (states['{% endraw %}{{ entity }}{% raw %}_work_state'].state ==
-  '1') return "mdi:radiator";
-        else return "mdi:radiator-off"; ]]]
+  [[[
+    return states['climate.{% endraw %}{{ entity }}{% raw %}']?.attributes?.hvac_action === 'heating'
+      ? 'mdi:radiator'
+      : 'mdi:radiator-off';
+  ]]]
 {% endraw %}
 style:
   left: {{ x }}

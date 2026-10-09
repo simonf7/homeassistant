@@ -25,4 +25,4 @@ cards:
         secondary_info: brightness
   - !include
     - snippet-thermometer.yaml
-    - entity: sensor.sonoff_a4800c35c2
+    - entity: sensor.dining_room_thermometer

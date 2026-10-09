@@ -120,34 +120,34 @@
 
     - !include # amy's radiator
       - button-radiator.yaml
-      - entity: sensor.sonoff_a4800ba0b7
-        x: 30%
-        y: 9%
+      - entity: amys_radiator
+        x: 28%
+        y: 91%
     - !include # spareroom radiator
       - button-radiator.yaml
-      - entity: sensor.sonoff_a4800badea
+      - entity: spare_room_radiator
         x: 75.5%
         y: 9%
     - !include # bedroom radiator
       - button-radiator.yaml
-      - entity: sensor.sonoff_a4800b9e1a
-        x: 28%
-        y: 91%
+      - entity: bedroom_radiator
+        x: 30%
+        y: 9%
     - !include # harry's radiator
       - button-radiator.yaml
-      - entity: sensor.sonoff_a4800b6840
+      - entity: harrys_radiator
         x: 72%
         y: 91%
 
     - !include # bathroom thermometer
       - button-thermometer.yaml
-      - entity: sensor.bathroom_thermometer_sonoff_a48014d8eb_temperature
+      - entity: sensor.bathroom_thermometer_temperature
         x: 53%
         y: 6%
 
     - !include # hall
       - button-thermometer.yaml
-      - entity: sensor.sonoff_a4800c364c_temperature
+      - entity: sensor.hall_thermometer_temperature
         x: 49.5%
         y: 53%
         popup: popup-hall.yaml

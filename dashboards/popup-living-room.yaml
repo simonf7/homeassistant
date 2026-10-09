@@ -34,6 +34,6 @@ cards:
             secondary_info: brightness
   - !include
     - snippet-thermometer.yaml
-    - entity: sensor.sonoff_a4800b698d
+    - entity: sensor.living_room_thermometer
   - type: media-control
     entity: media_player.living_room_display
