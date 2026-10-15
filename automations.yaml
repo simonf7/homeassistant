@@ -309,3 +309,15 @@
     metadata: {}
     data: {}
   mode: single
+- id: '1792067175327'
+  alias: Shed power flow
+  description: ''
+  triggers: []
+  conditions: []
+  actions:
+  - action: cast.show_lovelace_view
+    metadata: {}
+    data:
+      entity_id: media_player.shed_display
+      view_path: power-dashboard
+  mode: single

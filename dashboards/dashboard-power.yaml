@@ -1,5 +1,5 @@
 views:
-  - title: Power
+  - title: Power Flow
     sections:
       - type: grid
         cards:

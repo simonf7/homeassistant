@@ -27,9 +27,9 @@ lovelace:
       icon: mdi:battery-50
       show_in_sidebar: true
       filename: dashboards/dashboard-battery-levels.yaml
-    power-dashboard:
+    power-flow:
       mode: yaml
-      title: Power
+      title: Power Flow
       icon: mdi:lightning-bolt
       show_in_sidebar: true
       filename: dashboards/dashboard-power.yaml
