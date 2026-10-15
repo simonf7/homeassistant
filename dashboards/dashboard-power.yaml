@@ -1,0 +1,7 @@
+views:
+  - title: Power
+    sections:
+      - type: grid
+        cards:
+          - !include snippet-power.yaml
+        column_span: 4

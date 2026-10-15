@@ -14,7 +14,7 @@ entities:
       decimals: 2
       unit_white_space: false
       unit_of_measurement: p
-    name: Octopus
+    name: Grid
     display_zero_tolerance: 0
   solar:
     entity: sensor.pv1_power
@@ -32,6 +32,8 @@ entities:
       name: Zappi
       icon: mdi:ev-station
       display_zero: true
+      secondary_info:
+        entity: sensor.zappi_27008591_myenergi_zappi_27008591_plug_status
 clickable_entities: true
 display_zero_lines:
   mode: grey_out
@@ -53,3 +55,6 @@ transparency_zero_lines: 0
 sort_individual_devices: false
 grid_options:
   columns: full
+disable_dots: false
+no_labels: false
+allow_layout_break: true

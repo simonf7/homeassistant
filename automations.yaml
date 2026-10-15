@@ -290,16 +290,22 @@
       entity_id: light.outside
     data: {}
   mode: single
-- id: '1787942744330'
-  alias: Sonoff Integration Auto-Reset
-  description: ''
+- id: '1791659647826'
+  alias: Solcast - Strategic API Throttling
+  description: Pulls Solcast data at optimized intervals to stay within the 10 API
+    limit.
   triggers:
-  - trigger: time_pattern
-    minutes: /15
+  - at: 05:00:00
+    trigger: time
+  - at: '12:00:00'
+    trigger: time
+  - at: '16:00:00'
+    trigger: time
+  - at: '23:15:00'
+    trigger: time
   conditions: []
   actions:
-  - action: homeassistant.reload_config_entry
+  - action: solcast_solar.update_forecasts
     metadata: {}
-    data:
-      entry_id: 01JE9Y68FY5JTKHFMKN6MJZQP0
+    data: {}
   mode: single
