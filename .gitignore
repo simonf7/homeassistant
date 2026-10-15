@@ -18,3 +18,6 @@ secrets.yaml
 
 # Keep custom integrations out of this dashboard-focused repository
 custom_components/
+
+# Ignore solcast data files
+solcast_solar/
