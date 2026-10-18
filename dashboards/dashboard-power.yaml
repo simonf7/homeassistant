@@ -11,10 +11,23 @@ views:
             grid_options:
               columns: full
             cards:
-              - type: tile
-                entity: sensor.solcast_pv_forecast_forecast_tomorrow
-                name: Tomorrow's solar forecast
-              - type: tile
-                entity: sensor.solcast_pv_forecast_forecast_today
-                name: Today's total solar forecast
+              - type: markdown
+                content: >-
+                  <ha-icon icon="mdi:solar-power"></ha-icon>**Today (generated / forecast)**  
+
+                  {% if has_value('sensor.solar_energy_today') and
+                  has_value('sensor.solcast_pv_forecast_forecast_today') %}
+                  {{ states('sensor.solar_energy_today') | float | round(1) }} kWh / {{ states('sensor.solcast_pv_forecast_forecast_today') | float | round(1) }} kWh
+                  {% else %}
+                  Generation or forecast unavailable
+                  {% endif %}
+              - type: markdown
+                content: >-
+                  <ha-icon icon="mdi:solar-power"></ha-icon>**Tomorrow (forecast)**  
+
+                  {% if has_value('sensor.solcast_pv_forecast_forecast_tomorrow') %}
+                  {{ states('sensor.solcast_pv_forecast_forecast_tomorrow') | float | round(1) }} kWh
+                  {% else %}
+                  Forecast unavailable
+                  {% endif %}
         column_span: 4
