@@ -13,7 +13,7 @@ views:
             cards:
               - type: markdown
                 content: >-
-                  <ha-icon icon="mdi:solar-power"></ha-icon>**Today (generated / forecast)**  
+                  <ha-icon icon="{{ state_attr('sensor.weather_today_condition', 'icon') }}"></ha-icon>**Today (generated / forecast)**  
 
                   {% if has_value('sensor.solar_energy_today') and
                   has_value('sensor.solcast_pv_forecast_forecast_today') %}
@@ -23,7 +23,7 @@ views:
                   {% endif %}
               - type: markdown
                 content: >-
-                  <ha-icon icon="mdi:solar-power"></ha-icon>**Tomorrow (forecast)**  
+                  <ha-icon icon="{{ state_attr('sensor.weather_tomorrow_condition', 'icon') }}"></ha-icon>**Tomorrow (forecast)**  
 
                   {% if has_value('sensor.solcast_pv_forecast_forecast_tomorrow') %}
                   {{ states('sensor.solcast_pv_forecast_forecast_tomorrow') | float | round(1) }} kWh

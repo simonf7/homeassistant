@@ -1,0 +1,30 @@
+- trigger:
+    - trigger: time_pattern
+      hours: /1
+    - trigger: homeassistant
+      event: start
+    - trigger: event
+      event_type: event_template_reloaded
+  action:
+    - action: weather.get_forecasts
+      data:
+        type: daily
+      target:
+        entity_id: weather.forecast_home
+      response_variable: daily
+  sensor:
+    - name: Weather Today Condition
+      unique_id: weather_today_condition
+      state: "{{ daily['weather.forecast_home'].forecast[0].condition }}"
+      icon: >
+        {% set cond = daily['weather.forecast_home'].forecast[0].condition %}
+        {% set mapper = {'clear-night': 'weather-night', 'cloudy': 'weather-cloudy', 'fog': 'weather-fog', 'hail': 'weather-hail', 'lightning': 'weather-lightning', 'lightning-rainy': 'weather-lightning-rainy', 'partlycloudy': 'weather-partly-cloudy', 'pouring': 'weather-pouring', 'rainy': 'weather-rainy', 'snowy': 'weather-snowy', 'snowy-rainy': 'weather-snowy-rainy', 'sunny': 'weather-sunny', 'windy': 'weather-windy', 'windy-variant': 'weather-windy-variant', 'exceptional': 'alert-circle-outline'} %}
+        mdi:{{ mapper[cond] if cond in mapper else 'weather-cloudy-alert' }}
+
+    - name: Weather Tomorrow Condition
+      unique_id: weather_tomorrow_condition
+      state: "{{ daily['weather.forecast_home'].forecast[1].condition }}"
+      icon: >
+        {% set cond = daily['weather.forecast_home'].forecast[1].condition %}
+        {% set mapper = {'clear-night': 'weather-night', 'cloudy': 'weather-cloudy', 'fog': 'weather-fog', 'hail': 'weather-hail', 'lightning': 'weather-lightning', 'lightning-rainy': 'weather-lightning-rainy', 'partlycloudy': 'weather-partly-cloudy', 'pouring': 'weather-pouring', 'rainy': 'weather-rainy', 'snowy': 'weather-snowy', 'snowy-rainy': 'weather-snowy-rainy', 'sunny': 'weather-sunny', 'windy': 'weather-windy', 'windy-variant': 'weather-windy-variant', 'exceptional': 'alert-circle-outline'} %}
+        mdi:{{ mapper[cond] if cond in mapper else 'weather-cloudy-alert' }}
