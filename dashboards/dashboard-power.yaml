@@ -3,5 +3,18 @@ views:
     sections:
       - type: grid
         cards:
+          - type: heading
+            heading: Power Flow
+            heading_style: title
           - !include snippet-power.yaml
+          - type: horizontal-stack
+            grid_options:
+              columns: full
+            cards:
+              - type: tile
+                entity: sensor.solcast_pv_forecast_forecast_tomorrow
+                name: Tomorrow's solar forecast
+              - type: tile
+                entity: sensor.solcast_pv_forecast_forecast_today
+                name: Today's total solar forecast
         column_span: 4
