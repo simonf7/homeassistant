@@ -7,27 +7,112 @@ views:
             heading: Power Flow
             heading_style: title
           - !include snippet-power.yaml
-          - type: horizontal-stack
-            grid_options:
-              columns: full
-            cards:
-              - type: markdown
-                content: >-
-                  <ha-icon icon="{{ state_attr('sensor.weather_today_condition', 'icon') }}"></ha-icon>**Today (generated / forecast)**  
-
-                  {% if has_value('sensor.solar_energy_today') and
-                  has_value('sensor.solcast_pv_forecast_forecast_today') %}
-                  {{ states('sensor.solar_energy_today') | float | round(1) }} kWh / {{ states('sensor.solcast_pv_forecast_forecast_today') | float | round(1) }} kWh
-                  {% else %}
-                  Generation or forecast unavailable
-                  {% endif %}
-              - type: markdown
-                content: >-
-                  <ha-icon icon="{{ state_attr('sensor.weather_tomorrow_condition', 'icon') }}"></ha-icon>**Tomorrow (forecast)**  
-
-                  {% if has_value('sensor.solcast_pv_forecast_forecast_tomorrow') %}
-                  {{ states('sensor.solcast_pv_forecast_forecast_tomorrow') | float | round(1) }} kWh
-                  {% else %}
-                  Forecast unavailable
-                  {% endif %}
         column_span: 4
+      - type: grid
+        cards:
+          - type: custom:button-card
+            entity: sensor.solcast_pv_forecast_forecast_today
+            triggers_update:
+              - sensor.solar_energy_today
+              - sensor.weather_today_condition
+            show_icon: false
+            show_name: false
+            show_state: false
+            tap_action:
+              action: none
+            custom_fields:
+              icon: |
+                [[[
+                  const icon = states['sensor.weather_today_condition']?.attributes?.icon || 'mdi:weather-sunny';
+                  return `<ha-icon icon="${icon}"></ha-icon>`;
+                ]]]
+              title: Today (generated / forecast)
+              value: |
+                [[[
+                  const generated = Number.parseFloat(states['sensor.solar_energy_today']?.state);
+                  const forecast = Number.parseFloat(states['sensor.solcast_pv_forecast_forecast_today']?.state);
+                  return Number.isFinite(generated) && Number.isFinite(forecast)
+                    ? `${generated.toFixed(1)} kWh / ${forecast.toFixed(1)} kWh`
+                    : 'Generation or forecast unavailable';
+                ]]]
+            styles:
+              card:
+                - padding: 8px
+              grid:
+                - grid-template-areas: '"icon title" "icon value"'
+                - grid-template-columns: 48px minmax(0, 1fr)
+                - grid-template-rows: min-content min-content
+                - column-gap: 12px
+                - row-gap: 8px
+                - align-items: center
+              custom_fields:
+                icon:
+                  - grid-area: icon
+                  - justify-self: center
+                  - align-self: center
+                  - '--mdc-icon-size': 40px
+                title:
+                  - grid-area: title
+                  - justify-self: start
+                  - text-align: left
+                  - font-weight: bold
+                  - white-space: nowrap
+                value:
+                  - grid-area: value
+                  - justify-self: start
+                  - text-align: left
+                  - white-space: nowrap
+        column_span: 1
+      - type: grid
+        cards:
+          - type: custom:button-card
+            entity: sensor.solcast_pv_forecast_forecast_tomorrow
+            triggers_update:
+              - sensor.weather_tomorrow_condition
+            show_icon: false
+            show_name: false
+            show_state: false
+            tap_action:
+              action: none
+            custom_fields:
+              icon: |
+                [[[
+                  const icon = states['sensor.weather_tomorrow_condition']?.attributes?.icon || 'mdi:weather-sunny';
+                  return `<ha-icon icon="${icon}"></ha-icon>`;
+                ]]]
+              title: Tomorrow (forecast)
+              value: |
+                [[[
+                  const forecast = Number.parseFloat(states['sensor.solcast_pv_forecast_forecast_tomorrow']?.state);
+                  return Number.isFinite(forecast)
+                    ? `${forecast.toFixed(1)} kWh`
+                    : 'Forecast unavailable';
+                ]]]
+            styles:
+              card:
+                - padding: 8px
+              grid:
+                - grid-template-areas: '"icon title" "icon value"'
+                - grid-template-columns: 48px minmax(0, 1fr)
+                - grid-template-rows: min-content min-content
+                - column-gap: 12px
+                - row-gap: 8px
+                - align-items: center
+              custom_fields:
+                icon:
+                  - grid-area: icon
+                  - justify-self: center
+                  - align-self: center
+                  - '--mdc-icon-size': 40px
+                title:
+                  - grid-area: title
+                  - justify-self: start
+                  - text-align: left
+                  - font-weight: bold
+                  - white-space: nowrap
+                value:
+                  - grid-area: value
+                  - justify-self: start
+                  - text-align: left
+                  - white-space: nowrap
+        column_span: 1
