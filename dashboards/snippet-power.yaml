@@ -11,11 +11,11 @@ entities:
     secondary_info:
       color_value: false
       entity: sensor.current_electricity_rate_in_pence
-      decimals: 2
       unit_white_space: false
       unit_of_measurement: p
+      decimals: 0
     name: Grid
-    display_zero_tolerance: 0
+    display_zero_tolerance: 50
   solar:
     entity: sensor.pv1_power
     secondary_info:
@@ -25,15 +25,22 @@ entities:
       display_zero: true
   home: {}
   individual:
-    - entity: sensor.entertainment_monitor_ac_current_power_value
-      name: TV/Xbox
-      icon: mdi:television
     - entity: sensor.zappi_27008591_myenergi_zappi_27008591_power_ct_internal_load
       name: Zappi
-      icon: mdi:ev-station
+      icon: mdi:car-electric
       display_zero: true
       secondary_info:
-        entity: sensor.zappi_27008591_myenergi_zappi_27008591_plug_status
+        icon: ''
+        color_value: false
+        display_zero: true
+        accept_negative: false
+        unit_white_space: false
+        template: >-
+          {% if is_state('sensor.zappi_27008591_myenergi_zappi_27008591_plug_status', 'EV Connected') %}
+            {{ states('sensor.zappi_27008591_myenergi_zappi_27008591_status') }}
+          {% else %}
+            Disconnected
+          {% endif %}
 clickable_entities: true
 display_zero_lines:
   mode: grey_out
@@ -54,7 +61,7 @@ mega_threshold: 1000000
 transparency_zero_lines: 0
 sort_individual_devices: false
 grid_options:
-  columns: full
+  rows: auto
 disable_dots: false
 no_labels: false
 allow_layout_break: true

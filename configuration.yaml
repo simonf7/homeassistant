@@ -40,18 +40,30 @@ lovelace:
       icon: mdi:signal
       show_in_sidebar: true
       filename: dashboards/dashboard-link-quality.yaml
-    downstairs-lights:
+    phone-view:
       mode: yaml
-      title: Downstairs Lights
-      icon: mdi:stairs-down
+      title: Phone View
+      icon: mdi:cellphone
       show_in_sidebar: true
-      filename: dashboards/dashboard-downstairs.yaml
-    upstairs-lights:
+      filename: dashboards/dashboard-phone.yaml
+    portal-view:
       mode: yaml
-      title: Upstairs Lights
-      icon: mdi:stairs-up
+      title: Portal View
+      icon: mdi:monitor-dashboard
       show_in_sidebar: true
-      filename: dashboards/dashboard-upstairs.yaml
+      filename: dashboards/dashboard-portal.yaml
+    #    downstairs-lights:
+    #      mode: yaml
+    #      title: Downstairs Lights
+    #      icon: mdi:stairs-down
+    #      show_in_sidebar: true
+    #      filename: dashboards/dashboard-downstairs.yaml
+    #    upstairs-lights:
+    #      mode: yaml
+    #      title: Upstairs Lights
+    #      icon: mdi:stairs-up
+    #      show_in_sidebar: true
+    #      filename: dashboards/dashboard-upstairs.yaml
     house-lights:
       mode: yaml
       title: House Lights

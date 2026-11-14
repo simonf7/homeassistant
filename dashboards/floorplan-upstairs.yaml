@@ -160,6 +160,10 @@
         border-radius: var(--ha-card-border-radius, 12px);
         padding: 8px 0;
       }
+      #root {
+        width: min(100%, calc(100dvh - 180px));
+        margin-inline: auto;
+      }
       h1.card-header {
         padding: 0px;
       }

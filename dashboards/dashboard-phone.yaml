@@ -1,0 +1,30 @@
+# lovelace_gen
+views:
+  - title: Phone
+    sections:
+      - type: grid
+        cards:
+          - type: custom:tabdeck-card
+            style: pill
+            align: justify
+            grid_options:
+              columns: full
+            tabs:
+              - name: Power
+                icon: mdi:lightning-bolt
+                card:
+                  type: vertical-stack
+                  cards:
+                    - !include snippet-power.yaml
+                    - !include snippet-solar-today.yaml
+                    - !include snippet-solar-tomorrow.yaml
+              - name: Downstairs
+                icon: mdi:stairs-down
+                card:
+                  type: horizontal-stack
+                  cards: !include floorplan-downstairs.yaml
+              - name: Upstairs
+                icon: mdi:stairs-up
+                card:
+                  type: horizontal-stack
+                  cards: !include floorplan-upstairs.yaml

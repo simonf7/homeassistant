@@ -1,0 +1,72 @@
+# lovelace_gen
+views:
+  - title: Portal
+    sections:
+      - type: grid
+        cards:
+          - type: custom:tabdeck-card
+            style: pill
+            align: justify
+            grid_options:
+              columns: full
+            tabs:
+              - name: Downstairs
+                icon: mdi:stairs-down
+                card:
+                  type: horizontal-stack
+                  cards: !include floorplan-downstairs.yaml
+              - name: Upstairs
+                icon: mdi:stairs-up
+                card:
+                  type: horizontal-stack
+                  cards: !include floorplan-upstairs.yaml
+              - name: Power
+                icon: mdi:lightning-bolt
+                card:
+                  type: vertical-stack
+                  cards:
+                    - !include snippet-power.yaml
+                    - !include snippet-solar-today.yaml
+                    - !include snippet-solar-tomorrow.yaml
+        column_span: 2
+      - type: grid
+        cards:
+          - type: vertical-stack
+            grid_options:
+              columns: full
+            card_mod:
+              style: |
+                :host {
+                  padding-top: 70px;
+                }
+            cards:
+              - !include snippet-clock.yaml
+              - !include snippet-line.yaml
+              - type: weather-forecast
+                name: Weather
+                show_current: true
+                show_forecast: true
+                entity: weather.forecast_home
+                forecast_type: daily
+              - !include snippet-line.yaml
+              - type: horizontal-stack
+                cards:
+                  - !include
+                    - button-presence.yaml
+                    - entity: person.simon
+                      name: Simon
+                  - !include
+                    - button-presence.yaml
+                    - entity: person.debbie
+                      name: Debbie
+              - type: horizontal-stack
+                cards:
+                  - !include
+                    - button-presence.yaml
+                    - entity: person.harrison
+                      name: Harry
+                  - !include
+                    - button-presence.yaml
+                    - entity: person.amy
+                      name: Amy
+        column_span: 1
