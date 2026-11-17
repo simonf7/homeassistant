@@ -6,7 +6,9 @@ entities:
       consumption: sensor.battery_discharge
       production: sensor.battery_charge
   grid:
-    entity: sensor.octopus_energy_electricity_21l4171264_1012675233301_current_demand
+    entity:
+      consumption: sensor.grid_consumption
+      production: sensor.feed_in
     use_metadata: false
     secondary_info:
       color_value: false
@@ -36,20 +38,21 @@ entities:
         accept_negative: false
         unit_white_space: false
         template: >-
-          {% if is_state('sensor.zappi_27008591_myenergi_zappi_27008591_plug_status', 'EV Connected') %}
-            {{ states('sensor.zappi_27008591_myenergi_zappi_27008591_status') }}
-          {% else %}
-            Disconnected
-          {% endif %}
+          "{{
+          states('sensor.zappi_27008591_myenergi_zappi_27008591_plug_status') |
+          replace('EV ', '') }}"
+    - entity: sensor.shed_monitor_power
+      icon: mdi:greenhouse
+      name: Shed
 clickable_entities: true
 display_zero_lines:
-  mode: grey_out
+  mode: transparency
   transparency: 50
   grey_color:
     - 189
     - 189
     - 189
-use_new_flow_rate_model: true
+  grey_out_circles: false
 base_decimals: 0
 kilo_decimals: 1
 min_flow_rate: 0.75
@@ -64,4 +67,7 @@ grid_options:
   rows: auto
 disable_dots: false
 no_labels: false
-allow_layout_break: true
+allow_layout_break: false
+flow_rate_model: duration
+topology: standard
+keep_trailing_zeros: true

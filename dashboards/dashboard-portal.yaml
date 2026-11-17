@@ -5,11 +5,18 @@ views:
       - type: grid
         cards:
           - type: custom:tabdeck-card
-            style: pill
-            align: justify
+            preset: rail
             grid_options:
               columns: full
             tabs:
+              - name: Power
+                icon: mdi:lightning-bolt
+                card:
+                  type: vertical-stack
+                  cards:
+                    - !include snippet-power.yaml
+                    - !include snippet-solar-today.yaml
+                    - !include snippet-solar-tomorrow.yaml
               - name: Downstairs
                 icon: mdi:stairs-down
                 card:
@@ -20,14 +27,6 @@ views:
                 card:
                   type: horizontal-stack
                   cards: !include floorplan-upstairs.yaml
-              - name: Power
-                icon: mdi:lightning-bolt
-                card:
-                  type: vertical-stack
-                  cards:
-                    - !include snippet-power.yaml
-                    - !include snippet-solar-today.yaml
-                    - !include snippet-solar-tomorrow.yaml
         column_span: 2
       - type: grid
         cards:
@@ -37,7 +36,7 @@ views:
             card_mod:
               style: |
                 :host {
-                  padding-top: 70px;
+                  padding-top: 9px;
                 }
             cards:
               - !include snippet-clock.yaml

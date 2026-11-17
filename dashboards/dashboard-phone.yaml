@@ -5,8 +5,11 @@ views:
       - type: grid
         cards:
           - type: custom:tabdeck-card
-            style: pill
-            align: justify
+            style: ios
+            tab_display: active
+            swipe: true
+            swipe_mouse: true
+            transition: slide
             grid_options:
               columns: full
             tabs:

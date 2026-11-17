@@ -76,7 +76,7 @@ views:
                     ? ''
                     : `<text x="500" y="${centerY + 105}" text-anchor="middle" fill="var(--secondary-text-color)" font-size="17">No link-quality entities found</text>`;
                   const legendY = height - 24;
-                  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 ${height}" style="display:block;width:100%;min-width:720px;height:auto">
+                  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 ${height}" style="display:block;width:100%;min-width:0;max-width:100%;max-height:calc(100dvh - 160px);height:auto;margin-inline:auto">
                     ${links}
                     <circle cx="500" cy="${centerY}" r="68" fill="var(--card-background-color)" stroke="var(--primary-color)" stroke-width="3"/>
                     <text x="500" y="${centerY - 5}" text-anchor="middle" fill="var(--primary-text-color)" font-size="20" font-weight="bold">Zigbee</text>
