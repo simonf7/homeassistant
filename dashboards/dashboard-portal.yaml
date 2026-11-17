@@ -4,29 +4,39 @@ views:
     sections:
       - type: grid
         cards:
-          - type: custom:tabdeck-card
-            preset: rail
+          - type: custom:mod-card
             grid_options:
               columns: full
-            tabs:
-              - name: Power
-                icon: mdi:lightning-bolt
-                card:
-                  type: vertical-stack
-                  cards:
-                    - !include snippet-power.yaml
-                    - !include snippet-solar-today.yaml
-                    - !include snippet-solar-tomorrow.yaml
-              - name: Downstairs
-                icon: mdi:stairs-down
-                card:
-                  type: horizontal-stack
-                  cards: !include floorplan-downstairs.yaml
-              - name: Upstairs
-                icon: mdi:stairs-up
-                card:
-                  type: horizontal-stack
-                  cards: !include floorplan-upstairs.yaml
+            card:
+              type: custom:tabdeck-card
+              preset: rail
+              tabs:
+                - name: Power
+                  icon: mdi:lightning-bolt
+                  card:
+                    type: vertical-stack
+                    cards:
+                      - !include snippet-power.yaml
+                      - !include snippet-solar-today.yaml
+                      - !include snippet-solar-tomorrow.yaml
+                - name: Downstairs
+                  icon: mdi:stairs-down
+                  card:
+                    type: vertical-stack
+                    cards: !include floorplan-downstairs.yaml
+                - name: Upstairs
+                  icon: mdi:stairs-up
+                  card:
+                    type: vertical-stack
+                    cards: !include floorplan-upstairs.yaml
+            card_mod:
+              prepend: true
+              style:
+                'tabdeck-card$':
+                  'tabdeck-tabbar$': |
+                    .bar.left {
+                      transform: translateY(4px);
+                    }
         column_span: 2
       - type: grid
         cards:
