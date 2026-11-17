@@ -309,40 +309,24 @@
     metadata: {}
     data: {}
   mode: single
-- id: '1792067175327'
-  alias: Shed power flow
-  description: ''
-  triggers: []
-  conditions: []
+- id: '1794954939660'
+  alias: Washing Machine Finished Announcement
+  description: Announce on Kitchen display when washing machine finishes after 7:30
+    AM
+  triggers:
+  - trigger: state
+    entity_id: sensor.kitchen_washing_machine_job_state
+    to: Finish
+  conditions:
+  - condition: time
+    after: 07:30:00
   actions:
-  - action: cast.show_lovelace_view
-    metadata: {}
+  - action: tts.cloud_say
+    target:
+      entity_id:
+      - media_player.kitchen_display
+      - media_player.office_speaker
     data:
-      entity_id: media_player.shed_display
-      view_path: power-dashboard
-  mode: single
-- id: '1792150339907'
-  alias: Living Room Flow
-  description: ''
-  triggers: []
-  conditions: []
-  actions:
-  - sequence:
-    - action: frontend.set_theme
-      data:
-        name: default
-        name_dark: default
-    - action: media_player.turn_off
-      target:
-        entity_id: media_player.living_room_display
-    - delay:
-        hours: 0
-        minutes: 0
-        seconds: 3
-    - action: cast.show_lovelace_view
-      metadata: {}
-      data:
-        entity_id: media_player.living_room_display
-        view_path: '0'
-        dashboard_path: power-flow
+      message: The washing machine has finished.
+      cache: true
   mode: single
