@@ -161,7 +161,7 @@
         padding: 8px 0;
       }
       #root {
-        width: min(100%, calc(100dvh - 120px));
+        width: min(100%, calc(100dvh - 128px));
         margin-inline: auto;
       }
       h1.card-header {

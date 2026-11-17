@@ -24,10 +24,16 @@ views:
               - name: Downstairs
                 icon: mdi:stairs-down
                 card:
-                  type: horizontal-stack
+                  type: vertical-stack
                   cards: !include floorplan-downstairs.yaml
               - name: Upstairs
                 icon: mdi:stairs-up
                 card:
-                  type: horizontal-stack
+                  type: vertical-stack
                   cards: !include floorplan-upstairs.yaml
+              - name: Who's Home
+                icon: mdi:account
+                card:
+                  type: vertical-stack
+                  cards:
+                    - !include snippet-people.yaml

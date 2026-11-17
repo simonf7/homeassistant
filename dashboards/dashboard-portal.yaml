@@ -33,6 +33,10 @@ views:
               prepend: true
               style:
                 'tabdeck-card$':
+                  '.': |
+                    #tabdeck-panel {
+                      margin-left: 28px;
+                    }
                   'tabdeck-tabbar$': |
                     .bar.left {
                       transform: translateY(4px);
@@ -58,24 +62,5 @@ views:
                 entity: weather.forecast_home
                 forecast_type: daily
               - !include snippet-line.yaml
-              - type: horizontal-stack
-                cards:
-                  - !include
-                    - button-presence.yaml
-                    - entity: person.simon
-                      name: Simon
-                  - !include
-                    - button-presence.yaml
-                    - entity: person.debbie
-                      name: Debbie
-              - type: horizontal-stack
-                cards:
-                  - !include
-                    - button-presence.yaml
-                    - entity: person.harrison
-                      name: Harry
-                  - !include
-                    - button-presence.yaml
-                    - entity: person.amy
-                      name: Amy
+              - !include snippet-people.yaml
         column_span: 1
