@@ -17,8 +17,10 @@ views:
                     type: vertical-stack
                     cards:
                       - !include snippet-power.yaml
-                      - !include snippet-solar-today.yaml
-                      - !include snippet-solar-tomorrow.yaml
+                      - type: horizontal-stack
+                        cards:
+                          - !include snippet-solar-today.yaml
+                          - !include snippet-solar-tomorrow.yaml
                 - name: Downstairs
                   icon: mdi:stairs-down
                   card:
