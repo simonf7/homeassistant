@@ -44,9 +44,13 @@ styles:
       - justify-self: start
       - text-align: left
       - font-weight: bold
+      - font-size: >-
+          [[[ return window.matchMedia('(max-width: 600px)').matches ? '0.75em' : '1em'; ]]]
       - white-space: nowrap
     value:
       - grid-area: value
       - justify-self: start
       - text-align: left
+      - font-size: >-
+          [[[ return window.matchMedia('(max-width: 600px)').matches ? '0.75em' : '1em'; ]]]
       - white-space: nowrap
