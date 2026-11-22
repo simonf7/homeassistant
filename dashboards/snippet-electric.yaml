@@ -1,0 +1,51 @@
+type: custom:button-card
+entity: sensor.octopus_energy_electricity_21l4171264_1012675233301_current_accumulative_cost
+triggers_update:
+  - sensor.octopus_energy_electricity_21l4171264_1012675233301_current_accumulative_cost
+show_icon: false
+show_name: false
+show_state: false
+tap_action:
+  action: none
+custom_fields:
+  icon: <ha-icon icon="mdi:lightning-bolt"></ha-icon>
+  title: Electric (today / yesterday)
+  value: |
+    [[[
+      const today = Number.parseFloat(states['sensor.octopus_energy_electricity_21l4171264_1012675233301_current_accumulative_cost']?.state);
+      const yesterday = Number.parseFloat(states['sensor.octopus_energy_electricity_21l4171264_1012675233301_previous_accumulative_cost']?.state);
+      return Number.isFinite(today) && Number.isFinite(yesterday)
+        ? `£${today.toFixed(2)} / £${yesterday.toFixed(2)}`
+        : 'Electric costs unavailable';
+    ]]]
+styles:
+  card:
+    - padding: 8px
+  grid:
+    - grid-template-areas: '"icon title" "icon value"'
+    - grid-template-columns: 48px minmax(0, 1fr)
+    - grid-template-rows: min-content min-content
+    - column-gap: 12px
+    - row-gap: 8px
+    - align-items: center
+  custom_fields:
+    icon:
+      - grid-area: icon
+      - justify-self: center
+      - align-self: center
+      - '--mdc-icon-size': 40px
+    title:
+      - grid-area: title
+      - justify-self: start
+      - text-align: left
+      - font-weight: bold
+      - font-size: >-
+          [[[ return window.matchMedia('(max-width: 600px)').matches ? '0.75em' : '1em'; ]]]
+      - white-space: nowrap
+    value:
+      - grid-area: value
+      - justify-self: start
+      - text-align: left
+      - font-size: >-
+          [[[ return window.matchMedia('(max-width: 600px)').matches ? '0.75em' : '1em'; ]]]
+      - white-space: nowrap

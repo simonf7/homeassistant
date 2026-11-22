@@ -12,10 +12,9 @@ entities:
     use_metadata: false
     secondary_info:
       color_value: false
-      entity: sensor.current_electricity_rate_in_pence
-      unit_white_space: false
-      unit_of_measurement: p
-      decimals: 0
+      template: >-
+        {% set cost = states('sensor.octopus_energy_electricity_21l4171264_1012675233301_current_accumulative_cost') %}
+        {{ '£%.2f' | format(cost | float) if is_number(cost) else 'Unavailable' }}
     name: Grid
     display_zero_tolerance: 50
   solar:
