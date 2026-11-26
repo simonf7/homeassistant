@@ -1,0 +1,39 @@
+# lovelace_gen
+type: custom:calendar-card-pro
+entities:
+  - entity: calendar.simonf21_gmail_com
+    label: Simon
+  - entity: calendar.family
+    label: Family
+  - entity: calendar.family_birthdays
+    label: Birthdays
+  - entity: calendar.myschedule_rota
+    label: Amy
+    accent_color: '#ffaaaa'
+  - entity: calendar.webcal_teamer_net_teams_121353_norwich_ice_events_subscription_ics_e8bc56
+    label: Football
+    accent_color: '#ffffff'
+view: month
+toolbar:
+  show: true
+  view_switcher_layouts:
+    - list
+    - column
+    - grid
+    - month
+weather:
+  position: date
+  date:
+    show_conditions: true
+    show_high_temp: true
+    show_low_temp: false
+    icon_size: 14px
+    font_size: 12px
+    color: var(--primary-text-color)
+  event:
+    show_conditions: true
+    show_temp: true
+    icon_size: 14px
+    font_size: 12px
+    color: var(--primary-text-color)
+  entity: weather.forecast_home

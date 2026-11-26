@@ -61,6 +61,20 @@ views:
           - type: heading
             heading: Calendar
           - !include snippet-calendar.yaml
+          - type: custom:button-card
+            name: Full Calendar
+            icon: mdi:calendar-month
+            show_name: true
+            show_icon: false
+            show_state: false
+            tap_action:
+              action: fire-dom-event
+              browser_mod:
+                service: browser_mod.popup
+                data:
+                  title: Show Full Calendar
+                  initial_style: fullscreen
+                  content: !include snippet-calendar-month.yaml
         column_span: 1
       - type: grid
         cards:

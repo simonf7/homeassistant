@@ -1,0 +1,7 @@
+# lovelace_gen
+views:
+  - title: Full Calendar
+    path: full-calendar
+    panel: true
+    cards:
+      - !include snippet-calendar-month.yaml
