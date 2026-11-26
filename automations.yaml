@@ -330,3 +330,66 @@
       message: The washing machine has finished.
       cache: true
   mode: single
+- id: '1795612651611'
+  alias: Shed too hot
+  description: ''
+  triggers:
+  - trigger: temperature.changed
+    target:
+      entity_id: sensor.shed_thermometer_temperature
+    options:
+      threshold:
+        type: above
+        value:
+          active_choice: number
+          number: 17
+          unit_of_measurement: °C
+  conditions:
+  - condition: climate.is_hvac_mode
+    target:
+      entity_id: climate.shed_mill_heatergen3oil
+    options:
+      behavior: any
+      for: 00:00:00
+      hvac_mode:
+      - auto
+      - heat
+  actions:
+  - action: climate.set_hvac_mode
+    metadata: {}
+    target:
+      entity_id: climate.shed_mill_heatergen3oil
+    data:
+      hvac_mode: 'off'
+  mode: single
+- id: '1795612701065'
+  alias: Shed too cold
+  description: ''
+  triggers:
+  - trigger: temperature.changed
+    target:
+      entity_id: sensor.shed_thermometer_temperature
+    options:
+      threshold:
+        type: below
+        value:
+          active_choice: number
+          number: 16
+          unit_of_measurement: °C
+  conditions:
+  - condition: climate.is_hvac_mode
+    target:
+      entity_id: climate.shed_mill_heatergen3oil
+    options:
+      behavior: any
+      for: 00:00:00
+      hvac_mode:
+      - 'off'
+  actions:
+  - action: climate.set_hvac_mode
+    metadata: {}
+    target:
+      entity_id: climate.shed_mill_heatergen3oil
+    data:
+      hvac_mode: auto
+  mode: single
