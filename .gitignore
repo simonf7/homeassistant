@@ -20,4 +20,4 @@ secrets.yaml
 custom_components/
 
 # Ignore solcast data files
-solcast_solar/
+solcast_solar/**
