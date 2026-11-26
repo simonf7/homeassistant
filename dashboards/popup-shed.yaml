@@ -1,0 +1,24 @@
+# lovelace_gen
+type: vertical-stack
+cards:
+  - type: entities
+    entities:
+      - entity: light.ceiling
+        secondary_info: brightness
+      - entity: light.corner
+        secondary_info: brightness
+  - type: thermostat
+    entity: climate.shed_mill_heatergen3oil
+    name: Shed Heater
+    features:
+      - type: climate-hvac-modes
+        style: dropdown
+        hvac_modes:
+          - auto
+          - heat
+          - 'off'
+  - !include
+    - snippet-thermometer.yaml
+    - entity: sensor.shed_thermometer
+  - type: media-control
+    entity: media_player.shed_display

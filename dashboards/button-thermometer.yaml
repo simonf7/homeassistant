@@ -3,10 +3,23 @@ type: custom:button-card
 entity: {{ entity }}
 show_name: false
 show_state: true
+{% if icon is defined %}
+show_icon: true
+icon: "{{ icon }}"
+{% if size is defined %}
+size: {{ size }}
+{% else %}
+size: clamp(1.5em, 2.5vw, 2em)
+{% endif %}
+{% else %}
 show_icon: false
+{% endif %}
 style:
   left: {{ x }}
   top: {{ y }}
+{% if icon is defined %}
+  width: clamp(5em, 10vw, 6em)
+{% endif %}
 styles:
   state:
     - font-size: >-

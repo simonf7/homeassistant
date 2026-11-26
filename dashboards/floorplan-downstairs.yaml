@@ -199,10 +199,21 @@
     - !include # outside
       - button-thermometer.yaml
       - entity: sensor.outside_thermometer_temperature
-        x: 10%
-        y: 4%
+        x: 12%
+        y: 7%
         popup: popup-outside.yaml
+        triggers_update:
+          - sensor.weather_today_condition
+        icon: "[[[ return states['sensor.weather_today_condition']?.attributes?.icon || 'mdi:weather-sunny'; ]]]"
         title: Outside
+    - !include # shed
+      - button-thermometer.yaml
+      - entity: sensor.shed_thermometer_temperature
+        x: 25%
+        y: 7%
+        popup: popup-shed.yaml
+        icon: mdi:home-variant
+        title: Shed
     - !include # porch
       - button-thermometer.yaml
       - entity: sensor.porch_thermometer_temperature

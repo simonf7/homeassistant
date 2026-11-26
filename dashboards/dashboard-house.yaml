@@ -21,27 +21,25 @@ views:
             grid_options:
               columns: full
           - type: heading
-            heading: Other
+            heading: Who's Home
           - type: horizontal-stack
             cards:
-              - type: custom:button-card
-                entity: weather.forecast_home
-                #                entity: sensor.outside_thermometer_temperature
-                show_name: true
-                show_state: false
-                show_icon: true
-                name: >
-                  [[[ return states['sensor.outside_thermometer_temperature'].state + ' °C']]]
-              - type: custom:button-card
-                entity: sensor.shed_thermometer_temperature
-                show_state: true
-                show_name: false
-                show_icon: true
-                icon: mdi:home-variant
-              - type: markdown
-                content: ' '
-              - type: markdown
-                content: ' '
+              - !include
+                - button-presence.yaml
+                - entity: person.simon
+                  name: Simon
+              - !include
+                - button-presence.yaml
+                - entity: person.debbie
+                  name: Debbie
+              - !include
+                - button-presence.yaml
+                - entity: person.harrison
+                  name: Harry
+              - !include
+                - button-presence.yaml
+                - entity: person.amy
+                  name: Amy
             grid_options:
               columns: full
         column_span: 2
@@ -55,38 +53,14 @@ views:
             entity: weather.forecast_home
             forecast_type: daily
           - type: heading
+            heading: Power
+          - !include snippet-power.yaml
+          - type: heading
             heading: To-do
           - !include snippet-tasks.yaml
           - type: heading
             heading: Calendar
           - !include snippet-calendar.yaml
-          - type: heading
-            heading: Who's Home
-          - type: horizontal-stack
-            cards:
-              - !include
-                - button-presence.yaml
-                - entity: person.simon
-                  name: Simon
-              - !include
-                - button-presence.yaml
-                - entity: person.debbie
-                  name: Debbie
-          - type: horizontal-stack
-            cards:
-              - !include
-                - button-presence.yaml
-                - entity: person.harrison
-                  name: Harry
-              - !include
-                - button-presence.yaml
-                - entity: person.amy
-                  name: Amy
-            grid_options:
-              columns: full
-          - type: heading
-            heading: Power
-          - !include snippet-power.yaml
         column_span: 1
       - type: grid
         cards:
